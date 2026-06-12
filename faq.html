@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQ — Royal Aesthetik</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#0A0A0A;--bg-2:#111111;--bg-3:#161616;--ivory:#F0EDE8;--ivory-dim:#9A9590;--ivory-dark:#3A3835;--gold:#B8925A;--gold-dim:rgba(184,146,90,.35);--font-display:'Cormorant Garamond',Georgia,serif;--font-body:'DM Sans',system-ui,sans-serif;--font-label:'Montserrat',sans-serif;--ease:cubic-bezier(0.25,0.1,0.25,1)}
+html{scroll-behavior:smooth;font-size:16px}
+body{background:var(--bg);color:var(--ivory);font-family:var(--font-body);font-weight:300;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.label{font-family:var(--font-label);font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);font-weight:400}
+.r{opacity:0;transform:translateY(24px);transition:opacity 1s var(--ease),transform 1s var(--ease)}.r.on{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;height:76px;padding:0 5vw;display:flex;align-items:center;justify-content:space-between;transition:background .5s}
+nav.scrolled{background:rgba(10,10,10,.94);backdrop-filter:blur(16px);border-bottom:1px solid var(--gold-dim)}
+.nav-logo{font-family:var(--font-display);font-size:1.25rem;font-weight:300;letter-spacing:.12em;color:var(--ivory);text-decoration:none}
+.nav-logo em{font-style:normal;color:var(--gold)}
+.nav-links{display:flex;gap:2.5rem;list-style:none;align-items:center}
+.nav-links a{font-family:var(--font-label);font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--ivory-dim);text-decoration:none;transition:color .3s}
+.nav-links a:hover,.nav-links a.active{color:var(--ivory)}
+.nav-cta{background:transparent!important;border:1px solid var(--gold-dim);color:var(--gold)!important;padding:.55rem 1.4rem;transition:background .3s!important,border-color .3s!important,color .3s!important}
+.nav-cta:hover{background:var(--gold)!important;border-color:var(--gold)!important;color:var(--bg)!important}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.hamburger span{display:block;width:20px;height:1px;background:var(--ivory)}
+.btn-dark{font-family:var(--font-label);font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;background:var(--gold);color:var(--bg);padding:.9rem 2.4rem;text-decoration:none;display:inline-block;transition:background .3s,transform .3s}
+.btn-dark:hover{background:var(--ivory);transform:translateY(-2px)}
+footer{background:var(--bg-2);padding:6rem 5vw 3rem;border-top:1px solid var(--ivory-dark)}
+.footer-top{display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;gap:4vw;padding-bottom:4rem;border-bottom:1px solid var(--ivory-dark)}
+.footer-logo{font-family:var(--font-display);font-size:1.6rem;font-weight:200;color:var(--ivory);letter-spacing:.1em}
+.footer-logo em{font-style:normal;color:var(--gold)}
+.footer-tagline{font-size:.8rem;color:var(--ivory-dim);margin-top:.75rem;line-height:1.8;max-width:240px}
+.footer-col-title{font-family:var(--font-label);font-size:8.5px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:.85rem}
+.footer-links a{font-size:.8rem;color:var(--ivory-dim);text-decoration:none;transition:color .3s}
+.footer-links a:hover{color:var(--ivory)}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:2.5rem}
+.footer-legal{font-family:var(--font-label);font-size:8.5px;letter-spacing:.12em;text-transform:uppercase;color:rgba(240,237,232,.2)}
+.footer-legal a{color:rgba(240,237,232,.3);text-decoration:none;margin-left:1.5rem;transition:color .3s}
+.footer-legal a:hover{color:var(--ivory)}
+.footer-swiss{display:flex;align-items:center;gap:.6rem}
+.footer-swiss span{font-family:var(--font-label);font-size:8.5px;letter-spacing:.18em;text-transform:uppercase;color:rgba(240,237,232,.2)}
+
+.page-hero{padding:160px 5vw 80px;border-bottom:1px solid var(--ivory-dark)}
+.page-eyebrow{font-family:var(--font-label);font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:2rem;display:flex;align-items:center;gap:1.2rem}
+.page-eyebrow::before{content:'';display:block;width:28px;height:1px;background:var(--gold)}
+.page-title{font-family:var(--font-display);font-size:clamp(3rem,6vw,6.5rem);font-weight:200;line-height:.95;color:var(--ivory)}
+.page-title em{font-style:italic;color:var(--gold)}
+.page-sub{font-size:.92rem;line-height:1.9;color:var(--ivory-dim);max-width:520px;margin-top:2.5rem}
+
+/* FAQ LAYOUT */
+.faq-body{display:grid;grid-template-columns:280px 1fr;gap:0;border-bottom:1px solid var(--ivory-dark)}
+.faq-sidebar{padding:4rem 3vw 4rem 5vw;border-right:1px solid var(--ivory-dark);position:sticky;top:76px;align-self:start;max-height:calc(100vh - 76px);overflow-y:auto}
+.faq-sidebar-title{font-family:var(--font-label);font-size:8.5px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1.75rem}
+.faq-nav{list-style:none;display:flex;flex-direction:column;gap:.25rem}
+.faq-nav a{font-size:.84rem;color:var(--ivory-dim);text-decoration:none;padding:.5rem 0;display:block;transition:color .3s;border-left:2px solid transparent;padding-left:1rem;margin-left:-1rem}
+.faq-nav a:hover,.faq-nav a.active{color:var(--ivory);border-left-color:var(--gold)}
+
+.faq-content{padding:4rem 5vw}
+.faq-category{margin-bottom:5rem}
+.faq-category-title{font-family:var(--font-display);font-size:clamp(1.5rem,2.5vw,2.5rem);font-weight:200;color:var(--ivory);margin-bottom:2.5rem;padding-bottom:1.5rem;border-bottom:1px solid var(--ivory-dark)}
+.faq-category-title em{font-style:italic;color:var(--gold)}
+
+.faq-item{border-bottom:1px solid var(--ivory-dark)}
+.faq-q{padding:1.5rem 0;display:flex;justify-content:space-between;align-items:center;cursor:pointer;gap:2rem}
+.faq-q-text{font-family:var(--font-display);font-size:1.1rem;font-weight:300;color:var(--ivory);line-height:1.3}
+.faq-q-icon{width:28px;height:28px;border:1px solid var(--ivory-dark);border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all .3s}
+.faq-q-icon::before{content:'+';font-family:var(--font-label);font-size:14px;color:var(--gold);line-height:1}
+.faq-item.open .faq-q-icon{border-color:var(--gold);background:var(--gold-dim)}
+.faq-item.open .faq-q-icon::before{content:'–'}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .5s var(--ease)}
+.faq-a-inner{padding:0 0 1.75rem;font-size:.88rem;line-height:1.9;color:var(--ivory-dim)}
+.faq-a-inner a{color:var(--gold);text-decoration:none}
+
+/* CTA */
+.cta-strip{padding:8rem 5vw;text-align:center;position:relative}
+.cta-strip::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 50% 50%,rgba(184,146,90,.05) 0%,transparent 70%)}
+.cta-title{font-family:var(--font-display);font-size:clamp(2.5rem,4.5vw,5rem);font-weight:200;line-height:1.05;color:var(--ivory);margin:1.5rem 0}
+.cta-title em{font-style:italic;color:var(--gold)}
+.cta-sub{font-size:.9rem;color:var(--ivory-dim);max-width:440px;margin:0 auto 3rem;line-height:1.9}
+
+@media(max-width:900px){.faq-body{grid-template-columns:1fr}.faq-sidebar{display:none}}
+@media(max-width:768px){
+  nav{height:64px}.nav-links{display:none}.hamburger{display:flex}
+  .footer-top{grid-template-columns:1fr 1fr;gap:3rem}
+  .footer-bottom{flex-direction:column;gap:1rem;text-align:center}
+}
+@media(max-width:500px){.footer-top{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav id="nav" class="scrolled">
+  <a href="index.html" class="nav-logo">Royal <em>Aesthetik</em></a>
+  <ul class="nav-links">
+    <li><a href="behandlungen.html">Behandlungen</a></li>
+    <li><a href="uber-uns.html">Dr. Jeyrani</a></li>
+    <li><a href="galerie.html">Galerie</a></li>
+    <li><a href="preise.html">Preise</a></li>
+    <li><a href="faq.html" class="active">FAQ</a></li>
+    <li><a href="kontakt.html" class="nav-cta">Beratung buchen</a></li>
+  </ul>
+  <button class="hamburger" aria-label="Menü"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="page-hero">
+  <div class="page-eyebrow r">Häufige Fragen</div>
+  <h1 class="page-title r d1">Ihre Fragen,<br><em>beantwortet</em></h1>
+  <p class="page-sub r d2">Hier finden Sie Antworten auf die häufigsten Fragen zu unseren Behandlungen, Abläufen und der Klinik.</p>
+</div>
+
+<div class="faq-body">
+  <aside class="faq-sidebar">
+    <p class="faq-sidebar-title">Kategorien</p>
+    <ul class="faq-nav">
+      <li><a href="#allgemein">Allgemein</a></li>
+      <li><a href="#behandlungen">Behandlungen</a></li>
+      <li><a href="#sicherheit">Sicherheit</a></li>
+      <li><a href="#ergebnisse">Ergebnisse</a></li>
+      <li><a href="#ablauf">Ablauf & Termin</a></li>
+      <li><a href="#nachsorge">Nachsorge</a></li>
+    </ul>
+  </aside>
+
+  <div class="faq-content">
+
+    <div class="faq-category" id="allgemein">
+      <h2 class="faq-category-title r"><em>Allgemein</em></h2>
+
+      <div class="faq-item r">
+        <div class="faq-q"><p class="faq-q-text">Was ist medizinische Ästhetik?</p><div class="faq-q-icon"></div></div>
+        <div class="faq-a"><div class="faq-a-inner">Medizinische Ästhetik umfasst minimalinvasive Behandlungen, die das Erscheinungsbild verbessern, ohne einen chirurgischen Eingriff zu erfordern. Dazu gehören Injektionen, Fadenbehandlungen und regenerative Therapien — alles unter ärztlicher Aufsicht.</div></div>
+      </div>
+      <div class="faq-item r">
+        <div class="faq-q"><p class="faq-q-text">Ist eine Erstberatung wirklich kostenlos?</p><div class="faq-q-icon"></div></div>
+        <div class="faq-a"><div class="faq-a-inner">Ja, vollständig kostenlos und unverbindlich. In der Erstberatung lernen Sie Dr. Jeyrani kennen, besprechen Ihre Ziele und erhalten einen individuellen Behandlungsplan — ohne jegliche Verpflichtung.</div></div>
+      </div>
+      <div class="faq-item r">
+        <div class="faq-q"><p class="faq-q-text">Für wen sind die Behandlungen geeignet?</p><div class="faq-q-icon"></div></div>
+        <div class="faq-a"><div class="faq-a-inner">Grundsätzlich für Erwachsene, die kleine Verfeinerungen wünschen — keine dramatischen Veränderungen. Ob eine Behandlung für Sie geeignet ist, klären wir in der Beratung anhand Ihrer Gesundheitsgeschichte, Ihrer Haut und Ihrer Ziele.</div></div>
+      </div>
+    </div>
+
+    <div class="faq-category" id="behandlungen">
+      <h2 class="faq-category-title r">Über die <em>Behandlungen</em></h2>
+
+      <div class="faq-item r">
+        <div class="faq-q"><p class="faq-q-text">Schmerzen die Behandlungen?</p><div class="faq-q-icon"></div></div>
+        <div class="faq-a"><div class="faq-a-inner">Die meisten Patienten beschreiben die Behandlungen als leicht unangenehm, aber nicht schmerzhaft. Wir verwenden feine Kanülen und topische Betäubungsmittel, wo nötig. Das Wohlbefinden unserer Patienten hat höchste Priorität.</div></div>
+      </div>
+      <div class="faq-item r">
+        <div class="faq-q"><p class="faq-q-text">Wie lange dauert eine typische Behandlung?</p><div class="faq-q-icon"></div></div>
+        <div class="faq-a"><div class="faq-a-inner">Botulinumtoxin und Hyaluronsäure dauern in der Regel 20–60 Minuten. Komplexere Behandlungen wie Fadenlifting oder PRP-Therapie können 60–90 Minuten in Anspruch nehmen. Planen Sie zusätzlich Zeit für das Vorgespräch ein.</div></div>
+      </div>
+      <div class="faq-item r">
+        <div class="faq-q"><p class="faq-q-text">Was ist der Unterschied zwischen Botox und Fillern?</p><div class="faq-q-icon"></div></div>
+        <div class="faq-a"><div class="faq-a-inner">Botulinumtoxin entspannt Muskeln und reduziert so dynamische Falten (z. B. Stirnfalten). Hyaluronsäure-Filler hingegen füllen Volumen auf und definieren Konturen — sie wirken strukturell, nicht muskelrelaxierend. Oft werden beide kombiniert.</div></div>
+      </div>
+      <div class="faq-item r">
+        <div class="faq-q"><p class="faq-q-text">Kann ich mehrere Behandlungen gleichzeitig machen?</p><div class="faq-q-icon"></div></div>
+        <div class="faq-a"><div class="faq-a-inner">Ja, in vielen Fällen lassen sich Behandlungen kombinieren — z. B. Botulinumtoxin und Filler in einer Sitzung. Was sinnvoll und sicher ist, besprechen wir individuell in der Beratung.</div></div>
+      </div>
+    </div>
+
+    <div class="faq-category" id="sicherheit">
+      <h2 class="faq-category-title r">Sicherheit &amp; <em>Risiken</em></h2>
+
+      <div class="faq-item r">
+        <div class="faq-q"><p class="faq-q-text">Sind die Behandlungen sicher?</p><div class="faq-q-icon"></div></div>
+        <div class="faq-a"><div class="faq-a-inner">Alle Behandlungen werden von Dr. med. Roya Jeyrani persönlich durchgeführt. Wir verwenden ausschliesslich Swissmedic-zugelassene Produkte und arbeiten nach höchsten medizinischen Standards. Risiken werden in der Aufklärung vollständig besprochen.</div></div>
+      </div>
+      <div class="faq-item r">
+        <div class="faq-q"><p class="faq-q-text">Welche Nebenwirkungen sind möglich?</p><div class="faq-q-icon"></div></div>
+        <div class="faq-a"><div class="faq-a-inner">Häufige, temporäre Nebenwirkungen sind leichte Rötungen, Schwellungen oder Blutergüsse an der Einstichstelle. Diese klingen in der Regel innerhalb weniger Tage ab. Schwerwiegende Komplikationen sind bei fachgerechter Durchführung selten.</div></div>
+      </div>
+      <div class="faq-item r">
+        <div class="faq-q"><p class="faq-q-text">Wann darf ich nicht behandelt werden?</p><div class="faq-q-icon"></div></div>
+        <div class="faq-a"><div class="faq-a-inner">Gegenanzeigen umfassen Schwangerschaft, Stillzeit, aktive Infektionen im Behandlungsbereich, bestimmte Autoimmunerkrankungen und blutverdünnende Medikamente. Im Aufklärungsgespräch klären wir alle relevanten Faktoren ab.</div></div>
+      </div>
+    </div>
+
+    <div class="faq-category" id="ergebnisse">
+      <h2 class="faq-category-title r">Ergebnisse &amp; <em>Wirkung</em></h2>
+
+      <div class="faq-item r">
+        <div class="faq-q"><p class="faq-q-text">Wie lange halten die Ergebnisse?</p><div class="faq-q-icon"></div></div>
+        <div class="faq-a"><div class="faq-a-inner">Das hängt von der Behandlung ab: Botulinumtoxin hält 8–12 Wochen, Hyaluronsäure 12–18 Monate, Fadenlifting bis zu 24 Monate. Biostimulatoren und PRP erzielen Ergebnisse, die über Monate bis Jahre anhalten können, da sie die körpereigene Kollagenproduktion anregen.</div></div>
+      </div>
+      <div class="faq-item r">
+        <div class="faq-q"><p class="faq-q-text">Werden die Ergebnisse natürlich aussehen?</p><div class="faq-q-icon"></div></div>
+        <div class="faq-a"><div class="faq-a-inner">Das ist unser oberstes Ziel. Dr. Jeyrani arbeitet nach dem Prinzip «Enhancement, not Alteration» — Verfeinerung, keine Veränderung. Wir arbeiten mit Ihren natürlichen Proportionen, nicht gegen sie. Das Ergebnis soll so aussehen, als hätten Sie sich einfach gut erholt.</div></div>
+      </div>
+    </div>
+
+    <div class="faq-category" id="ablauf">
+      <h2 class="faq-category-title r">Ablauf &amp; <em>Termin</em></h2>
+
+      <div class="faq-item r">
+        <div class="faq-q"><p class="faq-q-text">Wie läuft eine Erstberatung ab?</p><div class="faq-q-icon"></div></div>
+        <div class="faq-a"><div class="faq-a-inner">Zu Beginn besprechen wir Ihre Ziele und Ihre Gesundheitsgeschichte. Dr. Jeyrani analysiert Ihre Hautstruktur und Gesichtsproportionen und empfiehlt geeignete Behandlungen. Sie erhalten einen individuellen Plan mit transparenten Kosten — alles ohne Druck.</div></div>
+      </div>
+      <div class="faq-item r">
+        <div class="faq-q"><p class="faq-q-text">Wie kann ich einen Termin vereinbaren?</p><div class="faq-q-icon"></div></div>
+        <div class="faq-a"><div class="faq-a-inner">Am einfachsten über unser <a href="kontakt.html">Kontaktformular</a> oder per E-Mail an <a href="mailto:info@royalaesthetik.ch">info@royalaesthetik.ch</a>. Wir antworten in der Regel innerhalb eines Werktages und schlagen Ihnen passende Termine vor.</div></div>
+      </div>
+    </div>
+
+    <div class="faq-category" id="nachsorge">
+      <h2 class="faq-category-title r"><em>Nachsorge</em></h2>
+
+      <div class="faq-item r">
+        <div class="faq-q"><p class="faq-q-text">Was darf ich nach der Behandlung nicht tun?</p><div class="faq-q-icon"></div></div>
+        <div class="faq-a"><div class="faq-a-inner">In den ersten 24–48 Stunden: kein intensiver Sport, kein Sauna- oder Solariumbesuch, kein Alkohol, keine starke Sonneneinstrahlung. Direkt nach der Behandlung sollten Sie den Bereich nicht massieren. Dr. Jeyrani gibt Ihnen nach jeder Behandlung individuelle Pflegeempfehlungen.</div></div>
+      </div>
+      <div class="faq-item r">
+        <div class="faq-q"><p class="faq-q-text">Gibt es ein Follow-up nach der Behandlung?</p><div class="faq-q-icon"></div></div>
+        <div class="faq-a"><div class="faq-a-inner">Ja, nach Botulinumtoxin und anderen Behandlungen bieten wir ein optionales Kontroll-Follow-up nach 2–4 Wochen an. Bei Bedarf kann nachgebessert werden. Für alle Patienten sind wir auch per E-Mail jederzeit erreichbar.</div></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="cta-strip">
+  <div class="r">
+    <span class="label">Noch Fragen?</span>
+    <h2 class="cta-title">Sprechen Sie<br>direkt mit <em>uns</em>.</h2>
+    <p class="cta-sub">Keine Frage ist zu klein. Wir nehmen uns Zeit für Sie — kostenlos und unverbindlich.</p>
+    <a href="kontakt.html" class="btn-dark">Kontakt aufnehmen</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-top">
+    <div><p class="footer-logo">Royal <em>Aesthetik</em></p><p class="footer-tagline">Medizinische Ästhetik auf höchstem Niveau.</p></div>
+    <div><p class="footer-col-title">Behandlungen</p><ul class="footer-links"><li><a href="behandlungen.html">Botulinumtoxin</a></li><li><a href="behandlungen.html">Hyaluronsäure</a></li><li><a href="behandlungen.html">Fadenlifting</a></li><li><a href="behandlungen.html">PRP Therapie</a></li></ul></div>
+    <div><p class="footer-col-title">Klinik</p><ul class="footer-links"><li><a href="uber-uns.html">Über uns</a></li><li><a href="galerie.html">Galerie</a></li><li><a href="preise.html">Preise</a></li><li><a href="faq.html">FAQ</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></div>
+    <div><p class="footer-col-title">Kontakt</p><ul class="footer-links"><li><a href="#">Leutschenstrasse 1</a></li><li><a href="#">8807 Freienbach</a></li><li><a href="mailto:info@royalaesthetik.ch">info@royalaesthetik.ch</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-legal"><span>© 2025 Royal Aesthetik</span><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a><a href="agb.html">AGB</a></div>
+    <div class="footer-swiss"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect width="16" height="16" fill="#CC0000" rx="2"/><rect x="6.5" y="2" width="3" height="12" fill="white"/><rect x="2" y="6.5" width="12" height="3" fill="white"/></svg><span>Swiss Made Quality</span></div>
+  </div>
+</footer>
+<script>
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>40),{passive:true});
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target);}});},{threshold:0.08});
+document.querySelectorAll('.r').forEach(el=>obs.observe(el));
+document.querySelector('.hamburger').addEventListener('click',function(){const l=document.querySelector('.nav-links');const open=l.style.display==='flex';l.style.cssText=open?'':'display:flex;flex-direction:column;position:fixed;top:64px;left:0;right:0;background:rgba(10,10,10,.97);padding:2rem 5vw;gap:1.5rem;border-bottom:1px solid rgba(184,146,90,.2)';});
+document.querySelectorAll('.faq-item').forEach(item=>{item.querySelector('.faq-q').addEventListener('click',()=>{const isOpen=item.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(o=>{o.classList.remove('open');o.querySelector('.faq-a').style.maxHeight='0';});if(!isOpen){item.classList.add('open');item.querySelector('.faq-a').style.maxHeight=item.querySelector('.faq-a-inner').scrollHeight+'px';}});});
+</script>
+</body>
+</html>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Jeyrani — Royal Aesthetik</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#0A0A0A;--bg-2:#111111;--bg-3:#161616;--ivory:#F0EDE8;--ivory-dim:#9A9590;--ivory-dark:#3A3835;--gold:#B8925A;--gold-dim:rgba(184,146,90,.35);--font-display:'Cormorant Garamond',Georgia,serif;--font-body:'DM Sans',system-ui,sans-serif;--font-label:'Montserrat',sans-serif;--ease:cubic-bezier(0.25,0.1,0.25,1)}
+html{scroll-behavior:smooth;font-size:16px}
+body{background:var(--bg);color:var(--ivory);font-family:var(--font-body);font-weight:300;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.label{font-family:var(--font-label);font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);font-weight:400}
+.r{opacity:0;transform:translateY(24px);transition:opacity 1s var(--ease),transform 1s var(--ease)}.r.on{opacity:1;transform:none}
+.rl{opacity:0;transform:translateX(-28px);transition:opacity 1s var(--ease),transform 1s var(--ease)}.rl.on{opacity:1;transform:none}
+.rr{opacity:0;transform:translateX(28px);transition:opacity 1s var(--ease),transform 1s var(--ease)}.rr.on{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.35s}.d4{transition-delay:.5s}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;height:76px;padding:0 5vw;display:flex;align-items:center;justify-content:space-between;transition:background .5s}
+nav.scrolled{background:rgba(10,10,10,.94);backdrop-filter:blur(16px);border-bottom:1px solid var(--gold-dim)}
+.nav-logo{font-family:var(--font-display);font-size:1.25rem;font-weight:300;letter-spacing:.12em;color:var(--ivory);text-decoration:none}
+.nav-logo em{font-style:normal;color:var(--gold)}
+.nav-links{display:flex;gap:2.5rem;list-style:none;align-items:center}
+.nav-links a{font-family:var(--font-label);font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--ivory-dim);text-decoration:none;transition:color .3s}
+.nav-links a:hover,.nav-links a.active{color:var(--ivory)}
+.nav-cta{background:transparent!important;border:1px solid var(--gold-dim);color:var(--gold)!important;padding:.55rem 1.4rem;transition:background .3s!important,border-color .3s!important,color .3s!important}
+.nav-cta:hover{background:var(--gold)!important;border-color:var(--gold)!important;color:var(--bg)!important}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.hamburger span{display:block;width:20px;height:1px;background:var(--ivory)}
+.btn-dark{font-family:var(--font-label);font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;background:var(--gold);color:var(--bg);padding:.9rem 2.4rem;text-decoration:none;display:inline-block;transition:background .3s,transform .3s}
+.btn-dark:hover{background:var(--ivory);transform:translateY(-2px)}
+.btn-ghost{font-family:var(--font-label);font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--ivory-dim);text-decoration:none;display:inline-flex;align-items:center;gap:.75rem;transition:color .3s}
+.btn-ghost::after{content:'';display:block;width:28px;height:1px;background:currentColor;transition:width .35s}
+.btn-ghost:hover{color:var(--gold)}.btn-ghost:hover::after{width:48px}
+footer{background:var(--bg-2);padding:6rem 5vw 3rem;border-top:1px solid var(--ivory-dark)}
+.footer-top{display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;gap:4vw;padding-bottom:4rem;border-bottom:1px solid var(--ivory-dark)}
+.footer-logo{font-family:var(--font-display);font-size:1.6rem;font-weight:200;color:var(--ivory);letter-spacing:.1em}
+.footer-logo em{font-style:normal;color:var(--gold)}
+.footer-tagline{font-size:.8rem;color:var(--ivory-dim);margin-top:.75rem;line-height:1.8;max-width:240px}
+.footer-col-title{font-family:var(--font-label);font-size:8.5px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:.85rem}
+.footer-links a{font-size:.8rem;color:var(--ivory-dim);text-decoration:none;transition:color .3s}
+.footer-links a:hover{color:var(--ivory)}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:2.5rem}
+.footer-legal{font-family:var(--font-label);font-size:8.5px;letter-spacing:.12em;text-transform:uppercase;color:rgba(240,237,232,.2)}
+.footer-legal a{color:rgba(240,237,232,.3);text-decoration:none;margin-left:1.5rem;transition:color .3s}
+.footer-legal a:hover{color:var(--ivory)}
+.footer-swiss{display:flex;align-items:center;gap:.6rem}
+.footer-swiss span{font-family:var(--font-label);font-size:8.5px;letter-spacing:.18em;text-transform:uppercase;color:rgba(240,237,232,.2)}
+
+/* HERO SPLIT */
+.hero-split{min-height:100svh;display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--ivory-dark)}
+.hero-img{position:relative;background:linear-gradient(160deg,#3a2e24,#1a1410);overflow:hidden}
+.hero-img-inner{width:100%;height:100%;min-height:600px;background:linear-gradient(160deg,#4a3826 0%,#2a1e14 40%,#160e08 100%)}
+.hero-img-label{position:absolute;bottom:2rem;left:2rem;font-family:var(--font-label);font-size:8.5px;letter-spacing:.18em;text-transform:uppercase;color:rgba(240,237,232,.3)}
+.hero-content{padding:140px 5vw 80px;display:flex;flex-direction:column;justify-content:flex-end}
+.hero-eyebrow{font-family:var(--font-label);font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:2rem;display:flex;align-items:center;gap:1.2rem}
+.hero-eyebrow::before{content:'';display:block;width:28px;height:1px;background:var(--gold)}
+.hero-title{font-family:var(--font-display);font-size:clamp(2.8rem,4.5vw,5.5rem);font-weight:200;line-height:1;color:var(--ivory)}
+.hero-title em{font-style:italic;color:var(--gold);display:block}
+.hero-sub{font-size:.9rem;line-height:1.95;color:var(--ivory-dim);margin-top:2.5rem;max-width:440px}
+
+/* PHILOSOPHY QUOTE */
+.quote-section{padding:8rem 5vw;display:grid;grid-template-columns:1fr 2fr;gap:8vw;align-items:center;border-bottom:1px solid var(--ivory-dark);background:var(--bg-2)}
+.quote-label{font-family:var(--font-label);font-size:9px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold)}
+.quote-text{font-family:var(--font-display);font-size:clamp(1.8rem,3vw,3rem);font-weight:200;line-height:1.5;color:var(--ivory);font-style:italic;position:relative;padding-left:2.5rem}
+.quote-text::before{content:'\201C';position:absolute;left:0;top:-.5rem;font-size:5rem;line-height:1;color:var(--gold);opacity:.25;font-style:normal}
+.quote-author{margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--ivory-dark)}
+.quote-author-name{font-family:var(--font-display);font-size:1.1rem;font-weight:300;color:var(--ivory)}
+.quote-author-role{font-family:var(--font-label);font-size:8.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-top:.3rem}
+
+/* CREDENTIALS */
+.creds{padding:8rem 5vw;border-bottom:1px solid var(--ivory-dark)}
+.creds-header{margin-bottom:5rem}
+.creds-title{font-family:var(--font-display);font-size:clamp(2rem,3.5vw,4rem);font-weight:200;color:var(--ivory);line-height:1}
+.creds-title em{font-style:italic;color:var(--gold)}
+.creds-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--ivory-dark)}
+.cred-card{background:var(--bg);padding:3rem 2.5rem}
+.cred-icon{width:32px;height:32px;border:1px solid var(--gold-dim);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:1.75rem}
+.cred-icon svg{width:14px;height:14px;stroke:var(--gold);fill:none;stroke-width:1.5}
+.cred-title{font-family:var(--font-display);font-size:1.2rem;font-weight:300;color:var(--ivory);margin-bottom:.75rem}
+.cred-desc{font-size:.84rem;line-height:1.8;color:var(--ivory-dim)}
+
+/* APPROACH */
+.approach{padding:8rem 5vw;border-bottom:1px solid var(--ivory-dark)}
+.approach-header{margin-bottom:5rem;max-width:560px}
+.approach-title{font-family:var(--font-display);font-size:clamp(2rem,3.5vw,4rem);font-weight:200;color:var(--ivory);line-height:1}
+.approach-title em{font-style:italic;color:var(--gold)}
+.approach-steps{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--ivory-dark)}
+.step{padding:3.5rem 0 3.5rem 3rem;border-bottom:1px solid var(--ivory-dark);border-right:1px solid var(--ivory-dark)}
+.step:nth-child(even){padding-left:4vw;border-right:none}
+.step-num{font-family:var(--font-display);font-size:3.5rem;font-weight:200;color:var(--gold);opacity:.2;line-height:1;margin-bottom:1.5rem}
+.step-title{font-family:var(--font-display);font-size:1.4rem;font-weight:300;color:var(--ivory);margin-bottom:.75rem}
+.step-desc{font-size:.87rem;line-height:1.85;color:var(--ivory-dim)}
+
+/* VALUES */
+.values{padding:6rem 5vw;background:var(--bg-2)}
+.values-inner{display:grid;grid-template-columns:1fr 3fr;gap:8vw;align-items:start}
+.values-label{font-family:var(--font-label);font-size:9px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);padding-top:.4rem}
+.values-list{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;border-left:1px solid var(--ivory-dark)}
+.value-item{padding:2.5rem 2.5rem;border-bottom:1px solid var(--ivory-dark);border-right:1px solid var(--ivory-dark)}
+.value-item:nth-child(3n){border-right:none}
+.value-name{font-family:var(--font-display);font-size:1.2rem;font-weight:300;color:var(--ivory);margin-bottom:.5rem}
+.value-desc{font-size:.82rem;line-height:1.75;color:var(--ivory-dim)}
+
+/* CTA */
+.cta-section{padding:8rem 5vw;text-align:center;border-top:1px solid var(--ivory-dark);position:relative}
+.cta-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 50% 50%,rgba(184,146,90,.05) 0%,transparent 70%)}
+.cta-title{font-family:var(--font-display);font-size:clamp(2.5rem,4.5vw,5rem);font-weight:200;line-height:1.05;color:var(--ivory);margin:1.5rem 0}
+.cta-title em{font-style:italic;color:var(--gold)}
+.cta-sub{font-size:.9rem;color:var(--ivory-dim);max-width:440px;margin:0 auto 3rem;line-height:1.9}
+
+@media(max-width:900px){
+  .hero-split{grid-template-columns:1fr;min-height:auto}
+  .hero-img{min-height:50vw}
+  .quote-section{grid-template-columns:1fr;gap:2rem}
+  .creds-grid{grid-template-columns:1fr 1fr}
+  .approach-steps{grid-template-columns:1fr}
+  .step{border-right:none;padding-left:0}
+  .step:nth-child(even){padding-left:0}
+  .values-inner{grid-template-columns:1fr}
+  .values-list{grid-template-columns:1fr 1fr;border-left:none;border-top:1px solid var(--ivory-dark)}
+}
+@media(max-width:768px){
+  nav{height:64px}.nav-links{display:none}.hamburger{display:flex}
+  .creds-grid{grid-template-columns:1fr}
+  .values-list{grid-template-columns:1fr}
+  .value-item:nth-child(3n){border-right:none}
+  .footer-top{grid-template-columns:1fr 1fr;gap:3rem}
+  .footer-bottom{flex-direction:column;gap:1rem;text-align:center}
+}
+@media(max-width:500px){.footer-top{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav id="nav" class="scrolled">
+  <a href="index.html" class="nav-logo">Royal <em>Aesthetik</em></a>
+  <ul class="nav-links">
+    <li><a href="behandlungen.html">Behandlungen</a></li>
+    <li><a href="uber-uns.html" class="active">Dr. Jeyrani</a></li>
+    <li><a href="galerie.html">Galerie</a></li>
+    <li><a href="preise.html">Preise</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="kontakt.html" class="nav-cta">Beratung buchen</a></li>
+  </ul>
+  <button class="hamburger" aria-label="Menü"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="hero-split">
+  <div class="hero-img">
+    <div class="hero-img-inner"></div>
+    <p class="hero-img-label">Dr. med. Roya Jeyrani — Portrait</p>
+  </div>
+  <div class="hero-content">
+    <div class="hero-eyebrow rl">Über die Ärztin</div>
+    <h1 class="hero-title rr d1">Dr. med.<br>Roya <em>Jeyrani</em></h1>
+    <p class="hero-sub rr d2">Fachärztin für medizinische Ästhetik. Gegründet auf dem Fundament, dass wahre Schönheit immer natürlich wirkt — nie gemacht, nie offensichtlich.</p>
+  </div>
+</div>
+
+<div class="quote-section">
+  <div class="r"><span class="quote-label">Philosophie</span></div>
+  <div class="r d1">
+    <p class="quote-text">Die Kunst, die natürliche Schönheit zu betonen — nie zu verändern. Jedes Gesicht erzählt eine Geschichte; meine Aufgabe ist es, sie zu verfeinern.</p>
+    <div class="quote-author">
+      <p class="quote-author-name">Dr. med. Roya Jeyrani</p>
+      <p class="quote-author-role">Ärztin & Gründerin, Royal Aesthetik</p>
+    </div>
+  </div>
+</div>
+
+<section class="creds">
+  <div class="creds-header r">
+    <span class="label">Ausbildung & Expertise</span>
+    <h2 class="creds-title">Medizinische<br><em>Qualifikationen</em></h2>
+  </div>
+  <div class="creds-grid">
+    <div class="cred-card r">
+      <div class="cred-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+      <h3 class="cred-title">Medizinstudium</h3>
+      <p class="cred-desc">Abschluss der Humanmedizin an renommierter Universität. Umfassende Grundlage in Anatomie, Physiologie und klinischer Medizin.</p>
+    </div>
+    <div class="cred-card r d1">
+      <div class="cred-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+      <h3 class="cred-title">6+ Jahre Erfahrung</h3>
+      <p class="cred-desc">Spezialisierte Praxis in medizinischer Ästhetik. Kontinuierliche Weiterbildung bei internationalen Experten in Zürich, London und Paris.</p>
+    </div>
+    <div class="cred-card r d2">
+      <div class="cred-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+      <h3 class="cred-title">Schweizer Standards</h3>
+      <p class="cred-desc">Vollständig lizenzierte Praxis nach Schweizer Heilmittelgesetz. Alle verwendeten Produkte sind Swissmedic-zugelassen.</p>
+    </div>
+    <div class="cred-card r d1">
+      <div class="cred-icon"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+      <h3 class="cred-title">1000+ Patienten</h3>
+      <p class="cred-desc">Über tausend zufriedene Patientinnen und Patienten in der Schweiz. Persönliche Betreuung, individuelle Behandlungspläne.</p>
+    </div>
+    <div class="cred-card r d2">
+      <div class="cred-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg></div>
+      <h3 class="cred-title">Modernste Technik</h3>
+      <p class="cred-desc">Einsatz aktueller Produkte und Technologien: Premium-Filler, PDO-Fäden, Exosomen-Therapie und mehr.</p>
+    </div>
+    <div class="cred-card r d3">
+      <div class="cred-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+      <h3 class="cred-title">Persönliche Beratung</h3>
+      <p class="cred-desc">Jede Behandlung beginnt mit einem ausführlichen Gespräch. Keine Standardlösungen — nur individuelle Pläne.</p>
+    </div>
+  </div>
+</section>
+
+<section class="approach">
+  <div class="approach-header r">
+    <span class="label">Behandlungsphilosophie</span>
+    <h2 class="approach-title">Mein <em>Ansatz</em></h2>
+  </div>
+  <div class="approach-steps">
+    <div class="step rl">
+      <div class="step-num">01</div>
+      <h3 class="step-title">Zuhören & Verstehen</h3>
+      <p class="step-desc">Jede Behandlung beginnt mit einem offenen Gespräch. Ich höre zu, was Sie stört, was Sie wünschen und welche Ziele realistisch sind.</p>
+    </div>
+    <div class="step rr">
+      <div class="step-num">02</div>
+      <h3 class="step-title">Analyse & Planung</h3>
+      <p class="step-desc">Medizinische Begutachtung Ihrer Gesichtsproportionen, Hautqualität und Gesundheitsgeschichte. Entwicklung eines individuellen Plans.</p>
+    </div>
+    <div class="step rl">
+      <div class="step-num">03</div>
+      <h3 class="step-title">Präzise Ausführung</h3>
+      <p class="step-desc">Jede Injektion, jede Behandlung wird mit chirurgischer Präzision und ästhetischem Gespür durchgeführt. Kein Automatismus.</p>
+    </div>
+    <div class="step rr">
+      <div class="step-num">04</div>
+      <h3 class="step-title">Nachsorge & Begleitung</h3>
+      <p class="step-desc">Ich begleite Sie durch die Heilungsphase und stehe für Fragen zur Verfügung. Das Ergebnis ist das gemeinsame Ziel.</p>
+    </div>
+  </div>
+</section>
+
+<div class="values">
+  <div class="values-inner">
+    <div class="r"><span class="values-label">Unsere Werte</span></div>
+    <div class="values-list">
+      <div class="value-item r"><h3 class="value-name">Natürlichkeit</h3><p class="value-desc">Ergebnisse, die niemand bemerkt — ausser Ihnen selbst.</p></div>
+      <div class="value-item r d1"><h3 class="value-name">Präzision</h3><p class="value-desc">Medizinische Genauigkeit bei jeder Behandlung.</p></div>
+      <div class="value-item r d2"><h3 class="value-name">Vertrauen</h3><p class="value-desc">Offene Kommunikation, realistische Erwartungen.</p></div>
+      <div class="value-item r"><h3 class="value-name">Individualität</h3><p class="value-desc">Kein Einheitskonzept — nur massgeschneiderte Pläne.</p></div>
+      <div class="value-item r d1"><h3 class="value-name">Diskretion</h3><p class="value-desc">Absolute Vertraulichkeit. Ihr Vertrauen ist heilig.</p></div>
+      <div class="value-item r d2"><h3 class="value-name">Qualität</h3><p class="value-desc">Nur geprüfte, zugelassene Produkte der höchsten Güte.</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="cta-section">
+  <div class="r">
+    <span class="label">Persönliche Beratung</span>
+    <h2 class="cta-title">Lernen Sie<br><em>Dr. Jeyrani</em> kennen.</h2>
+    <p class="cta-sub">Ein erstes Gespräch kostet nichts — ausser ein wenig Zeit. Und vielleicht verändert es alles.</p>
+    <a href="kontakt.html" class="btn-dark">Beratung buchen</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-top">
+    <div><p class="footer-logo">Royal <em>Aesthetik</em></p><p class="footer-tagline">Medizinische Ästhetik auf höchstem Niveau.</p></div>
+    <div><p class="footer-col-title">Behandlungen</p><ul class="footer-links"><li><a href="behandlungen.html">Botulinumtoxin</a></li><li><a href="behandlungen.html">Hyaluronsäure</a></li><li><a href="behandlungen.html">Fadenlifting</a></li><li><a href="behandlungen.html">PRP Therapie</a></li><li><a href="behandlungen.html">Biostimulatoren</a></li></ul></div>
+    <div><p class="footer-col-title">Klinik</p><ul class="footer-links"><li><a href="uber-uns.html">Über uns</a></li><li><a href="galerie.html">Galerie</a></li><li><a href="preise.html">Preise</a></li><li><a href="faq.html">FAQ</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></div>
+    <div><p class="footer-col-title">Kontakt</p><ul class="footer-links"><li><a href="#">Leutschenstrasse 1</a></li><li><a href="#">8807 Freienbach</a></li><li><a href="mailto:info@royalaesthetik.ch">info@royalaesthetik.ch</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-legal"><span>© 2025 Royal Aesthetik</span><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a><a href="agb.html">AGB</a></div>
+    <div class="footer-swiss"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect width="16" height="16" fill="#CC0000" rx="2"/><rect x="6.5" y="2" width="3" height="12" fill="white"/><rect x="2" y="6.5" width="12" height="3" fill="white"/></svg><span>Swiss Made Quality</span></div>
+  </div>
+</footer>
+<script>
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>40),{passive:true});
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target);}});},{threshold:0.08});
+document.querySelectorAll('.r,.rl,.rr').forEach(el=>obs.observe(el));
+document.querySelector('.hamburger').addEventListener('click',function(){const l=document.querySelector('.nav-links');const open=l.style.display==='flex';l.style.cssText=open?'':'display:flex;flex-direction:column;position:fixed;top:64px;left:0;right:0;background:rgba(10,10,10,.97);padding:2rem 5vw;gap:1.5rem;border-bottom:1px solid rgba(184,146,90,.2)';});
+</script>
+</body>
+</html>

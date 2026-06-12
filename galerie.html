@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galerie — Royal Aesthetik</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#0A0A0A;--bg-2:#111111;--bg-3:#161616;--ivory:#F0EDE8;--ivory-dim:#9A9590;--ivory-dark:#3A3835;--gold:#B8925A;--gold-dim:rgba(184,146,90,.35);--font-display:'Cormorant Garamond',Georgia,serif;--font-body:'DM Sans',system-ui,sans-serif;--font-label:'Montserrat',sans-serif;--ease:cubic-bezier(0.25,0.1,0.25,1)}
+html{scroll-behavior:smooth;font-size:16px}
+body{background:var(--bg);color:var(--ivory);font-family:var(--font-body);font-weight:300;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.label{font-family:var(--font-label);font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);font-weight:400}
+.r{opacity:0;transform:translateY(24px);transition:opacity 1s var(--ease),transform 1s var(--ease)}.r.on{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.35s}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;height:76px;padding:0 5vw;display:flex;align-items:center;justify-content:space-between;transition:background .5s}
+nav.scrolled{background:rgba(10,10,10,.94);backdrop-filter:blur(16px);border-bottom:1px solid var(--gold-dim)}
+.nav-logo{font-family:var(--font-display);font-size:1.25rem;font-weight:300;letter-spacing:.12em;color:var(--ivory);text-decoration:none}
+.nav-logo em{font-style:normal;color:var(--gold)}
+.nav-links{display:flex;gap:2.5rem;list-style:none;align-items:center}
+.nav-links a{font-family:var(--font-label);font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--ivory-dim);text-decoration:none;transition:color .3s}
+.nav-links a:hover,.nav-links a.active{color:var(--ivory)}
+.nav-cta{background:transparent!important;border:1px solid var(--gold-dim);color:var(--gold)!important;padding:.55rem 1.4rem;transition:background .3s!important,border-color .3s!important,color .3s!important}
+.nav-cta:hover{background:var(--gold)!important;border-color:var(--gold)!important;color:var(--bg)!important}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.hamburger span{display:block;width:20px;height:1px;background:var(--ivory)}
+.btn-dark{font-family:var(--font-label);font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;background:var(--gold);color:var(--bg);padding:.9rem 2.4rem;text-decoration:none;display:inline-block;transition:background .3s,transform .3s}
+.btn-dark:hover{background:var(--ivory);transform:translateY(-2px)}
+footer{background:var(--bg-2);padding:6rem 5vw 3rem;border-top:1px solid var(--ivory-dark)}
+.footer-top{display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;gap:4vw;padding-bottom:4rem;border-bottom:1px solid var(--ivory-dark)}
+.footer-logo{font-family:var(--font-display);font-size:1.6rem;font-weight:200;color:var(--ivory);letter-spacing:.1em}
+.footer-logo em{font-style:normal;color:var(--gold)}
+.footer-tagline{font-size:.8rem;color:var(--ivory-dim);margin-top:.75rem;line-height:1.8;max-width:240px}
+.footer-col-title{font-family:var(--font-label);font-size:8.5px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:.85rem}
+.footer-links a{font-size:.8rem;color:var(--ivory-dim);text-decoration:none;transition:color .3s}
+.footer-links a:hover{color:var(--ivory)}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:2.5rem}
+.footer-legal{font-family:var(--font-label);font-size:8.5px;letter-spacing:.12em;text-transform:uppercase;color:rgba(240,237,232,.2)}
+.footer-legal a{color:rgba(240,237,232,.3);text-decoration:none;margin-left:1.5rem;transition:color .3s}
+.footer-legal a:hover{color:var(--ivory)}
+.footer-swiss{display:flex;align-items:center;gap:.6rem}
+.footer-swiss span{font-family:var(--font-label);font-size:8.5px;letter-spacing:.18em;text-transform:uppercase;color:rgba(240,237,232,.2)}
+
+.page-hero{padding:160px 5vw 80px;border-bottom:1px solid var(--ivory-dark)}
+.page-eyebrow{font-family:var(--font-label);font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:2rem;display:flex;align-items:center;gap:1.2rem}
+.page-eyebrow::before{content:'';display:block;width:28px;height:1px;background:var(--gold)}
+.page-title{font-family:var(--font-display);font-size:clamp(3rem,6vw,6.5rem);font-weight:200;line-height:.95;color:var(--ivory)}
+.page-title em{font-style:italic;color:var(--gold)}
+.page-sub{font-size:.92rem;line-height:1.9;color:var(--ivory-dim);max-width:520px;margin-top:2.5rem}
+
+.filter-bar{padding:2rem 5vw;border-bottom:1px solid var(--ivory-dark);display:flex;gap:.75rem;flex-wrap:wrap}
+.filter-btn{font-family:var(--font-label);font-size:9px;letter-spacing:.2em;text-transform:uppercase;background:none;border:1px solid var(--ivory-dark);color:var(--ivory-dim);padding:.5rem 1.4rem;cursor:pointer;transition:all .3s}
+.filter-btn:hover,.filter-btn.active{border-color:var(--gold);color:var(--gold)}
+
+/* MAIN GALLERY GRID */
+.gallery-main{padding:0;display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:320px 320px;gap:2px;border-bottom:1px solid var(--ivory-dark)}
+.g-cell{position:relative;overflow:hidden;cursor:pointer}
+.g-cell--tall{grid-row:span 2}
+.g-bg{width:100%;height:100%;transition:transform .7s var(--ease)}
+.g-cell:hover .g-bg{transform:scale(1.04)}
+.g-overlay{position:absolute;inset:0;background:rgba(10,10,10,0);transition:background .4s;display:flex;align-items:flex-end;padding:1.75rem}
+.g-cell:hover .g-overlay{background:rgba(10,10,10,.6)}
+.g-info{opacity:0;transform:translateY(8px);transition:opacity .4s,transform .4s}
+.g-cell:hover .g-info{opacity:1;transform:none}
+.g-name{font-family:var(--font-display);font-size:1.15rem;font-weight:300;color:var(--ivory)}
+.g-cat{font-family:var(--font-label);font-size:8px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-top:.3rem}
+
+/* BEFORE/AFTER */
+.ba-section{padding:8rem 5vw;border-bottom:1px solid var(--ivory-dark)}
+.ba-header{margin-bottom:4rem}
+.ba-title{font-family:var(--font-display);font-size:clamp(2rem,3.5vw,4rem);font-weight:200;color:var(--ivory);line-height:1;margin-top:1rem}
+.ba-title em{font-style:italic;color:var(--gold)}
+.ba-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.ba-card{position:relative;overflow:hidden}
+.ba-pair{display:grid;grid-template-columns:1fr 1fr;gap:1px}
+.ba-img{aspect-ratio:3/4}
+.ba-img-label{font-family:var(--font-label);font-size:8.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--ivory-dim);padding:.75rem 1rem;background:var(--bg-3);text-align:center}
+.ba-treatment{font-family:var(--font-display);font-size:1rem;font-weight:300;color:var(--ivory);padding:1.25rem 1rem .5rem;background:var(--bg-3)}
+.ba-detail{font-family:var(--font-label);font-size:8px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);padding:0 1rem 1.25rem;background:var(--bg-3)}
+
+/* MASONRY */
+.masonry-section{padding:6rem 5vw;border-bottom:1px solid var(--ivory-dark)}
+.masonry-title{font-family:var(--font-display);font-size:clamp(1.8rem,3vw,3rem);font-weight:200;color:var(--ivory);margin-bottom:3rem}
+.masonry-title em{font-style:italic;color:var(--gold)}
+.masonry{columns:4;column-gap:2px}
+.m-item{break-inside:avoid;margin-bottom:2px;overflow:hidden;position:relative;cursor:pointer}
+.m-img{width:100%;display:block;transition:transform .6s var(--ease)}
+.m-item:hover .m-img{transform:scale(1.03)}
+.m-overlay{position:absolute;inset:0;background:rgba(10,10,10,0);transition:background .3s;display:flex;align-items:center;justify-content:center}
+.m-item:hover .m-overlay{background:rgba(10,10,10,.4)}
+.m-label{font-family:var(--font-label);font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--ivory);opacity:0;transition:opacity .3s}
+.m-item:hover .m-label{opacity:1}
+
+/* CTA */
+.cta-strip{padding:8rem 5vw;text-align:center;position:relative}
+.cta-strip::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 50% 50%,rgba(184,146,90,.05) 0%,transparent 70%)}
+.cta-title{font-family:var(--font-display);font-size:clamp(2.5rem,4.5vw,5rem);font-weight:200;line-height:1.05;color:var(--ivory);margin:1.5rem 0}
+.cta-title em{font-style:italic;color:var(--gold)}
+.cta-sub{font-size:.9rem;color:var(--ivory-dim);max-width:440px;margin:0 auto 3rem;line-height:1.9}
+
+@media(max-width:900px){
+  .gallery-main{grid-template-columns:1fr 1fr;grid-template-rows:auto}
+  .g-cell--tall{grid-row:span 1}
+  .g-bg{height:260px}
+  .ba-grid{grid-template-columns:1fr 1fr}
+  .masonry{columns:3}
+}
+@media(max-width:768px){
+  nav{height:64px}.nav-links{display:none}.hamburger{display:flex}
+  .gallery-main{grid-template-columns:1fr;grid-template-rows:auto}
+  .g-bg{height:240px}
+  .ba-grid{grid-template-columns:1fr}
+  .masonry{columns:2}
+  .footer-top{grid-template-columns:1fr 1fr;gap:3rem}
+  .footer-bottom{flex-direction:column;gap:1rem;text-align:center}
+}
+@media(max-width:500px){.footer-top{grid-template-columns:1fr}.masonry{columns:1}}
+</style>
+</head>
+<body>
+<nav id="nav" class="scrolled">
+  <a href="index.html" class="nav-logo">Royal <em>Aesthetik</em></a>
+  <ul class="nav-links">
+    <li><a href="behandlungen.html">Behandlungen</a></li>
+    <li><a href="uber-uns.html">Dr. Jeyrani</a></li>
+    <li><a href="galerie.html" class="active">Galerie</a></li>
+    <li><a href="preise.html">Preise</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="kontakt.html" class="nav-cta">Beratung buchen</a></li>
+  </ul>
+  <button class="hamburger" aria-label="Menü"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="page-hero">
+  <div class="page-eyebrow r">Unsere Arbeit</div>
+  <h1 class="page-title r d1">Ergebnisse,<br>die <em>überzeugen</em></h1>
+  <p class="page-sub r d2">Jedes Bild erzählt eine Geschichte von Verfeinerung, nicht von Veränderung. Natürliche Ergebnisse, die für sich sprechen.</p>
+</div>
+
+<div class="filter-bar">
+  <button class="filter-btn active">Alle</button>
+  <button class="filter-btn">Botulinumtoxin</button>
+  <button class="filter-btn">Hyaluronsäure</button>
+  <button class="filter-btn">Fadenlifting</button>
+  <button class="filter-btn">PRP</button>
+</div>
+
+<div class="gallery-main r">
+  <div class="g-cell g-cell--tall">
+    <div class="g-bg" style="background:linear-gradient(160deg,#4a3828,#201810);height:100%"></div>
+    <div class="g-overlay"><div class="g-info"><p class="g-name">Gesichtskonturierung</p><p class="g-cat">Hyaluronsäure</p></div></div>
+  </div>
+  <div class="g-cell">
+    <div class="g-bg" style="background:linear-gradient(160deg,#3a2e20,#1a1410);height:100%"></div>
+    <div class="g-overlay"><div class="g-info"><p class="g-name">Faltenbehandlung</p><p class="g-cat">Botulinumtoxin</p></div></div>
+  </div>
+  <div class="g-cell">
+    <div class="g-bg" style="background:linear-gradient(160deg,#342618,#160e08);height:100%"></div>
+    <div class="g-overlay"><div class="g-info"><p class="g-name">Lippenaugmentation</p><p class="g-cat">Hyaluronsäure</p></div></div>
+  </div>
+  <div class="g-cell">
+    <div class="g-bg" style="background:linear-gradient(160deg,#2e2218,#120c08);height:100%"></div>
+    <div class="g-overlay"><div class="g-info"><p class="g-name">Hautverjüngung</p><p class="g-cat">PRP Therapie</p></div></div>
+  </div>
+  <div class="g-cell">
+    <div class="g-bg" style="background:linear-gradient(160deg,#3c2c1c,#1c1008);height:100%"></div>
+    <div class="g-overlay"><div class="g-info"><p class="g-name">Fadenlifting</p><p class="g-cat">PDO Fäden</p></div></div>
+  </div>
+</div>
+
+<section class="ba-section">
+  <div class="ba-header r">
+    <span class="label">Behandlungsergebnisse</span>
+    <h2 class="ba-title">Vorher / <em>Nachher</em></h2>
+  </div>
+  <div class="ba-grid">
+    <div class="ba-card r">
+      <div class="ba-pair">
+        <div>
+          <div class="ba-img" style="background:linear-gradient(160deg,#2a2018,#0e0a06)"></div>
+          <p class="ba-img-label">Vorher</p>
+        </div>
+        <div>
+          <div class="ba-img" style="background:linear-gradient(160deg,#3a2e22,#1a1410)"></div>
+          <p class="ba-img-label">Nachher</p>
+        </div>
+      </div>
+      <p class="ba-treatment">Stirnfalten</p>
+      <p class="ba-detail">Botulinumtoxin — 1 Behandlung</p>
+    </div>
+    <div class="ba-card r d1">
+      <div class="ba-pair">
+        <div>
+          <div class="ba-img" style="background:linear-gradient(160deg,#241c12,#0a0806)"></div>
+          <p class="ba-img-label">Vorher</p>
+        </div>
+        <div>
+          <div class="ba-img" style="background:linear-gradient(160deg,#3e2e1e,#1c1410)"></div>
+          <p class="ba-img-label">Nachher</p>
+        </div>
+      </div>
+      <p class="ba-treatment">Lippenvolumen</p>
+      <p class="ba-detail">Hyaluronsäure — 1 ml Filler</p>
+    </div>
+    <div class="ba-card r d2">
+      <div class="ba-pair">
+        <div>
+          <div class="ba-img" style="background:linear-gradient(160deg,#201a10,#080604)"></div>
+          <p class="ba-img-label">Vorher</p>
+        </div>
+        <div>
+          <div class="ba-img" style="background:linear-gradient(160deg,#382c1c,#181008)"></div>
+          <p class="ba-img-label">Nachher</p>
+        </div>
+      </div>
+      <p class="ba-treatment">Hautqualität</p>
+      <p class="ba-detail">PRP + Microneedling — 3 Sitzungen</p>
+    </div>
+  </div>
+</section>
+
+<section class="masonry-section r">
+  <h2 class="masonry-title">Weitere <em>Einblicke</em></h2>
+  <div class="masonry">
+    <div class="m-item"><div class="m-img" style="background:linear-gradient(160deg,#3a2e22,#181008);height:280px"></div><div class="m-overlay"><span class="m-label">Konturierung</span></div></div>
+    <div class="m-item"><div class="m-img" style="background:linear-gradient(160deg,#2e241a,#12100a);height:200px"></div><div class="m-overlay"><span class="m-label">Augenpartie</span></div></div>
+    <div class="m-item"><div class="m-img" style="background:linear-gradient(160deg,#4a3828,#201810);height:340px"></div><div class="m-overlay"><span class="m-label">PRP Haare</span></div></div>
+    <div class="m-item"><div class="m-img" style="background:linear-gradient(160deg,#362818,#140e08);height:220px"></div><div class="m-overlay"><span class="m-label">Biostimulatoren</span></div></div>
+    <div class="m-item"><div class="m-img" style="background:linear-gradient(160deg,#2a2016,#0e0c08);height:260px"></div><div class="m-overlay"><span class="m-label">Fadenlifting</span></div></div>
+    <div class="m-item"><div class="m-img" style="background:linear-gradient(160deg,#3c2c1e,#1a1208);height:300px"></div><div class="m-overlay"><span class="m-label">Lippen</span></div></div>
+    <div class="m-item"><div class="m-img" style="background:linear-gradient(160deg,#281e14,#0c0a08);height:240px"></div><div class="m-overlay"><span class="m-label">Wangenvolumen</span></div></div>
+    <div class="m-item"><div class="m-img" style="background:linear-gradient(160deg,#402e1e,#1c1208);height:200px"></div><div class="m-overlay"><span class="m-label">Exosomen</span></div></div>
+  </div>
+</section>
+
+<div class="cta-strip">
+  <div class="r">
+    <span class="label">Ihr Ergebnis</span>
+    <h2 class="cta-title">Bereit für<br><em>Ihre</em> Verwandlung?</h2>
+    <p class="cta-sub">Vereinbaren Sie Ihre kostenlose Erstberatung und entdecken Sie, was möglich ist.</p>
+    <a href="kontakt.html" class="btn-dark">Beratung buchen</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-top">
+    <div><p class="footer-logo">Royal <em>Aesthetik</em></p><p class="footer-tagline">Medizinische Ästhetik auf höchstem Niveau.</p></div>
+    <div><p class="footer-col-title">Behandlungen</p><ul class="footer-links"><li><a href="behandlungen.html">Botulinumtoxin</a></li><li><a href="behandlungen.html">Hyaluronsäure</a></li><li><a href="behandlungen.html">Fadenlifting</a></li><li><a href="behandlungen.html">PRP Therapie</a></li></ul></div>
+    <div><p class="footer-col-title">Klinik</p><ul class="footer-links"><li><a href="uber-uns.html">Über uns</a></li><li><a href="galerie.html">Galerie</a></li><li><a href="preise.html">Preise</a></li><li><a href="faq.html">FAQ</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></div>
+    <div><p class="footer-col-title">Kontakt</p><ul class="footer-links"><li><a href="#">Leutschenstrasse 1</a></li><li><a href="#">8807 Freienbach</a></li><li><a href="mailto:info@royalaesthetik.ch">info@royalaesthetik.ch</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-legal"><span>© 2025 Royal Aesthetik</span><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a><a href="agb.html">AGB</a></div>
+    <div class="footer-swiss"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect width="16" height="16" fill="#CC0000" rx="2"/><rect x="6.5" y="2" width="3" height="12" fill="white"/><rect x="2" y="6.5" width="12" height="3" fill="white"/></svg><span>Swiss Made Quality</span></div>
+  </div>
+</footer>
+<script>
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>40),{passive:true});
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target);}});},{threshold:0.08});
+document.querySelectorAll('.r').forEach(el=>obs.observe(el));
+document.querySelector('.hamburger').addEventListener('click',function(){const l=document.querySelector('.nav-links');const open=l.style.display==='flex';l.style.cssText=open?'':'display:flex;flex-direction:column;position:fixed;top:64px;left:0;right:0;background:rgba(10,10,10,.97);padding:2rem 5vw;gap:1.5rem;border-bottom:1px solid rgba(184,146,90,.2)';});
+</script>
+</body>
+</html>
