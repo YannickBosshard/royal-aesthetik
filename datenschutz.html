@@ -3,18 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Datenschutz — Royal Aesthetik</title>
+<title>Datenschutz – Royal Aesthetik</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--bg:#0A0A0A;--bg-2:#111111;--ivory:#F0EDE8;--ivory-dim:#9A9590;--ivory-dark:#3A3835;--gold:#B8925A;--gold-dim:rgba(184,146,90,.35);--font-display:'Cormorant Garamond',Georgia,serif;--font-body:'DM Sans',system-ui,sans-serif;--font-label:'Montserrat',sans-serif}
+:root{--bg:#FAF8F5;--bg-2:#F0EDE8;--ivory:#1C1A18;--ivory-dim:#6B6560;--ivory-dark:#CCC7BF;--gold:#B8925A;--gold-dim:rgba(184,146,90,.35);--font-display:'Cormorant Garamond',Georgia,serif;--font-body:'DM Sans',system-ui,sans-serif;--font-label:'Montserrat',sans-serif}
 html{font-size:16px}
 body{background:var(--bg);color:var(--ivory);font-family:var(--font-body);font-weight:300;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-nav{position:fixed;top:0;left:0;right:0;z-index:200;height:76px;padding:0 5vw;display:flex;align-items:center;justify-content:space-between;background:rgba(10,10,10,.94);backdrop-filter:blur(16px);border-bottom:1px solid var(--gold-dim)}
-.nav-logo{font-family:var(--font-display);font-size:1.25rem;font-weight:300;letter-spacing:.12em;color:var(--ivory);text-decoration:none}
-.nav-logo em{font-style:normal;color:var(--gold)}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;height:76px;padding:0 5vw;display:flex;align-items:center;justify-content:space-between;background:rgba(250,248,245,.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--gold-dim)}
+.nav-logo{display:flex;align-items:center;text-decoration:none}
+.nav-logo img{height:38px;width:104px;object-fit:contain;object-position:left center;display:block;filter:none}
 .nav-links{display:flex;gap:2.5rem;list-style:none;align-items:center}
 .nav-links a{font-family:var(--font-label);font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--ivory-dim);text-decoration:none;transition:color .3s}
 .nav-links a:hover{color:var(--ivory)}
@@ -24,8 +24,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:76px;padding:0 5vw;di
 .hamburger span{display:block;width:20px;height:1px;background:var(--ivory)}
 footer{background:var(--bg-2);padding:6rem 5vw 3rem;border-top:1px solid var(--ivory-dark)}
 .footer-top{display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;gap:4vw;padding-bottom:4rem;border-bottom:1px solid var(--ivory-dark)}
-.footer-logo{font-family:var(--font-display);font-size:1.6rem;font-weight:200;color:var(--ivory);letter-spacing:.1em}
-.footer-logo em{font-style:normal;color:var(--gold)}
+.footer-logo{height:52px;width:auto;display:block;opacity:.85}
 .footer-tagline{font-size:.8rem;color:var(--ivory-dim);margin-top:.75rem;line-height:1.8;max-width:240px}
 .footer-col-title{font-family:var(--font-label);font-size:8.5px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem}
 .footer-links{list-style:none;display:flex;flex-direction:column;gap:.85rem}
@@ -51,11 +50,10 @@ footer{background:var(--bg-2);padding:6rem 5vw 3rem;border-top:1px solid var(--i
 </head>
 <body>
 <nav>
-  <a href="index.html" class="nav-logo">Royal <em>Aesthetik</em></a>
+  <a href="index.html" class="nav-logo"><img src="bilder/logo/logo.svg" alt="Royal Aesthetik" style="height:38px;width:104px;display:block;object-fit:contain;object-position:left center"></a>
   <ul class="nav-links">
     <li><a href="behandlungen.html">Behandlungen</a></li>
     <li><a href="uber-uns.html">Dr. Jeyrani</a></li>
-    <li><a href="galerie.html">Galerie</a></li>
     <li><a href="preise.html">Preise</a></li>
     <li><a href="faq.html">FAQ</a></li>
     <li><a href="kontakt.html" class="nav-cta">Beratung buchen</a></li>
@@ -84,14 +82,14 @@ footer{background:var(--bg-2);padding:6rem 5vw 3rem;border-top:1px solid var(--i
   <p>Sie haben das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung. Wenden Sie sich an: <a href="mailto:info@royalaesthetik.ch">info@royalaesthetik.ch</a></p>
   <h2>Cookies und Website-Analyse</h2>
   <p>Diese Website verwendet ausschliesslich technisch notwendige Cookies. Es werden keine Tracking-Cookies oder Analyse-Dienste eingesetzt, ohne Ihre ausdrückliche Einwilligung.</p>
-  <h2>Änderungen</h2>
+  <h2>–nderungen</h2>
   <p>Wir behalten uns vor, diese Datenschutzerklärung bei Bedarf anzupassen. Stand: Januar 2025.</p>
 </div>
 <footer>
   <div class="footer-top">
-    <div><p class="footer-logo">Royal <em>Aesthetik</em></p><p class="footer-tagline">Medizinische Ästhetik auf höchstem Niveau.</p></div>
+    <div><img src="bilder/logo/logo.svg" alt="Royal Aesthetik" class="footer-logo"><p class="footer-tagline">Medizinische –sthetik auf höchstem Niveau.</p></div>
     <div><p class="footer-col-title">Behandlungen</p><ul class="footer-links"><li><a href="behandlungen.html">Botulinumtoxin</a></li><li><a href="behandlungen.html">Hyaluronsäure</a></li><li><a href="behandlungen.html">Fadenlifting</a></li><li><a href="behandlungen.html">PRP Therapie</a></li></ul></div>
-    <div><p class="footer-col-title">Klinik</p><ul class="footer-links"><li><a href="uber-uns.html">Über uns</a></li><li><a href="galerie.html">Galerie</a></li><li><a href="preise.html">Preise</a></li><li><a href="faq.html">FAQ</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></div>
+    <div><p class="footer-col-title">Klinik</p><ul class="footer-links"><li><a href="uber-uns.html">–ober uns</a></li><li><a href="preise.html">Preise</a></li><li><a href="faq.html">FAQ</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></div>
     <div><p class="footer-col-title">Kontakt</p><ul class="footer-links"><li><a href="#">Leutschenstrasse 1</a></li><li><a href="#">8807 Freienbach</a></li><li><a href="mailto:info@royalaesthetik.ch">info@royalaesthetik.ch</a></li></ul></div>
   </div>
   <div class="footer-bottom">
@@ -102,3 +100,4 @@ footer{background:var(--bg-2);padding:6rem 5vw 3rem;border-top:1px solid var(--i
 <script>document.querySelector('.hamburger').addEventListener('click',function(){const l=document.querySelector('.nav-links');const open=l.style.display==='flex';l.style.cssText=open?'':'display:flex;flex-direction:column;position:fixed;top:64px;left:0;right:0;background:rgba(10,10,10,.97);padding:2rem 5vw;gap:1.5rem;border-bottom:1px solid rgba(184,146,90,.2)';});</script>
 </body>
 </html>
+

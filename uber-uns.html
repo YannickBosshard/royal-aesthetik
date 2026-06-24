@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dr. Jeyrani — Royal Aesthetik</title>
+<title>Dr. Jeyrani – Royal Aesthetik</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--bg:#0A0A0A;--bg-2:#111111;--bg-3:#161616;--ivory:#F0EDE8;--ivory-dim:#9A9590;--ivory-dark:#3A3835;--gold:#B8925A;--gold-dim:rgba(184,146,90,.35);--font-display:'Cormorant Garamond',Georgia,serif;--font-body:'DM Sans',system-ui,sans-serif;--font-label:'Montserrat',sans-serif;--ease:cubic-bezier(0.25,0.1,0.25,1)}
+:root{--bg:#FAF8F5;--bg-2:#F0EDE8;--bg-3:#E5E0D8;--ivory:#1C1A18;--ivory-dim:#6B6560;--ivory-dark:#CCC7BF;--gold:#B8925A;--gold-dim:rgba(184,146,90,.35);--font-display:'Cormorant Garamond',Georgia,serif;--font-body:'DM Sans',system-ui,sans-serif;--font-label:'Montserrat',sans-serif;--ease:cubic-bezier(0.25,0.1,0.25,1)}
 html{scroll-behavior:smooth;font-size:16px}
 body{background:var(--bg);color:var(--ivory);font-family:var(--font-body);font-weight:300;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 .label{font-family:var(--font-label);font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);font-weight:400}
@@ -17,10 +17,10 @@ body{background:var(--bg);color:var(--ivory);font-family:var(--font-body);font-w
 .rl{opacity:0;transform:translateX(-28px);transition:opacity 1s var(--ease),transform 1s var(--ease)}.rl.on{opacity:1;transform:none}
 .rr{opacity:0;transform:translateX(28px);transition:opacity 1s var(--ease),transform 1s var(--ease)}.rr.on{opacity:1;transform:none}
 .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.35s}.d4{transition-delay:.5s}
-nav{position:fixed;top:0;left:0;right:0;z-index:200;height:76px;padding:0 5vw;display:flex;align-items:center;justify-content:space-between;transition:background .5s}
-nav.scrolled{background:rgba(10,10,10,.94);backdrop-filter:blur(16px);border-bottom:1px solid var(--gold-dim)}
-.nav-logo{font-family:var(--font-display);font-size:1.25rem;font-weight:300;letter-spacing:.12em;color:var(--ivory);text-decoration:none}
-.nav-logo em{font-style:normal;color:var(--gold)}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;height:76px;padding:0 5vw;display:flex;align-items:center;justify-content:space-between;background:rgba(250,248,245,.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--gold-dim)}
+nav.scrolled{background:rgba(250,248,245,.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--gold-dim)}
+.nav-logo{display:flex;align-items:center;text-decoration:none}
+.nav-logo img{height:38px;width:104px;object-fit:contain;object-position:left center;display:block;filter:none}
 .nav-links{display:flex;gap:2.5rem;list-style:none;align-items:center}
 .nav-links a{font-family:var(--font-label);font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--ivory-dim);text-decoration:none;transition:color .3s}
 .nav-links a:hover,.nav-links a.active{color:var(--ivory)}
@@ -35,8 +35,7 @@ nav.scrolled{background:rgba(10,10,10,.94);backdrop-filter:blur(16px);border-bot
 .btn-ghost:hover{color:var(--gold)}.btn-ghost:hover::after{width:48px}
 footer{background:var(--bg-2);padding:6rem 5vw 3rem;border-top:1px solid var(--ivory-dark)}
 .footer-top{display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;gap:4vw;padding-bottom:4rem;border-bottom:1px solid var(--ivory-dark)}
-.footer-logo{font-family:var(--font-display);font-size:1.6rem;font-weight:200;color:var(--ivory);letter-spacing:.1em}
-.footer-logo em{font-style:normal;color:var(--gold)}
+.footer-logo{height:52px;width:auto;display:block;opacity:.85}
 .footer-tagline{font-size:.8rem;color:var(--ivory-dim);margin-top:.75rem;line-height:1.8;max-width:240px}
 .footer-col-title{font-family:var(--font-label);font-size:8.5px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem}
 .footer-links{list-style:none;display:flex;flex-direction:column;gap:.85rem}
@@ -50,9 +49,9 @@ footer{background:var(--bg-2);padding:6rem 5vw 3rem;border-top:1px solid var(--i
 .footer-swiss span{font-family:var(--font-label);font-size:8.5px;letter-spacing:.18em;text-transform:uppercase;color:rgba(240,237,232,.2)}
 
 /* HERO SPLIT */
-.hero-split{min-height:100svh;display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--ivory-dark)}
-.hero-img{position:relative;background:linear-gradient(160deg,#3a2e24,#1a1410);overflow:hidden}
-.hero-img-inner{width:100%;height:100%;min-height:600px;background:linear-gradient(160deg,#4a3826 0%,#2a1e14 40%,#160e08 100%)}
+.hero-split{height:88vh;max-height:780px;display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--ivory-dark)}
+.hero-img{position:relative;overflow:hidden}
+.hero-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
 .hero-img-label{position:absolute;bottom:2rem;left:2rem;font-family:var(--font-label);font-size:8.5px;letter-spacing:.18em;text-transform:uppercase;color:rgba(240,237,232,.3)}
 .hero-content{padding:140px 5vw 80px;display:flex;flex-direction:column;justify-content:flex-end}
 .hero-eyebrow{font-family:var(--font-label);font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:2rem;display:flex;align-items:center;gap:1.2rem}
@@ -135,11 +134,10 @@ footer{background:var(--bg-2);padding:6rem 5vw 3rem;border-top:1px solid var(--i
 </head>
 <body>
 <nav id="nav" class="scrolled">
-  <a href="index.html" class="nav-logo">Royal <em>Aesthetik</em></a>
+  <a href="index.html" class="nav-logo"><img src="bilder/logo/logo.svg" alt="Royal Aesthetik" style="height:38px;width:104px;display:block;object-fit:contain;object-position:left center"></a>
   <ul class="nav-links">
     <li><a href="behandlungen.html">Behandlungen</a></li>
     <li><a href="uber-uns.html" class="active">Dr. Jeyrani</a></li>
-    <li><a href="galerie.html">Galerie</a></li>
     <li><a href="preise.html">Preise</a></li>
     <li><a href="faq.html">FAQ</a></li>
     <li><a href="kontakt.html" class="nav-cta">Beratung buchen</a></li>
@@ -148,24 +146,21 @@ footer{background:var(--bg-2);padding:6rem 5vw 3rem;border-top:1px solid var(--i
 </nav>
 
 <div class="hero-split">
-  <div class="hero-img">
-    <div class="hero-img-inner"></div>
-    <p class="hero-img-label">Dr. med. Roya Jeyrani — Portrait</p>
-  </div>
-  <div class="hero-content">
-    <div class="hero-eyebrow rl">Über die Ärztin</div>
+  <div class="hero-img"><img src="bilder/team/Portrait_Roya.jpg" alt="Dr. med. Roya Jeyrani"></div>
+  <div class="hero-content" style="padding-top:160px;padding-bottom:100px">
+    <div class="hero-eyebrow rl">–ober die –rztin</div>
     <h1 class="hero-title rr d1">Dr. med.<br>Roya <em>Jeyrani</em></h1>
-    <p class="hero-sub rr d2">Fachärztin für medizinische Ästhetik. Gegründet auf dem Fundament, dass wahre Schönheit immer natürlich wirkt — nie gemacht, nie offensichtlich.</p>
+    <p class="hero-sub rr d2">Als gebürtige Perserin vereint Dr. Jeyrani medizinische Präzision mit einem feinen ästhetischen Gespür. Fachärztin für Radiologie, Promotion Universität Bern – und eine Leidenschaft dafür, natürliche Schönheit zu verfeinern, nie zu verändern.</p>
   </div>
 </div>
 
 <div class="quote-section">
   <div class="r"><span class="quote-label">Philosophie</span></div>
   <div class="r d1">
-    <p class="quote-text">Die Kunst, die natürliche Schönheit zu betonen — nie zu verändern. Jedes Gesicht erzählt eine Geschichte; meine Aufgabe ist es, sie zu verfeinern.</p>
+    <p class="quote-text">Dank meiner anatomischen Kenntnisse aus der Radiologie und der kontinuierlichen Weiterentwicklung biete ich meinen Patientinnen und Patienten stets die fortschrittlichsten Behandlungsmethoden – mit minimaler Komplikationsrate und herausragenden Ergebnissen.</p>
     <div class="quote-author">
       <p class="quote-author-name">Dr. med. Roya Jeyrani</p>
-      <p class="quote-author-role">Ärztin & Gründerin, Royal Aesthetik</p>
+      <p class="quote-author-role">–rztin & Gründerin, Royal Aesthetik</p>
     </div>
   </div>
 </div>
@@ -178,33 +173,33 @@ footer{background:var(--bg-2);padding:6rem 5vw 3rem;border-top:1px solid var(--i
   <div class="creds-grid">
     <div class="cred-card r">
       <div class="cred-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
-      <h3 class="cred-title">Medizinstudium</h3>
-      <p class="cred-desc">Abschluss der Humanmedizin an renommierter Universität. Umfassende Grundlage in Anatomie, Physiologie und klinischer Medizin.</p>
+      <h3 class="cred-title">Studium Humanmedizin, Hamburg 2001</h3>
+      <p class="cred-desc">Approbation an der Universität Hamburg. Solide medizinische Grundlage als Basis für präzise, sichere ästhetische Behandlungen.</p>
     </div>
     <div class="cred-card r d1">
       <div class="cred-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
-      <h3 class="cred-title">6+ Jahre Erfahrung</h3>
-      <p class="cred-desc">Spezialisierte Praxis in medizinischer Ästhetik. Kontinuierliche Weiterbildung bei internationalen Experten in Zürich, London und Paris.</p>
+      <h3 class="cred-title">Fachärztin FMH Radiologie, 2007</h3>
+      <p class="cred-desc">Facharztausbildung an der Universitätsklinik Essen und am Inselspital Bern. Ausgezeichnete anatomische Kenntnisse – der entscheidende Vorteil bei jeder ästhetischen Behandlung.</p>
     </div>
     <div class="cred-card r d2">
       <div class="cred-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-      <h3 class="cred-title">Schweizer Standards</h3>
-      <p class="cred-desc">Vollständig lizenzierte Praxis nach Schweizer Heilmittelgesetz. Alle verwendeten Produkte sind Swissmedic-zugelassen.</p>
+      <h3 class="cred-title">Promotion Inselspital Bern, 2008</h3>
+      <p class="cred-desc">Promotion über notfallmässige superselektive Embolisation. Wissenschaftliche Präzision als Grundprinzip – auch in der –sthetik.</p>
     </div>
     <div class="cred-card r d1">
-      <div class="cred-icon"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
-      <h3 class="cred-title">1000+ Patienten</h3>
-      <p class="cred-desc">Über tausend zufriedene Patientinnen und Patienten in der Schweiz. Persönliche Betreuung, individuelle Behandlungspläne.</p>
+      <div class="cred-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg></div>
+      <h3 class="cred-title">Fadenlifting-Spezialisierung, Südkorea</h3>
+      <p class="cred-desc">Perfektionierung der Fadenlifting-Technik in Südkorea. Ergänzt durch internationale Erasmus-Zertifizierungen in MRT, Neuroradiologie und Mammadiagnostik.</p>
     </div>
     <div class="cred-card r d2">
       <div class="cred-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg></div>
-      <h3 class="cred-title">Modernste Technik</h3>
-      <p class="cred-desc">Einsatz aktueller Produkte und Technologien: Premium-Filler, PDO-Fäden, Exosomen-Therapie und mehr.</p>
+      <h3 class="cred-title">Medizinische –sthetik seit 2015</h3>
+      <p class="cred-desc">–ober 10 Jahre spezialisierte Erfahrung in ästhetischen Behandlungen. Kontinuierliche Weiterbildung – stets auf dem neuesten Stand der Methoden.</p>
     </div>
     <div class="cred-card r d3">
       <div class="cred-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-      <h3 class="cred-title">Persönliche Beratung</h3>
-      <p class="cred-desc">Jede Behandlung beginnt mit einem ausführlichen Gespräch. Keine Standardlösungen — nur individuelle Pläne.</p>
+      <h3 class="cred-title">Tutorin SGUM seit 2012</h3>
+      <p class="cred-desc">Langjährig engagiert in der Aus- und Weiterbildung bei der Schweizerischen Gesellschaft für Ultraschall in der Medizin. Zweisprachig Deutsch & Persisch.</p>
     </div>
   </div>
 </section>
@@ -242,10 +237,10 @@ footer{background:var(--bg-2);padding:6rem 5vw 3rem;border-top:1px solid var(--i
   <div class="values-inner">
     <div class="r"><span class="values-label">Unsere Werte</span></div>
     <div class="values-list">
-      <div class="value-item r"><h3 class="value-name">Natürlichkeit</h3><p class="value-desc">Ergebnisse, die niemand bemerkt — ausser Ihnen selbst.</p></div>
+      <div class="value-item r"><h3 class="value-name">Natürlichkeit</h3><p class="value-desc">Ergebnisse, die niemand bemerkt – ausser Ihnen selbst.</p></div>
       <div class="value-item r d1"><h3 class="value-name">Präzision</h3><p class="value-desc">Medizinische Genauigkeit bei jeder Behandlung.</p></div>
       <div class="value-item r d2"><h3 class="value-name">Vertrauen</h3><p class="value-desc">Offene Kommunikation, realistische Erwartungen.</p></div>
-      <div class="value-item r"><h3 class="value-name">Individualität</h3><p class="value-desc">Kein Einheitskonzept — nur massgeschneiderte Pläne.</p></div>
+      <div class="value-item r"><h3 class="value-name">Individualität</h3><p class="value-desc">Kein Einheitskonzept – nur massgeschneiderte Pläne.</p></div>
       <div class="value-item r d1"><h3 class="value-name">Diskretion</h3><p class="value-desc">Absolute Vertraulichkeit. Ihr Vertrauen ist heilig.</p></div>
       <div class="value-item r d2"><h3 class="value-name">Qualität</h3><p class="value-desc">Nur geprüfte, zugelassene Produkte der höchsten Güte.</p></div>
     </div>
@@ -256,16 +251,16 @@ footer{background:var(--bg-2);padding:6rem 5vw 3rem;border-top:1px solid var(--i
   <div class="r">
     <span class="label">Persönliche Beratung</span>
     <h2 class="cta-title">Lernen Sie<br><em>Dr. Jeyrani</em> kennen.</h2>
-    <p class="cta-sub">Ein erstes Gespräch kostet nichts — ausser ein wenig Zeit. Und vielleicht verändert es alles.</p>
+    <p class="cta-sub">Ein erstes Gespräch kostet nichts – ausser ein wenig Zeit. Und vielleicht verändert es alles.</p>
     <a href="kontakt.html" class="btn-dark">Beratung buchen</a>
   </div>
 </div>
 
 <footer>
   <div class="footer-top">
-    <div><p class="footer-logo">Royal <em>Aesthetik</em></p><p class="footer-tagline">Medizinische Ästhetik auf höchstem Niveau.</p></div>
+    <div><img src="bilder/logo/logo.svg" alt="Royal Aesthetik" class="footer-logo"><p class="footer-tagline">Medizinische –sthetik auf höchstem Niveau.</p></div>
     <div><p class="footer-col-title">Behandlungen</p><ul class="footer-links"><li><a href="behandlungen.html">Botulinumtoxin</a></li><li><a href="behandlungen.html">Hyaluronsäure</a></li><li><a href="behandlungen.html">Fadenlifting</a></li><li><a href="behandlungen.html">PRP Therapie</a></li><li><a href="behandlungen.html">Biostimulatoren</a></li></ul></div>
-    <div><p class="footer-col-title">Klinik</p><ul class="footer-links"><li><a href="uber-uns.html">Über uns</a></li><li><a href="galerie.html">Galerie</a></li><li><a href="preise.html">Preise</a></li><li><a href="faq.html">FAQ</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></div>
+    <div><p class="footer-col-title">Klinik</p><ul class="footer-links"><li><a href="uber-uns.html">–ober uns</a></li><li><a href="preise.html">Preise</a></li><li><a href="faq.html">FAQ</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></div>
     <div><p class="footer-col-title">Kontakt</p><ul class="footer-links"><li><a href="#">Leutschenstrasse 1</a></li><li><a href="#">8807 Freienbach</a></li><li><a href="mailto:info@royalaesthetik.ch">info@royalaesthetik.ch</a></li></ul></div>
   </div>
   <div class="footer-bottom">
@@ -282,3 +277,4 @@ document.querySelector('.hamburger').addEventListener('click',function(){const l
 </script>
 </body>
 </html>
+

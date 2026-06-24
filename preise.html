@@ -3,22 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Preise — Royal Aesthetik</title>
+<title>Preise – Royal Aesthetik</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--bg:#0A0A0A;--bg-2:#111111;--bg-3:#161616;--ivory:#F0EDE8;--ivory-dim:#9A9590;--ivory-dark:#3A3835;--gold:#B8925A;--gold-dim:rgba(184,146,90,.35);--font-display:'Cormorant Garamond',Georgia,serif;--font-body:'DM Sans',system-ui,sans-serif;--font-label:'Montserrat',sans-serif;--ease:cubic-bezier(0.25,0.1,0.25,1)}
+:root{--bg:#FAF8F5;--bg-2:#F0EDE8;--bg-3:#E5E0D8;--ivory:#1C1A18;--ivory-dim:#6B6560;--ivory-dark:#CCC7BF;--gold:#B8925A;--gold-dim:rgba(184,146,90,.35);--font-display:'Cormorant Garamond',Georgia,serif;--font-body:'DM Sans',system-ui,sans-serif;--font-label:'Montserrat',sans-serif;--ease:cubic-bezier(0.25,0.1,0.25,1)}
 html{scroll-behavior:smooth;font-size:16px}
 body{background:var(--bg);color:var(--ivory);font-family:var(--font-body);font-weight:300;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 .label{font-family:var(--font-label);font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);font-weight:400}
 .r{opacity:0;transform:translateY(24px);transition:opacity 1s var(--ease),transform 1s var(--ease)}.r.on{opacity:1;transform:none}
 .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.35s}.d4{transition-delay:.5s}
-nav{position:fixed;top:0;left:0;right:0;z-index:200;height:76px;padding:0 5vw;display:flex;align-items:center;justify-content:space-between;transition:background .5s}
-nav.scrolled{background:rgba(10,10,10,.94);backdrop-filter:blur(16px);border-bottom:1px solid var(--gold-dim)}
-.nav-logo{font-family:var(--font-display);font-size:1.25rem;font-weight:300;letter-spacing:.12em;color:var(--ivory);text-decoration:none}
-.nav-logo em{font-style:normal;color:var(--gold)}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;height:76px;padding:0 5vw;display:flex;align-items:center;justify-content:space-between;background:rgba(250,248,245,.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--gold-dim)}
+nav.scrolled{background:rgba(250,248,245,.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--gold-dim)}
+.nav-logo{display:flex;align-items:center;text-decoration:none}
+.nav-logo img{height:38px;width:104px;object-fit:contain;object-position:left center;display:block;filter:none}
 .nav-links{display:flex;gap:2.5rem;list-style:none;align-items:center}
 .nav-links a{font-family:var(--font-label);font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--ivory-dim);text-decoration:none;transition:color .3s}
 .nav-links a:hover,.nav-links a.active{color:var(--ivory)}
@@ -30,8 +30,7 @@ nav.scrolled{background:rgba(10,10,10,.94);backdrop-filter:blur(16px);border-bot
 .btn-dark:hover{background:var(--ivory);transform:translateY(-2px)}
 footer{background:var(--bg-2);padding:6rem 5vw 3rem;border-top:1px solid var(--ivory-dark)}
 .footer-top{display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;gap:4vw;padding-bottom:4rem;border-bottom:1px solid var(--ivory-dark)}
-.footer-logo{font-family:var(--font-display);font-size:1.6rem;font-weight:200;color:var(--ivory);letter-spacing:.1em}
-.footer-logo em{font-style:normal;color:var(--gold)}
+.footer-logo{height:52px;width:auto;display:block;opacity:.85}
 .footer-tagline{font-size:.8rem;color:var(--ivory-dim);margin-top:.75rem;line-height:1.8;max-width:240px}
 .footer-col-title{font-family:var(--font-label);font-size:8.5px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem}
 .footer-links{list-style:none;display:flex;flex-direction:column;gap:.85rem}
@@ -114,11 +113,10 @@ footer{background:var(--bg-2);padding:6rem 5vw 3rem;border-top:1px solid var(--i
 </head>
 <body>
 <nav id="nav" class="scrolled">
-  <a href="index.html" class="nav-logo">Royal <em>Aesthetik</em></a>
+  <a href="index.html" class="nav-logo"><img src="bilder/logo/logo.svg" alt="Royal Aesthetik" style="height:38px;width:104px;display:block;object-fit:contain;object-position:left center"></a>
   <ul class="nav-links">
     <li><a href="behandlungen.html">Behandlungen</a></li>
     <li><a href="uber-uns.html">Dr. Jeyrani</a></li>
-    <li><a href="galerie.html">Galerie</a></li>
     <li><a href="preise.html" class="active">Preise</a></li>
     <li><a href="faq.html">FAQ</a></li>
     <li><a href="kontakt.html" class="nav-cta">Beratung buchen</a></li>
@@ -129,7 +127,7 @@ footer{background:var(--bg-2);padding:6rem 5vw 3rem;border-top:1px solid var(--i
 <div class="page-hero">
   <div class="page-eyebrow r">Transparente Preisgestaltung</div>
   <h1 class="page-title r d1">Investition in<br><em>Ihre Schönheit</em></h1>
-  <p class="page-sub r d2">Qualität hat ihren Preis — und der ist bei uns fair und transparent. Genaue Kosten besprechen wir in der kostenlosen Erstberatung.</p>
+  <p class="page-sub r d2">Qualität hat ihren Preis – und der ist bei uns fair und transparent. Genaue Kosten besprechen wir in der kostenlosen Erstberatung.</p>
 </div>
 
 <section class="price-section">
@@ -168,8 +166,8 @@ footer{background:var(--bg-2);padding:6rem 5vw 3rem;border-top:1px solid var(--i
   </div>
   <div class="price-table r d1">
     <div class="price-row"><div><p class="price-name">Fadenlifting</p><p class="price-detail">PDO-Fäden, Preis je nach Anzahl</p></div><p class="price-amount"><span class="price-from">ab</span>980</p></div>
-    <div class="price-row"><div><p class="price-name">PRP Therapie — Gesicht</p><p class="price-detail">Eigenblutbehandlung</p></div><p class="price-amount"><span class="price-from">ab</span>480</p></div>
-    <div class="price-row"><div><p class="price-name">PRP Therapie — Haare</p><p class="price-detail">Haarwachstum</p></div><p class="price-amount"><span class="price-from">ab</span>520</p></div>
+    <div class="price-row"><div><p class="price-name">PRP Therapie – Gesicht</p><p class="price-detail">Eigenblutbehandlung</p></div><p class="price-amount"><span class="price-from">ab</span>480</p></div>
+    <div class="price-row"><div><p class="price-name">PRP Therapie – Haare</p><p class="price-detail">Haarwachstum</p></div><p class="price-amount"><span class="price-from">ab</span>520</p></div>
     <div class="price-row"><div><p class="price-name">Biostimulatoren (Sculptra)</p><p class="price-detail">Pro Fläschchen</p></div><p class="price-amount"><span class="price-from">ab</span>680</p></div>
     <div class="price-row"><div><p class="price-name">Polynukleotide (PDRN)</p><p class="price-detail">Pro Sitzung</p></div><p class="price-amount"><span class="price-from">ab</span>420</p></div>
     <div class="price-row"><div><p class="price-name">Microneedling + Exosomen</p><p class="price-detail">Pro Sitzung</p></div><p class="price-amount"><span class="price-from">ab</span>580</p></div>
@@ -188,8 +186,8 @@ footer{background:var(--bg-2);padding:6rem 5vw 3rem;border-top:1px solid var(--i
       <p class="pkg-period">3-Monats-Paket</p>
       <div class="pkg-divider"></div>
       <ul class="pkg-features">
-        <li>1× Botulinumtoxin (1 Zone)</li>
-        <li>1× Skinbooster</li>
+        <li>1–- Botulinumtoxin (1 Zone)</li>
+        <li>1–- Skinbooster</li>
         <li>Erstberatung inkl.</li>
         <li>Follow-up nach 4 Wochen</li>
       </ul>
@@ -202,9 +200,9 @@ footer{background:var(--bg-2);padding:6rem 5vw 3rem;border-top:1px solid var(--i
       <p class="pkg-period">6-Monats-Paket</p>
       <div class="pkg-divider"></div>
       <ul class="pkg-features">
-        <li>2× Botulinumtoxin (Full Face)</li>
-        <li>1× Hyaluronsäure (1 ml)</li>
-        <li>1× PRP Therapie</li>
+        <li>2–- Botulinumtoxin (Full Face)</li>
+        <li>1–- Hyaluronsäure (1 ml)</li>
+        <li>1–- PRP Therapie</li>
         <li>Erstberatung + 2 Follow-ups</li>
         <li>10 % Ersparnis</li>
       </ul>
@@ -216,10 +214,10 @@ footer{background:var(--bg-2);padding:6rem 5vw 3rem;border-top:1px solid var(--i
       <p class="pkg-period">Jahrespaket</p>
       <div class="pkg-divider"></div>
       <ul class="pkg-features">
-        <li>4× Botulinumtoxin (Full Face)</li>
-        <li>2× Hyaluronsäure (je 1 ml)</li>
-        <li>2× PRP Therapie</li>
-        <li>1× Microneedling + Exosomen</li>
+        <li>4–- Botulinumtoxin (Full Face)</li>
+        <li>2–- Hyaluronsäure (je 1 ml)</li>
+        <li>2–- PRP Therapie</li>
+        <li>1–- Microneedling + Exosomen</li>
         <li>Unbegrenzte Follow-ups</li>
         <li>15 % Ersparnis</li>
       </ul>
@@ -249,9 +247,9 @@ footer{background:var(--bg-2);padding:6rem 5vw 3rem;border-top:1px solid var(--i
 
 <footer>
   <div class="footer-top">
-    <div><p class="footer-logo">Royal <em>Aesthetik</em></p><p class="footer-tagline">Medizinische Ästhetik auf höchstem Niveau.</p></div>
+    <div><img src="bilder/logo/logo.svg" alt="Royal Aesthetik" class="footer-logo"><p class="footer-tagline">Medizinische –sthetik auf höchstem Niveau.</p></div>
     <div><p class="footer-col-title">Behandlungen</p><ul class="footer-links"><li><a href="behandlungen.html">Botulinumtoxin</a></li><li><a href="behandlungen.html">Hyaluronsäure</a></li><li><a href="behandlungen.html">Fadenlifting</a></li><li><a href="behandlungen.html">PRP Therapie</a></li></ul></div>
-    <div><p class="footer-col-title">Klinik</p><ul class="footer-links"><li><a href="uber-uns.html">Über uns</a></li><li><a href="galerie.html">Galerie</a></li><li><a href="preise.html">Preise</a></li><li><a href="faq.html">FAQ</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></div>
+    <div><p class="footer-col-title">Klinik</p><ul class="footer-links"><li><a href="uber-uns.html">–ober uns</a></li><li><a href="preise.html">Preise</a></li><li><a href="faq.html">FAQ</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></div>
     <div><p class="footer-col-title">Kontakt</p><ul class="footer-links"><li><a href="#">Leutschenstrasse 1</a></li><li><a href="#">8807 Freienbach</a></li><li><a href="mailto:info@royalaesthetik.ch">info@royalaesthetik.ch</a></li></ul></div>
   </div>
   <div class="footer-bottom">
@@ -268,3 +266,4 @@ document.querySelector('.hamburger').addEventListener('click',function(){const l
 </script>
 </body>
 </html>
+
