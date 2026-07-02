@@ -9,34 +9,34 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--bg:#FAF8F5;--bg-2:#F0EDE8;--bg-3:#E5E0D8;--ivory:#1C1A18;--ivory-dim:#6B6560;--ivory-dark:#CCC7BF;--gold:#B8925A;--gold-dim:rgba(184,146,90,.35);--font-display:'Cormorant Garamond',Georgia,serif;--font-body:'DM Sans',system-ui,sans-serif;--font-label:'Montserrat',sans-serif;--ease:cubic-bezier(0.25,0.1,0.25,1)}
+:root{--bg:#FAF8F5;--bg-2:#F0EDE8;--bg-3:#E5E0D8;--ivory:#1C1A18;--ivory-dim:#6B6560;--ivory-dark:#CCC7BF;--gold:#B8925A;--gold-dim:rgba(201,164,164,.15);--font-display:'Cormorant Garamond',Georgia,serif;--font-body:'DM Sans',system-ui,sans-serif;--font-label:'Montserrat',sans-serif;--ease:cubic-bezier(0.25,0.1,0.25,1);--rose:#C9A4A4;--rose-dim:rgba(201,164,164,.3);--rose-pale:rgba(201,164,164,.12);--white:#FFFFFF}
 html{scroll-behavior:smooth;font-size:16px}
 body{background:var(--bg);color:var(--ivory);font-family:var(--font-body);font-weight:300;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-.label{font-family:var(--font-label);font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);font-weight:400}
+.label{font-family:var(--font-label);font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--rose);font-weight:400}
 .r{opacity:0;transform:translateY(24px);transition:opacity 1s var(--ease),transform 1s var(--ease)}.r.on{opacity:1;transform:none}
 .rl{opacity:0;transform:translateX(-28px);transition:opacity 1s var(--ease),transform 1s var(--ease)}.rl.on{opacity:1;transform:none}
 .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.35s}
 nav{position:fixed;top:0;left:0;right:0;z-index:200;height:76px;padding:0 5vw;display:flex;align-items:center;justify-content:space-between;transition:background .5s,border-color .5s}
-nav.scrolled{background:rgba(250,248,245,.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--gold-dim)}
+nav.scrolled{background:rgba(250,248,245,.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--rose-dim)}
 .nav-logo{display:flex;align-items:center;text-decoration:none}
 .nav-logo img{height:38px;width:104px;object-fit:contain;object-position:left center;display:block;filter:none}
 .nav-links{display:flex;gap:2.5rem;list-style:none;align-items:center}
 .nav-links a{font-family:var(--font-label);font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--ivory-dim);text-decoration:none;transition:color .3s}
 .nav-links a:hover,.nav-links a.active{color:var(--ivory)}
-.nav-cta{background:transparent!important;border:1px solid var(--gold-dim);color:var(--gold)!important;padding:.55rem 1.4rem;transition:background .3s!important,border-color .3s!important,color .3s!important}
-.nav-cta:hover{background:var(--gold)!important;border-color:var(--gold)!important;color:var(--bg)!important}
+.nav-cta{background:transparent!important;border:1px solid var(--rose-dim);color:var(--rose)!important;padding:.55rem 1.4rem;transition:background .3s!important,border-color .3s!important,color .3s!important}
+.nav-cta:hover{background:var(--rose)!important;border-color:var(--rose)!important;color:var(--white)!important}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
 .hamburger span{display:block;width:20px;height:1px;background:var(--ivory)}
-.btn-dark{font-family:var(--font-label);font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;background:var(--gold);color:var(--bg);padding:.9rem 2.4rem;text-decoration:none;display:inline-block;transition:background .3s,transform .3s}
+.btn-dark{font-family:var(--font-label);font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;background:var(--rose);color:var(--bg);padding:.9rem 2.4rem;text-decoration:none;display:inline-block;transition:background .3s,transform .3s}
 .btn-dark:hover{background:var(--ivory);transform:translateY(-2px)}
 .btn-ghost{font-family:var(--font-label);font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--ivory-dim);text-decoration:none;display:inline-flex;align-items:center;gap:.75rem;transition:color .3s}
 .btn-ghost::after{content:'';display:block;width:28px;height:1px;background:currentColor;transition:width .35s}
-.btn-ghost:hover{color:var(--gold)}.btn-ghost:hover::after{width:48px}
-footer{background:var(--bg-2);padding:6rem 5vw 3rem;border-top:1px solid var(--ivory-dark)}
+.btn-ghost:hover{color:var(--rose)}.btn-ghost:hover::after{width:48px}
+footer{background:rgba(201,164,164,.1);padding:6rem 5vw 3rem;border-top:2px solid rgba(201,164,164,.4)}
 .footer-top{display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;gap:4vw;padding-bottom:4rem;border-bottom:1px solid var(--ivory-dark)}
 .footer-logo{height:52px;width:auto;display:block;opacity:.85}
 .footer-tagline{font-size:.8rem;color:var(--ivory-dim);margin-top:.75rem;line-height:1.8;max-width:240px}
-.footer-col-title{font-family:var(--font-label);font-size:8.5px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem}
+.footer-col-title{font-family:var(--font-label);font-size:8.5px;letter-spacing:.25em;text-transform:uppercase;color:var(--rose);margin-bottom:1.5rem}
 .footer-links{list-style:none;display:flex;flex-direction:column;gap:.85rem}
 .footer-links a{font-size:.8rem;color:var(--ivory-dim);text-decoration:none;transition:color .3s}
 .footer-links a:hover{color:var(--ivory)}
@@ -48,15 +48,15 @@ footer{background:var(--bg-2);padding:6rem 5vw 3rem;border-top:1px solid var(--i
 .footer-swiss span{font-family:var(--font-label);font-size:8.5px;letter-spacing:.18em;text-transform:uppercase;color:rgba(240,237,232,.2)}
 
 .page-hero{padding:160px 5vw 80px;border-bottom:1px solid var(--ivory-dark)}
-.page-eyebrow{font-family:var(--font-label);font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:2rem;display:flex;align-items:center;gap:1.2rem}
-.page-eyebrow::before{content:'';display:block;width:28px;height:1px;background:var(--gold)}
+.page-eyebrow{font-family:var(--font-label);font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--rose);margin-bottom:2rem;display:flex;align-items:center;gap:1.2rem}
+.page-eyebrow::before{content:'';display:block;width:28px;height:1px;background:var(--rose)}
 .page-title{font-family:var(--font-display);font-size:clamp(3rem,6vw,6.5rem);font-weight:200;line-height:.95;color:var(--ivory)}
-.page-title em{font-style:italic;color:var(--gold)}
+.page-title em{font-style:italic;color:var(--rose)}
 .page-sub{font-size:.92rem;line-height:1.9;color:var(--ivory-dim);max-width:520px;margin-top:2.5rem;font-weight:300}
 
 .filter-bar{padding:2rem 5vw;border-bottom:1px solid var(--ivory-dark);display:flex;gap:.75rem;flex-wrap:wrap}
 .filter-btn{font-family:var(--font-label);font-size:9px;letter-spacing:.2em;text-transform:uppercase;background:none;border:1px solid var(--ivory-dark);color:var(--ivory-dim);padding:.5rem 1.4rem;cursor:pointer;transition:all .3s}
-.filter-btn:hover,.filter-btn.active{border-color:var(--gold);color:var(--gold)}
+.filter-btn:hover,.filter-btn.active{border-color:var(--rose);color:var(--rose)}
 
 .treatment{display:grid;grid-template-columns:42% 58%;border-bottom:1px solid var(--ivory-dark);align-items:stretch}
 .treatment:nth-child(even){grid-template-columns:58% 42%}
@@ -66,23 +66,48 @@ footer{background:var(--bg-2);padding:6rem 5vw 3rem;border-top:1px solid var(--i
 .t-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:transform 1.2s var(--ease)}
 .treatment:hover .t-img img{transform:scale(1.04)}
 .t-body{padding:3rem 3vw;display:flex;flex-direction:column;justify-content:center}
-.t-num{font-family:var(--font-label);font-size:9px;letter-spacing:.22em;color:var(--gold);opacity:.6;margin-bottom:1.5rem}
+.t-num{font-family:var(--font-label);font-size:9px;letter-spacing:.22em;color:var(--rose);opacity:.6;margin-bottom:1.5rem}
 .t-name{font-family:var(--font-display);font-size:clamp(2rem,3.5vw,3.5rem);font-weight:200;color:var(--ivory);line-height:1.05;margin-bottom:1.5rem}
-.t-name em{font-style:italic;color:var(--gold)}
+.t-name em{font-style:italic;color:var(--rose)}
 .t-desc{font-size:.9rem;line-height:1.9;color:var(--ivory-dim);margin-bottom:2.5rem}
 .t-meta{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--ivory-dark);margin-bottom:2.5rem}
 .t-meta-cell{padding:.9rem 0;border-bottom:1px solid var(--ivory-dark)}
 .t-meta-cell:nth-child(odd){padding-right:1.5rem;border-right:1px solid var(--ivory-dark)}
 .t-meta-cell:nth-child(even){padding-left:1.5rem}
-.t-meta-k{font-family:var(--font-label);font-size:8.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:.3rem}
+.t-meta-k{font-family:var(--font-label);font-size:8.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--rose);margin-bottom:.3rem}
 .t-meta-v{font-size:.84rem;color:var(--ivory)}
 .t-tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:2.5rem}
 .tag{font-family:var(--font-label);font-size:8px;letter-spacing:.15em;text-transform:uppercase;border:1px solid var(--ivory-dark);color:var(--ivory-dim);padding:.3rem .8rem}
 
+/* ── MODAL ── */
+.modal-overlay{position:fixed;inset:0;z-index:500;background:rgba(28,26,24,.7);backdrop-filter:blur(6px);opacity:0;pointer-events:none;transition:opacity .35s}
+.modal-overlay.open{opacity:1;pointer-events:all}
+.modal{position:fixed;top:0;right:0;bottom:0;width:min(680px,100vw);background:var(--bg);z-index:501;transform:translateX(100%);transition:transform .45s cubic-bezier(0.25,0.1,0.25,1);overflow-y:auto;display:flex;flex-direction:column}
+.modal.open{transform:none}
+.modal-header{padding:2.5rem 2.5rem 2rem;border-bottom:1px solid var(--ivory-dark);display:flex;justify-content:space-between;align-items:flex-start;position:sticky;top:0;background:var(--bg);z-index:2}
+.modal-close{background:none;border:none;cursor:pointer;width:40px;height:40px;display:flex;align-items:center;justify-content:center;color:var(--ivory-dim);transition:color .2s;font-size:1.2rem;flex-shrink:0}
+.modal-close:hover{color:var(--ivory)}
+.modal-close svg{width:18px;height:18px;stroke:currentColor;stroke-width:1.5;fill:none}
+.modal-eyebrow{font-family:var(--font-label);font-size:9px;letter-spacing:.25em;text-transform:uppercase;color:var(--rose);margin-bottom:.75rem}
+.modal-title{font-family:var(--font-display);font-size:2.2rem;font-weight:200;line-height:1;color:var(--ivory)}
+.modal-title em{font-style:italic;color:var(--rose)}
+.modal-body{padding:2.5rem;flex:1}
+.modal-meta{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--ivory-dark);border:1px solid var(--ivory-dark);margin-bottom:2.5rem}
+.modal-meta-cell{background:var(--bg);padding:1rem 1.25rem}
+.modal-meta-k{font-family:var(--font-label);font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:var(--rose);margin-bottom:.3rem}
+.modal-meta-v{font-size:.88rem;color:var(--ivory);font-weight:400}
+.modal-section{margin-bottom:2rem}
+.modal-section h3{font-family:var(--font-display);font-size:1.25rem;font-weight:300;color:var(--ivory);margin-bottom:.75rem}
+.modal-section p{font-size:.88rem;line-height:1.95;color:var(--ivory-dim);font-weight:300;margin-bottom:.75rem}
+.modal-section ul{list-style:none;display:flex;flex-direction:column;gap:.5rem;margin-bottom:.75rem}
+.modal-section ul li{font-size:.88rem;line-height:1.7;color:var(--ivory-dim);font-weight:300;padding-left:1.25rem;position:relative}
+.modal-section ul li::before{content:'';position:absolute;left:0;top:.65em;width:5px;height:1px;background:var(--rose)}
+.modal-footer{padding:2rem 2.5rem;border-top:1px solid var(--ivory-dark);position:sticky;bottom:0;background:var(--bg)}
+
 .cta-strip{padding:8rem 5vw;text-align:center;border-top:1px solid var(--ivory-dark);position:relative}
-.cta-strip::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 50% 50%,rgba(184,146,90,.05) 0%,transparent 70%)}
+.cta-strip::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 50% 50%,rgba(201,164,164,.15) 0%,transparent 70%)}
 .cta-title{font-family:var(--font-display);font-size:clamp(2.5rem,4.5vw,5rem);font-weight:200;line-height:1.05;color:var(--ivory);margin:1.5rem 0}
-.cta-title em{font-style:italic;color:var(--gold)}
+.cta-title em{font-style:italic;color:var(--rose)}
 .cta-sub{font-size:.9rem;color:var(--ivory-dim);max-width:440px;margin:0 auto 3rem;line-height:1.9}
 
 @media(max-width:900px){
@@ -117,7 +142,7 @@ footer{background:var(--bg-2);padding:6rem 5vw 3rem;border-top:1px solid var(--i
 
 <div class="page-hero">
   <div class="page-eyebrow r">Unser Leistungsangebot</div>
-  <h1 class="page-title r d1">Medizinische<br><em>–sthetik</em></h1>
+  <h1 class="page-title r d1">Medizinische<br><em>–Ästhetik</em></h1>
   <p class="page-sub r d2">Jede Behandlung ist eine präzise medizinische Intervention – geplant, individuell abgestimmt und von Dr. med. Roya Jeyrani persönlich durchgeführt.</p>
 </div>
 
@@ -137,13 +162,16 @@ footer{background:var(--bg-2);padding:6rem 5vw 3rem;border-top:1px solid var(--i
     <h2 class="t-name">Botulinum<em>toxin</em></h2>
     <p class="t-desc">Präzise Glättung von Ausdrucksfalten durch gezielte Muskelentspannung. Stirn, Glabella, Augenpartie – natürliche Ergebnisse, die niemand bemerkt, aber alle spüren.</p>
     <div class="t-meta">
-      <div class="t-meta-cell"><p class="t-meta-k">Dauer</p><p class="t-meta-v">20–30 Min.</p></div>
-      <div class="t-meta-cell"><p class="t-meta-k">Ausfallzeit</p><p class="t-meta-v">1-3 Tage</p></div>
-      <div class="t-meta-cell"><p class="t-meta-k">Wirkung ab</p><p class="t-meta-v">4–7 Tage</p></div>
-      <div class="t-meta-cell"><p class="t-meta-k">Haltbarkeit</p><p class="t-meta-v">8–12 Wochen</p></div>
+      <div class="t-meta-cell"><p class="t-meta-k">Behandlungsdauer</p><p class="t-meta-v">10–20 Min.</p></div>
+      <div class="t-meta-cell"><p class="t-meta-k">Ausfallzeit</p><p class="t-meta-v">Keine</p></div>
+      <div class="t-meta-cell"><p class="t-meta-k">Wirkung ab</p><p class="t-meta-v">3–6 Tage</p></div>
+      <div class="t-meta-cell"><p class="t-meta-k">Haltbarkeit</p><p class="t-meta-v">12–16 Wochen</p></div>
     </div>
     <div class="t-tags"><span class="tag">Falten</span><span class="tag">Minimalinvasiv</span><span class="tag">Gesicht</span></div>
-    <a href="kontakt.html" class="btn-ghost">Beratung buchen</a>
+    <div style="display:flex;gap:2rem;align-items:center;margin-top:.5rem">
+      <button class="btn-ghost" onclick="openModal('botox')">Mehr erfahren</button>
+      <a href="kontakt.html" class="btn-ghost">Beratung buchen</a>
+    </div>
   </div>
 </article>
 
@@ -154,13 +182,16 @@ footer{background:var(--bg-2);padding:6rem 5vw 3rem;border-top:1px solid var(--i
     <h2 class="t-name">Hyaluron<em>säure</em></h2>
     <p class="t-desc">Volumenauffüllung, Lippenaugmentation und Konturierung mit modernsten Premium-Fillern. Sofortige Ergebnisse, die natürlich und harmonisch wirken.</p>
     <div class="t-meta">
-      <div class="t-meta-cell"><p class="t-meta-k">Dauer</p><p class="t-meta-v">30–60 Min.</p></div>
-      <div class="t-meta-cell"><p class="t-meta-k">Ausfallzeit</p><p class="t-meta-v">1–3 Tage</p></div>
+      <div class="t-meta-cell"><p class="t-meta-k">Behandlungsdauer</p><p class="t-meta-v">20–40 Min.</p></div>
+      <div class="t-meta-cell"><p class="t-meta-k">Ausfallzeit</p><p class="t-meta-v">Keine</p></div>
       <div class="t-meta-cell"><p class="t-meta-k">Wirkung ab</p><p class="t-meta-v">Sofort</p></div>
-      <div class="t-meta-cell"><p class="t-meta-k">Haltbarkeit</p><p class="t-meta-v">12–18 Monate</p></div>
+      <div class="t-meta-cell"><p class="t-meta-k">Haltbarkeit</p><p class="t-meta-v">9–12 Monate</p></div>
     </div>
     <div class="t-tags"><span class="tag">Volumen</span><span class="tag">Lippen</span><span class="tag">Konturierung</span></div>
-    <a href="kontakt.html" class="btn-ghost">Beratung buchen</a>
+    <div style="display:flex;gap:2rem;align-items:center;margin-top:.5rem">
+      <button class="btn-ghost" onclick="openModal('hyaluron')">Mehr erfahren</button>
+      <a href="kontakt.html" class="btn-ghost">Beratung buchen</a>
+    </div>
   </div>
 </article>
 
@@ -171,13 +202,16 @@ footer{background:var(--bg-2);padding:6rem 5vw 3rem;border-top:1px solid var(--i
     <h2 class="t-name">Faden<em>lifting</em></h2>
     <p class="t-desc">Minimalinvasives Lifting mit bioresorbierbaren PDO-Fäden. Sofortige mechanische Straffung und langfristige Kollagenstimulation.</p>
     <div class="t-meta">
-      <div class="t-meta-cell"><p class="t-meta-k">Dauer</p><p class="t-meta-v">45–90 Min.</p></div>
-      <div class="t-meta-cell"><p class="t-meta-k">Ausfallzeit</p><p class="t-meta-v">3–5 Tage</p></div>
-      <div class="t-meta-cell"><p class="t-meta-k">Wirkung ab</p><p class="t-meta-v">Sofort</p></div>
+      <div class="t-meta-cell"><p class="t-meta-k">Behandlungsdauer</p><p class="t-meta-v">ca. 30 Min.</p></div>
+      <div class="t-meta-cell"><p class="t-meta-k">Ausfallzeit</p><p class="t-meta-v">4–7 Tage</p></div>
+      <div class="t-meta-cell"><p class="t-meta-k">Wirkung ab</p><p class="t-meta-v">Sofort / 2 Wochen</p></div>
       <div class="t-meta-cell"><p class="t-meta-k">Haltbarkeit</p><p class="t-meta-v">12–24 Monate</p></div>
     </div>
     <div class="t-tags"><span class="tag">Lifting</span><span class="tag">Straffung</span><span class="tag">Kollagen</span></div>
-    <a href="kontakt.html" class="btn-ghost">Beratung buchen</a>
+    <div style="display:flex;gap:2rem;align-items:center;margin-top:.5rem">
+      <button class="btn-ghost" onclick="openModal('fadenlifting')">Mehr erfahren</button>
+      <a href="kontakt.html" class="btn-ghost">Beratung buchen</a>
+    </div>
   </div>
 </article>
 
@@ -188,13 +222,16 @@ footer{background:var(--bg-2);padding:6rem 5vw 3rem;border-top:1px solid var(--i
     <h2 class="t-name">PRP <em>Therapie</em></h2>
     <p class="t-desc">Eigenbluttherapie für Hautverjüngung und Haarwachstum. 100 % natürlich aus Ihrem eigenen Plasma – kein Fremdstoff, null Risiko auf Unverträglichkeiten.</p>
     <div class="t-meta">
-      <div class="t-meta-cell"><p class="t-meta-k">Dauer</p><p class="t-meta-v">45–60 Min.</p></div>
-      <div class="t-meta-cell"><p class="t-meta-k">Ausfallzeit</p><p class="t-meta-v">1–2 Tage</p></div>
-      <div class="t-meta-cell"><p class="t-meta-k">Wirkung ab</p><p class="t-meta-v">2–4 Wochen</p></div>
-      <div class="t-meta-cell"><p class="t-meta-k">Haltbarkeit</p><p class="t-meta-v">6–12 Monate</p></div>
+      <div class="t-meta-cell"><p class="t-meta-k">Behandlungsdauer</p><p class="t-meta-v">20–30 Min.</p></div>
+      <div class="t-meta-cell"><p class="t-meta-k">Ausfallzeit</p><p class="t-meta-v">Keine</p></div>
+      <div class="t-meta-cell"><p class="t-meta-k">Wirkung ab</p><p class="t-meta-v">Ab 4. Woche</p></div>
+      <div class="t-meta-cell"><p class="t-meta-k">Haltbarkeit</p><p class="t-meta-v">6–9 Monate</p></div>
     </div>
     <div class="t-tags"><span class="tag">Natürlich</span><span class="tag">Haare</span><span class="tag">Haut</span></div>
-    <a href="kontakt.html" class="btn-ghost">Beratung buchen</a>
+    <div style="display:flex;gap:2rem;align-items:center;margin-top:.5rem">
+      <button class="btn-ghost" onclick="openModal('prp')">Mehr erfahren</button>
+      <a href="kontakt.html" class="btn-ghost">Beratung buchen</a>
+    </div>
   </div>
 </article>
 
@@ -205,13 +242,16 @@ footer{background:var(--bg-2);padding:6rem 5vw 3rem;border-top:1px solid var(--i
     <h2 class="t-name">Bio<em>stimulatoren</em></h2>
     <p class="t-desc">Sculptra, Polynukleotide und Skinbooster für nachhaltige Kollagenstimulation. Wissenschaftlich fundiert, langfristig wirksam.</p>
     <div class="t-meta">
-      <div class="t-meta-cell"><p class="t-meta-k">Dauer</p><p class="t-meta-v">30–60 Min.</p></div>
-      <div class="t-meta-cell"><p class="t-meta-k">Ausfallzeit</p><p class="t-meta-v">1–3 Tage</p></div>
-      <div class="t-meta-cell"><p class="t-meta-k">Wirkung ab</p><p class="t-meta-v">4–8 Wochen</p></div>
-      <div class="t-meta-cell"><p class="t-meta-k">Haltbarkeit</p><p class="t-meta-v">12–24 Monate</p></div>
+      <div class="t-meta-cell"><p class="t-meta-k">Behandlungsdauer</p><p class="t-meta-v">20–30 Min.</p></div>
+      <div class="t-meta-cell"><p class="t-meta-k">Ausfallzeit</p><p class="t-meta-v">Keine</p></div>
+      <div class="t-meta-cell"><p class="t-meta-k">Wirkung ab</p><p class="t-meta-v">Ab 2. Monat</p></div>
+      <div class="t-meta-cell"><p class="t-meta-k">Haltbarkeit</p><p class="t-meta-v">6–18 Monate</p></div>
     </div>
     <div class="t-tags"><span class="tag">Sculptra</span><span class="tag">Kollagen</span><span class="tag">Nachhaltigkeit</span></div>
-    <a href="kontakt.html" class="btn-ghost">Beratung buchen</a>
+    <div style="display:flex;gap:2rem;align-items:center;margin-top:.5rem">
+      <button class="btn-ghost" onclick="openModal('biostimulatoren')">Mehr erfahren</button>
+      <a href="kontakt.html" class="btn-ghost">Beratung buchen</a>
+    </div>
   </div>
 </article>
 
@@ -222,16 +262,18 @@ footer{background:var(--bg-2);padding:6rem 5vw 3rem;border-top:1px solid var(--i
     <h2 class="t-name">Exosomen &amp;<br><em>Microneedling</em></h2>
     <p class="t-desc">Modernste Regenerationstechnologie kombiniert mit kontrollierter Mikrostimulation. Für strahlende Haut – Porenverfeinerung, Texturverbesserung, Leuchtkraft.</p>
     <div class="t-meta">
-      <div class="t-meta-cell"><p class="t-meta-k">Dauer</p><p class="t-meta-v">60–90 Min.</p></div>
-      <div class="t-meta-cell"><p class="t-meta-k">Ausfallzeit</p><p class="t-meta-v">2–4 Tage</p></div>
-      <div class="t-meta-cell"><p class="t-meta-k">Wirkung ab</p><p class="t-meta-v">1–2 Wochen</p></div>
-      <div class="t-meta-cell"><p class="t-meta-k">Haltbarkeit</p><p class="t-meta-v">6–12 Monate</p></div>
+      <div class="t-meta-cell"><p class="t-meta-k">Behandlungsdauer</p><p class="t-meta-v">30–40 Min.</p></div>
+      <div class="t-meta-cell"><p class="t-meta-k">Ausfallzeit</p><p class="t-meta-v">Keine – 2 Tage</p></div>
+      <div class="t-meta-cell"><p class="t-meta-k">Wirkung ab</p><p class="t-meta-v">4–6 Wochen</p></div>
+      <div class="t-meta-cell"><p class="t-meta-k">Haltbarkeit</p><p class="t-meta-v">8–12 Monate</p></div>
     </div>
     <div class="t-tags"><span class="tag">Exosomen</span><span class="tag">Microneedling</span><span class="tag">Hautbild</span></div>
-    <a href="kontakt.html" class="btn-ghost">Beratung buchen</a>
+    <div style="display:flex;gap:2rem;align-items:center;margin-top:.5rem">
+      <button class="btn-ghost" onclick="openModal('exosomen')">Mehr erfahren</button>
+      <a href="kontakt.html" class="btn-ghost">Beratung buchen</a>
+    </div>
   </div>
 </article>
-
 
 <article class="treatment r" data-cat="gesicht">
   <div class="t-img"><img src="bilder/dienstleistungen/eufoton.jpg" alt="Endolift Eufoton"></div>
@@ -240,16 +282,315 @@ footer{background:var(--bg-2);padding:6rem 5vw 3rem;border-top:1px solid var(--i
     <h2 class="t-name">Endolift <em>Eufoton</em></h2>
     <p class="t-desc">Laser-Lifting von innen – minimalinvasive Behandlung mit dem Eufoton-Laser für Gesicht, Hals und Körper. Sofortige Straffung und nachhaltige Kollagenneubildung ohne sichtbare Narben.</p>
     <div class="t-meta">
-      <div class="t-meta-cell"><p class="t-meta-k">Dauer</p><p class="t-meta-v">45–90 Min.</p></div>
-      <div class="t-meta-cell"><p class="t-meta-k">Ausfallzeit</p><p class="t-meta-v">3–7 Tage</p></div>
-      <div class="t-meta-cell"><p class="t-meta-k">Wirkung ab</p><p class="t-meta-v">2–4 Wochen</p></div>
-      <div class="t-meta-cell"><p class="t-meta-k">Haltbarkeit</p><p class="t-meta-v">12–24 Monate</p></div>
+      <div class="t-meta-cell"><p class="t-meta-k">Behandlungsdauer</p><p class="t-meta-v">30–45 Min.</p></div>
+      <div class="t-meta-cell"><p class="t-meta-k">Ausfallzeit</p><p class="t-meta-v">Keine</p></div>
+      <div class="t-meta-cell"><p class="t-meta-k">Wirkung ab</p><p class="t-meta-v">Sofort</p></div>
+      <div class="t-meta-cell"><p class="t-meta-k">Haltbarkeit</p><p class="t-meta-v">bis zu 3 Jahre</p></div>
     </div>
     <div class="t-tags"><span class="tag">Laser</span><span class="tag">Lifting</span><span class="tag">Straffung</span></div>
-    <a href="kontakt.html" class="btn-ghost">Beratung buchen</a>
+    <div style="display:flex;gap:2rem;align-items:center;margin-top:.5rem">
+      <button class="btn-ghost" onclick="openModal('endolift')">Mehr erfahren</button>
+      <a href="kontakt.html" class="btn-ghost">Beratung buchen</a>
+    </div>
   </div>
 </article>
 
+</div>
+
+<!-- MODALS -->
+<div class="modal-overlay" id="modal-overlay" onclick="closeModal()"></div>
+
+<div class="modal" id="modal-botox">
+  <div class="modal-header">
+    <div><p class="modal-eyebrow">01 – Gesicht</p><h2 class="modal-title">Botulinum<em>toxin</em></h2></div>
+    <button class="modal-close" onclick="closeModal()"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+  </div>
+  <div class="modal-body">
+    <div class="modal-meta">
+      <div class="modal-meta-cell"><p class="modal-meta-k">Behandlungsdauer</p><p class="modal-meta-v">10–20 Min.</p></div>
+      <div class="modal-meta-cell"><p class="modal-meta-k">Ausfallzeit</p><p class="modal-meta-v">Keine</p></div>
+      <div class="modal-meta-cell"><p class="modal-meta-k">Wirkung ab</p><p class="modal-meta-v">3–6 Tage</p></div>
+      <div class="modal-meta-cell"><p class="modal-meta-k">Haltbarkeit</p><p class="modal-meta-v">12–16 Wochen</p></div>
+    </div>
+    <div class="modal-section">
+      <h3>Was ist Botulinumtoxin?</h3>
+      <p>Das Botulinumtoxin, ein bewährtes Nervengift, wird seit Jahren erfolgreich in der ästhetischen Medizin eingesetzt. Das biotechnologische Verfahren zur Gewinnung und Reinigung dieses Toxins erfolgt in einem sorgfältigen Laborprozess, der dem aus einem Bakterium isoliert wird.</p>
+      <p>Der ästhetische Markt verwendet Botulinumtoxin hauptsächlich zur Behandlung von mimisch bedingten Falten. Nicht mimisch bedingte Falten erfordern hingegen andere Behandlungsmethoden und Präparate wie beispielsweise Hyaluronsäure.</p>
+    </div>
+    <div class="modal-section">
+      <h3>Wie wirkt es?</h3>
+      <p>Botulinumtoxin blockiert vorübergehend die Signalübertragung der Nerven auf die Muskeln. Die Muskelkontraktion kann je nach Dosierung vollständig aufgehoben oder nur abgeschwächt werden, was zu einer Glättung der mimisch bedingten Falten führt. Die sichtbare Wirkung tritt typischerweise 4–7 Tage nach der Injektion ein, wobei die Blockade der Muskelkontraktion bis zu 12 Wochen anhält.</p>
+    </div>
+    <div class="modal-section">
+      <h3>Mögliche Nebenwirkungen</h3>
+      <ul>
+        <li>Blutergüsse an den Injektionsstellen</li>
+        <li>Kopfschmerzen, Müdigkeit, Unwohlsein</li>
+        <li>Gliederschmerzen (selten)</li>
+        <li>Allergische Reaktionen (sehr selten)</li>
+      </ul>
+    </div>
+    <div class="modal-section">
+      <h3>Nachsorge</h3>
+      <p>Körperliche Anstrengungen und Massagen an den Injektionsstellen sollten für 24 Stunden vermieden werden.</p>
+      <ul>
+        <li>Kein direktes Sonnenlicht und kein Solarium für mindestens 2 Wochen</li>
+        <li>Kein Sport oder intensive körperliche Aktivität für 24 Stunden</li>
+        <li>Keine Saunabesuche oder heisse Bäder für 48 Stunden</li>
+        <li>Keine Massagen im Behandlungsbereich für 24 Stunden</li>
+      </ul>
+      <p>Botulinumtoxin wird auch zur Behandlung von übermässigem Schwitzen in den Achselhöhlen sowie gegen Migräne eingesetzt.</p>
+    </div>
+  </div>
+  <div class="modal-footer"><a href="kontakt.html" class="btn-dark">Beratung vereinbaren</a></div>
+</div>
+
+<div class="modal" id="modal-hyaluron">
+  <div class="modal-header">
+    <div><p class="modal-eyebrow">02 – Volumen & Kontur</p><h2 class="modal-title">Hyaluron<em>säure</em></h2></div>
+    <button class="modal-close" onclick="closeModal()"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+  </div>
+  <div class="modal-body">
+    <div class="modal-meta">
+      <div class="modal-meta-cell"><p class="modal-meta-k">Dauer</p><p class="modal-meta-v">30–60 Min.</p></div>
+      <div class="modal-meta-cell"><p class="modal-meta-k">Ausfallzeit</p><p class="modal-meta-v">1–3 Tage</p></div>
+      <div class="modal-meta-cell"><p class="modal-meta-k">Wirkung ab</p><p class="modal-meta-v">Sofort</p></div>
+      <div class="modal-meta-cell"><p class="modal-meta-k">Haltbarkeit</p><p class="modal-meta-v">12–18 Monate</p></div>
+    </div>
+    <div class="modal-section">
+      <h3>Was ist Hyaluronsäure?</h3>
+      <p>Jeder Mensch verliert im Laufe der Zeit die Bildung von Kollagen, wobei der Grad dieser Ausprägung individuell variiert. Ein weiteres häufiges Anzeichen für reifere Haut ist der allgemeine Volumenverlust, der aus der Abnahme unserer Elastin- und Kollagenproteine im Alterungsprozess resultiert.</p>
+      <p>Die Hyaluronsäure ist eine körpereigene Substanz, die im gesamten Bindegewebe vorkommt. Durch offenporiges Auffüllen von Vertiefungen in der Haut tragen sie dazu bei, das Erscheinungsbild der Hauttextur zuverlässig zu verbessern.</p>
+    </div>
+    <div class="modal-section">
+      <h3>Anwendungsbereiche</h3>
+      <ul>
+        <li>Lippenaugmentation und Lippenkonturierung</li>
+        <li>Wangenvolumen und Gesichtskonturierung</li>
+        <li>Nasolabialfalten und Marionettenlinien</li>
+        <li>Tränenrinnen und Augenpartie</li>
+        <li>Kinnmodellierung und Jawline</li>
+      </ul>
+    </div>
+    <div class="modal-section">
+      <h3>Die Injektion</h3>
+      <p>Die Injektion erfolgt je nach Behandlungsbedarf oberflächlich mittels einer sehr feinen Nadel. Die gängigen Produkte enthalten in der Regel ein Betäubungsmittel, und die Injektionsstellen werden etwa 15–30 Minuten vor einer Betäubungscreme behandelt. Die Wirkung der hochwertigen Produkte kann bis zu 18 Monate dauern, wobei diese Dauer je nach individuellem Fähigkeiten variieren kann.</p>
+    </div>
+  </div>
+  <div class="modal-footer"><a href="kontakt.html" class="btn-dark">Beratung vereinbaren</a></div>
+</div>
+
+<div class="modal" id="modal-fadenlifting">
+  <div class="modal-header">
+    <div><p class="modal-eyebrow">03 – Lifting</p><h2 class="modal-title">Faden<em>lifting</em></h2></div>
+    <button class="modal-close" onclick="closeModal()"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+  </div>
+  <div class="modal-body">
+    <div class="modal-meta">
+      <div class="modal-meta-cell"><p class="modal-meta-k">Behandlungsdauer</p><p class="modal-meta-v">ca. 30 Min.</p></div>
+      <div class="modal-meta-cell"><p class="modal-meta-k">Ausfallzeit</p><p class="modal-meta-v">4–7 Tage</p></div>
+      <div class="modal-meta-cell"><p class="modal-meta-k">Wirkung ab</p><p class="modal-meta-v">Sofort / 2 Wochen</p></div>
+      <div class="modal-meta-cell"><p class="modal-meta-k">Haltbarkeit</p><p class="modal-meta-v">12–24 Monate</p></div>
+    </div>
+    <div class="modal-section">
+      <h3>Zwei Fadentypen – ein Ziel</h3>
+      <p>Beim Fadenlifting unterscheiden wir zwischen zwei Arten von Fäden, die je nach Behandlungsziel und individuellem Befund zum Einsatz kommen. Beide bestehen aus biokompatiblen, vollständig abbaubaren Materialien und hinterlassen keine Rückstände im Gewebe.</p>
+    </div>
+    <div class="modal-section">
+      <h3>Widerhackenfäden – für ausgeprägte Straffung</h3>
+      <p>Widerhackenfäden (Cog-Fäden) sind mit kleinen Widerhaken besetzt, die sich im Gewebe verankern und die Haut sofort mechanisch anheben. Sie kommen vor allem dort zum Einsatz, wo eine deutlichere Korrektur gewünscht ist – etwa bei hängenden Wangen, sogenannten Hamsterbacken, oder einer abgesunkenen Kieferlinie. Die Wirkung ist unmittelbar sichtbar.</p>
+      <ul>
+        <li>Sofortige, sichtbare Liftingwirkung</li>
+        <li>Ideal bei stärkerer Erschlaffung der unteren Gesichtshälfte</li>
+        <li>Mechanische Verankerung im Unterhautgewebe</li>
+        <li>Zusätzliche Kollagenstimulation während des Fadenabbaus</li>
+      </ul>
+    </div>
+    <div class="modal-section">
+      <h3>Kollagenfäden – für Verjüngung & Hautqualität</h3>
+      <p>Kollagenfäden (Mono-Fäden) sind glatt und ohne Widerhaken. Sie werden in einem feinen Netzwerk unter der Haut platziert und regen gezielt die körpereigene Kollagenproduktion an. Diese Fäden eignen sich hervorragend für ein Haut-Update – eine sanfte Verjüngung für mehr Elastizität, Festigkeit und Leuchtkraft, ohne dramatischen Lift. Die Wirkung baut sich über ca. 2 Wochen bis 3 Monate schrittweise auf.</p>
+      <ul>
+        <li>Wirkung setzt nach ca. 2 Wochen ein</li>
+        <li>Verbesserung von Hauttextur, Poren und Feuchtigkeit</li>
+        <li>Ideal zur Prävention und für ein frisches Hautbild</li>
+        <li>Gut kombinierbar mit Botulinumtoxin oder Hyaluronsäure</li>
+      </ul>
+    </div>
+  </div>
+  <div class="modal-footer"><a href="kontakt.html" class="btn-dark">Beratung vereinbaren</a></div>
+</div>
+
+<div class="modal" id="modal-prp">
+  <div class="modal-header">
+    <div><p class="modal-eyebrow">04 – Regeneration</p><h2 class="modal-title">PRP <em>Therapie</em></h2></div>
+    <button class="modal-close" onclick="closeModal()"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+  </div>
+  <div class="modal-body">
+    <div class="modal-meta">
+      <div class="modal-meta-cell"><p class="modal-meta-k">Behandlungsdauer</p><p class="modal-meta-v">20–30 Min.</p></div>
+      <div class="modal-meta-cell"><p class="modal-meta-k">Ausfallzeit</p><p class="modal-meta-v">Keine</p></div>
+      <div class="modal-meta-cell"><p class="modal-meta-k">Wirkung ab</p><p class="modal-meta-v">Ab 4. Woche</p></div>
+      <div class="modal-meta-cell"><p class="modal-meta-k">Haltbarkeit</p><p class="modal-meta-v">6–9 Monate</p></div>
+    </div>
+    <div class="modal-section">
+      <h3>Was ist PRP?</h3>
+      <p>Die PRP-Therapie, auch bekannt als Platelet-Rich-Plasma-Therapie, ist eine innovative Behandlungsmethode, die auf der Verwendung von körpereigenem Plasma basiert. Dieses Plasma enthält eine Vielzahl natürlicher Wachstumsfaktoren, Stammzellen und bioaktiver Substanzen, die für die Regeneration des Körpers von entscheidender Bedeutung sind.</p>
+    </div>
+    <div class="modal-section">
+      <h3>Ablauf der Behandlung</h3>
+      <ul>
+        <li>Blutentnahme aus der Armvene (kleine Menge)</li>
+        <li>Zentrifugierung zur Gewinnung des thrombozytenreichen Plasmas</li>
+        <li>Injektion des Plasmas mit feiner Nadel in die Zielzone</li>
+        <li>Stimulation der Kollagenproduktion und Zellregeneration</li>
+      </ul>
+    </div>
+    <div class="modal-section">
+      <h3>Anwendungsbereiche</h3>
+      <ul>
+        <li>Hautverjüngung – Gesicht, Hals, Dekolleté</li>
+        <li>Volumenaufbau und Festigung der Haut</li>
+        <li>Haarausfall und Haarwachstum (Kopfhaut)</li>
+        <li>Augenringe und Tränenrinnen</li>
+      </ul>
+    </div>
+    <div class="modal-section">
+      <h3>100 % natürlich</h3>
+      <p>Da ausschliesslich körpereigenes Plasma verwendet wird, sind allergische Reaktionen oder Unverträglichkeiten nahezu ausgeschlossen. Die Methode ist besonders geeignet für Patientinnen, die eine natürliche Alternative zu synthetischen Füllstoffen suchen.</p>
+    </div>
+    <div class="modal-section">
+      <h3>Nachsorge & Kombination</h3>
+      <p>Nach der Behandlung sind keine besonderen Einschränkungen notwendig. Für optimale Ergebnisse empfehlen wir 3–4 Sitzungen im Abstand von 4–6 Wochen.</p>
+      <ul>
+        <li>Kein direktes Sonnenlicht und kein Solarium für 48 Stunden</li>
+        <li>Kein Sport oder Sauna am Behandlungstag</li>
+        <li>Keine aggressiven Pflegeprodukte (Retinol, Säuren) für 3 Tage</li>
+      </ul>
+      <p>Bei der Anwendung im Bereich der Kopfhaut zur Behandlung von Haarausfall kann PRP sehr gut mit <strong>Minoxidil</strong> kombiniert werden. Minoxidil regt die Durchblutung der Haarfollikel an und unterstützt so das durch PRP stimulierte Haarwachstum. Die Kombination beider Methoden zeigt in der Regel deutlich bessere Ergebnisse als jede Therapie für sich allein.</p>
+    </div>
+  </div>
+  <div class="modal-footer"><a href="kontakt.html" class="btn-dark">Beratung vereinbaren</a></div>
+</div>
+
+<div class="modal" id="modal-biostimulatoren">
+  <div class="modal-header">
+    <div><p class="modal-eyebrow">05 – Regeneration</p><h2 class="modal-title">Bio<em>stimulatoren</em></h2></div>
+    <button class="modal-close" onclick="closeModal()"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+  </div>
+  <div class="modal-body">
+    <div class="modal-meta">
+      <div class="modal-meta-cell"><p class="modal-meta-k">Behandlungsdauer</p><p class="modal-meta-v">20–30 Min.</p></div>
+      <div class="modal-meta-cell"><p class="modal-meta-k">Ausfallzeit</p><p class="modal-meta-v">Keine</p></div>
+      <div class="modal-meta-cell"><p class="modal-meta-k">Wirkung ab</p><p class="modal-meta-v">Ab 2. Monat</p></div>
+      <div class="modal-meta-cell"><p class="modal-meta-k">Haltbarkeit</p><p class="modal-meta-v">6–18 Monate</p></div>
+    </div>
+    <div class="modal-section">
+      <h3>Was sind Biostimulatoren?</h3>
+      <p>Biostimulatoren sind Wirkstoffe, die in der minimalinvasiven ästhetischen Medizin gezielt eingesetzt werden, um die körpereigene Kollagenproduktion anzuregen. Im Unterschied zu Fillern füllen sie keine Falten auf — sie aktivieren das Gewebe von innen und verbessern langfristig Festigkeit, Elastizität und Hautqualität. Die Einbringung erfolgt je nach Präparat mit einer feinen Spritze oder einer stumpfen Kanüle, was besonders schonend und präzise ist.</p>
+      <p>In der Regel sind mehrere Sitzungen erforderlich, um optimale und langanhaltende Ergebnisse zu erzielen.</p>
+    </div>
+    <div class="modal-section">
+      <h3>Poly-L-Milchsäure – Straffung & Volumen</h3>
+      <p>Poly-L-Milchsäure (z. B. Sculptra, Lanluma) ist ein bewährter Biostimulator, der tief im Gewebe die Neubildung von Kollagenfasern anregt. Die Wirkung entfaltet sich schrittweise über 2–3 Monate und hält bis zu 1,5 Jahre an. Angewendet wird sie vor allem im Gesicht und am Hals zur Straffung erschlaffter Haut, Volumenwiederherstellung und Verbesserung der Hauttextur.</p>
+      <ul>
+        <li>Anwendung: Gesicht, Wangen, Schläfen, Kinn, Hals</li>
+        <li>Strafft und voluminisiert die Haut nachhaltig</li>
+        <li>Haltbarkeit: ca. 1,5 Jahre</li>
+        <li>In der Regel 2–3 Sitzungen empfohlen</li>
+      </ul>
+    </div>
+    <div class="modal-section">
+      <h3>Polynukleotide (PDRN) – Regeneration & Feuchtigkeit</h3>
+      <p>Polynukleotide sind hochgereinigte DNA-Fragmente, gewonnen aus natürlichen biologischen Quellen. Sie wirken auf zellulärer Ebene: Sie reparieren geschädigtes Gewebe, stimulieren Fibroblasten und verbessern nachhaltig die Hautfeuchtigkeit, Elastizität und Leuchtkraft. Dank ihrer feinen Konsistenz eignen sie sich besonders für empfindliche und zarte Zonen, die mit klassischen Fillern schwer erreichbar sind.</p>
+      <ul>
+        <li>Anwendung: Augenpartie, Hals, Dekolleté, Gesicht</li>
+        <li>Ideal bei dünner, empfindlicher oder dehydrierter Haut</li>
+        <li>Haltbarkeit: 6–18 Monate je nach Präparat</li>
+        <li>Gut kombinierbar mit Botulinumtoxin, PRP oder Hyaluronsäure</li>
+      </ul>
+    </div>
+    <div class="modal-section">
+      <h3>Wissenschaftliche Wirkung</h3>
+      <p>Es wurde nachgewiesen, dass der Kollagengehalt der Haut bereits nach 3 Monaten um bis zu 66,5 % zunimmt. Neu gebildetes Kollagen stellt die natürliche Festigkeit, Spannung und Qualität der Haut langfristig wieder her.</p>
+    </div>
+  </div>
+  <div class="modal-footer"><a href="kontakt.html" class="btn-dark">Beratung vereinbaren</a></div>
+</div>
+
+<div class="modal" id="modal-exosomen">
+  <div class="modal-header">
+    <div><p class="modal-eyebrow">06 – Regeneration</p><h2 class="modal-title">Exosomen &amp; <em>Microneedling</em></h2></div>
+    <button class="modal-close" onclick="closeModal()"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+  </div>
+  <div class="modal-body">
+    <div class="modal-meta">
+      <div class="modal-meta-cell"><p class="modal-meta-k">Behandlungsdauer</p><p class="modal-meta-v">30–40 Min.</p></div>
+      <div class="modal-meta-cell"><p class="modal-meta-k">Ausfallzeit</p><p class="modal-meta-v">Keine – 2 Tage</p></div>
+      <div class="modal-meta-cell"><p class="modal-meta-k">Wirkung ab</p><p class="modal-meta-v">4–6 Wochen</p></div>
+      <div class="modal-meta-cell"><p class="modal-meta-k">Haltbarkeit</p><p class="modal-meta-v">8–12 Monate</p></div>
+    </div>
+    <div class="modal-section">
+      <h3>Microneedling – kontrollierte Hauterneuerung</h3>
+      <p>Beim Microneedling werden mit einer präzisen Nadeltechnik feinste, kontrollierte Mikrokanäle in der Haut erzeugt. Diese minimalen Verletzungsreize aktivieren den natürlichen Heilungsprozess des Körpers: Die Produktion von Kollagen und Elastin wird gesteigert, die Haut wird straffer, feiner und ebenmässiger und strahlender. Die Aufnahmefähigkeit der Haut steigt dabei deutlich an — ideal für die gleichzeitige Anwendung von Wirkstoffen wie Exosomen. Für optimale Ergebnisse sind mehrere Sitzungen empfohlen.</p>
+    </div>
+    <div class="modal-section">
+      <h3>Exosomen – Zellkommunikation & beschleunigte Erneuerung</h3>
+      <p>Exosomen sind winzige extrazelluläre Bläschen, die als natürliche Botenstoffe zwischen Zellen fungieren. In der ästhetischen Medizin werden Exosomen aus pflanzlichen Stammzellen gewonnen und als hochwirksames Serum direkt während des Microneedlings auf die Haut aufgetragen. Durch die geöffneten Mikrokanäle dringen sie tief in das Gewebe ein und liefern gezielte Signale zur Aktivierung der Hautzellen — mit dem Ziel, die Zellerneuerung zu beschleunigen, die Heilung zu optimieren und das Hautbild nachhaltig zu verbessern.</p>
+      <ul>
+        <li>Beschleunigt die Wundheilung nach dem Microneedling deutlich</li>
+        <li>Mit Exosomen: keine bis minimale Ausfallzeit</li>
+        <li>Fördert Zellregeneration und Kollagensynthese</li>
+        <li>Verbessert Leuchtkraft, Textur und Gleichmässigkeit des Hautbilds</li>
+      </ul>
+    </div>
+    <div class="modal-section">
+      <h3>Radiofrequenz – Wärme für tiefere Wirkung</h3>
+      <p>Die optionale Kombination mit Radiofrequenz verstärkt die Behandlung erheblich. Radiofrequenzenergie erzeugt kontrollierte Wärme in den tiefen Hautschichten, die das Kollagengewebe zusätzlich stimuliert und bestehende Kollagenfasern sofort strafft. Die Wärme fördert zudem die Durchblutung und verbessert die Aufnahme der Wirkstoffe. Das Ergebnis: eine spürbar festere, straffere Haut mit verbesserter Kontur — effektiver als Microneedling allein.</p>
+    </div>
+  </div>
+  <div class="modal-footer"><a href="kontakt.html" class="btn-dark">Beratung vereinbaren</a></div>
+</div>
+
+<div class="modal" id="modal-endolift">
+  <div class="modal-header">
+    <div><p class="modal-eyebrow">07 – Lifting</p><h2 class="modal-title">Endolift <em>Eufoton</em></h2></div>
+    <button class="modal-close" onclick="closeModal()"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+  </div>
+  <div class="modal-body">
+    <div class="modal-meta">
+      <div class="modal-meta-cell"><p class="modal-meta-k">Behandlungsdauer</p><p class="modal-meta-v">30–45 Min.</p></div>
+      <div class="modal-meta-cell"><p class="modal-meta-k">Ausfallzeit</p><p class="modal-meta-v">Keine</p></div>
+      <div class="modal-meta-cell"><p class="modal-meta-k">Wirkung ab</p><p class="modal-meta-v">Sofort</p></div>
+      <div class="modal-meta-cell"><p class="modal-meta-k">Haltbarkeit</p><p class="modal-meta-v">bis zu 3 Jahre</p></div>
+    </div>
+    <div class="modal-section">
+      <h3>Was ist Endolift?</h3>
+      <p>Die Endolift®-Behandlung stellt eine fortschrittliche Methode zur Hautstraffung und Fettreduktion dar, die minimal-invasiv und ambulant durchgeführt werden kann. Dabei kommen spezielle, ultradünne Laserfasern zum Einsatz, die gezielt unter die Haut eingeführt werden, um dort gezielt zu wirken.</p>
+    </div>
+    <div class="modal-section">
+      <h3>Sofort zurück im Alltag</h3>
+      <p>Für das Verfahren ist nur ein kleiner Einstich erforderlich, der oft sogar ohne Betäubung erfolgt und sich unmittelbar nach der Behandlung von selbst schliesst. Die Anwendung ist nahezu schmerzfrei, und eventuelle leichte Rötungen verschwinden schnell.</p>
+    </div>
+    <div class="modal-section">
+      <h3>Langfristige Wirkung</h3>
+      <ul>
+        <li>Sofortige sichtbare Hautstraffung</li>
+        <li>Kontinuierliche Kollagensynthese in tiefen Hautschichten</li>
+        <li>Stetige Verbesserung des Hautbildes über Monate</li>
+        <li>Behandlungsdauer in der Regel 30–45 Minuten</li>
+      </ul>
+    </div>
+    <div class="modal-section">
+      <h3>Anwendungsbereiche</h3>
+      <ul>
+        <li>Gesicht und Hals – Straffung und Konturierung</li>
+        <li>Augenlider und Augenpartie</li>
+        <li>Kinn und Kieferlinie (Jawline)</li>
+        <li>Körper – Bauch, Arme, Innenseiten</li>
+      </ul>
+    </div>
+  </div>
+  <div class="modal-footer"><a href="kontakt.html" class="btn-dark">Beratung vereinbaren</a></div>
 </div>
 
 <div class="cta-strip">
@@ -263,9 +604,9 @@ footer{background:var(--bg-2);padding:6rem 5vw 3rem;border-top:1px solid var(--i
 
 <footer>
   <div class="footer-top">
-    <div><img src="bilder/logo/logo.svg" alt="Royal Aesthetik" class="footer-logo"><p class="footer-tagline">Medizinische –sthetik auf höchstem Niveau.</p></div>
+    <div><img src="bilder/logo/logo.svg" alt="Royal Aesthetik" class="footer-logo"><p class="footer-tagline">Medizinische –Ästhetik auf höchstem Niveau.</p></div>
     <div><p class="footer-col-title">Behandlungen</p><ul class="footer-links"><li><a href="behandlungen.html">Botulinumtoxin</a></li><li><a href="behandlungen.html">Hyaluronsäure</a></li><li><a href="behandlungen.html">Fadenlifting</a></li><li><a href="behandlungen.html">PRP Therapie</a></li><li><a href="behandlungen.html">Biostimulatoren</a></li></ul></div>
-    <div><p class="footer-col-title">Klinik</p><ul class="footer-links"><li><a href="uber-uns.html">–ober uns</a></li><li><a href="preise.html">Preise</a></li><li><a href="faq.html">FAQ</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></div>
+    <div><p class="footer-col-title">Klinik</p><ul class="footer-links"><li><a href="uber-uns.html">Über uns</a></li><li><a href="preise.html">Preise</a></li><li><a href="faq.html">FAQ</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></div>
     <div><p class="footer-col-title">Kontakt</p><ul class="footer-links"><li><a href="#">Leutschenstrasse 1</a></li><li><a href="#">8807 Freienbach</a></li><li><a href="mailto:info@royalaesthetik.ch">info@royalaesthetik.ch</a></li></ul></div>
   </div>
   <div class="footer-bottom">
@@ -274,11 +615,14 @@ footer{background:var(--bg-2);padding:6rem 5vw 3rem;border-top:1px solid var(--i
   </div>
 </footer>
 <script>
+function openModal(id){document.querySelectorAll('.modal').forEach(m=>m.classList.remove('open'));document.getElementById('modal-'+id).classList.add('open');document.getElementById('modal-overlay').classList.add('open');document.body.style.overflow='hidden';}
+function closeModal(){document.querySelectorAll('.modal').forEach(m=>m.classList.remove('open'));document.getElementById('modal-overlay').classList.remove('open');document.body.style.overflow='';}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
 const nav=document.getElementById('nav');
 window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>40),{passive:true});
 const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target);}});},{threshold:0.08});
 document.querySelectorAll('.r,.rl').forEach(el=>obs.observe(el));
-document.querySelector('.hamburger').addEventListener('click',function(){const l=document.querySelector('.nav-links');const open=l.style.display==='flex';l.style.cssText=open?'':'display:flex;flex-direction:column;position:fixed;top:64px;left:0;right:0;background:rgba(10,10,10,.97);padding:2rem 5vw;gap:1.5rem;border-bottom:1px solid rgba(184,146,90,.2)';});
+document.querySelector('.hamburger').addEventListener('click',function(){const l=document.querySelector('.nav-links');const open=l.style.display==='flex';l.style.cssText=open?'':'display:flex;flex-direction:column;position:fixed;top:64px;left:0;right:0;background:rgba(250,248,245,.98);padding:2rem 5vw;gap:1.5rem;border-bottom:1px solid rgba(201,164,164,.3);box-shadow:0 8px 24px rgba(28,26,24,.08)';});
 document.querySelectorAll('.filter-btn').forEach(btn=>{btn.addEventListener('click',()=>{document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');const f=btn.dataset.filter;document.querySelectorAll('.treatment').forEach(t=>{t.style.display=(f==='all'||t.dataset.cat===f)?'grid':'none';});});});
 </script>
 </body>

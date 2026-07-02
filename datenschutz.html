@@ -9,24 +9,24 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--bg:#FAF8F5;--bg-2:#F0EDE8;--ivory:#1C1A18;--ivory-dim:#6B6560;--ivory-dark:#CCC7BF;--gold:#B8925A;--gold-dim:rgba(184,146,90,.35);--font-display:'Cormorant Garamond',Georgia,serif;--font-body:'DM Sans',system-ui,sans-serif;--font-label:'Montserrat',sans-serif}
+:root{--bg:#FAF8F5;--bg-2:#F0EDE8;--ivory:#1C1A18;--ivory-dim:#6B6560;--ivory-dark:#CCC7BF;--gold:#B8925A;--gold-dim:rgba(201,164,164,.15);--font-display:'Cormorant Garamond',Georgia,serif;--font-body:'DM Sans',system-ui,sans-serif;--font-label:'Montserrat',sans-serif}
 html{font-size:16px}
 body{background:var(--bg);color:var(--ivory);font-family:var(--font-body);font-weight:300;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-nav{position:fixed;top:0;left:0;right:0;z-index:200;height:76px;padding:0 5vw;display:flex;align-items:center;justify-content:space-between;background:rgba(250,248,245,.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--gold-dim)}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;height:76px;padding:0 5vw;display:flex;align-items:center;justify-content:space-between;background:rgba(250,248,245,.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--rose-dim)}
 .nav-logo{display:flex;align-items:center;text-decoration:none}
 .nav-logo img{height:38px;width:104px;object-fit:contain;object-position:left center;display:block;filter:none}
 .nav-links{display:flex;gap:2.5rem;list-style:none;align-items:center}
 .nav-links a{font-family:var(--font-label);font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--ivory-dim);text-decoration:none;transition:color .3s}
 .nav-links a:hover{color:var(--ivory)}
-.nav-cta{background:transparent!important;border:1px solid var(--gold-dim);color:var(--gold)!important;padding:.55rem 1.4rem;transition:background .3s!important,border-color .3s!important,color .3s!important}
-.nav-cta:hover{background:var(--gold)!important;border-color:var(--gold)!important;color:var(--bg)!important}
+.nav-cta{background:transparent!important;border:1px solid var(--rose-dim);color:var(--rose)!important;padding:.55rem 1.4rem;transition:background .3s!important,border-color .3s!important,color .3s!important}
+.nav-cta:hover{background:var(--rose)!important;border-color:var(--rose)!important;color:var(--white)!important}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
 .hamburger span{display:block;width:20px;height:1px;background:var(--ivory)}
-footer{background:var(--bg-2);padding:6rem 5vw 3rem;border-top:1px solid var(--ivory-dark)}
+footer{background:rgba(201,164,164,.1);padding:6rem 5vw 3rem;border-top:2px solid rgba(201,164,164,.4)}
 .footer-top{display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;gap:4vw;padding-bottom:4rem;border-bottom:1px solid var(--ivory-dark)}
 .footer-logo{height:52px;width:auto;display:block;opacity:.85}
 .footer-tagline{font-size:.8rem;color:var(--ivory-dim);margin-top:.75rem;line-height:1.8;max-width:240px}
-.footer-col-title{font-family:var(--font-label);font-size:8.5px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem}
+.footer-col-title{font-family:var(--font-label);font-size:8.5px;letter-spacing:.25em;text-transform:uppercase;color:var(--rose);margin-bottom:1.5rem}
 .footer-links{list-style:none;display:flex;flex-direction:column;gap:.85rem}
 .footer-links a{font-size:.8rem;color:var(--ivory-dim);text-decoration:none;transition:color .3s}
 .footer-links a:hover{color:var(--ivory)}
@@ -38,12 +38,12 @@ footer{background:var(--bg-2);padding:6rem 5vw 3rem;border-top:1px solid var(--i
 .footer-swiss span{font-family:var(--font-label);font-size:8.5px;letter-spacing:.18em;text-transform:uppercase;color:rgba(240,237,232,.2)}
 .legal{padding:140px 5vw 100px;max-width:760px}
 .legal h1{font-family:var(--font-display);font-size:clamp(2.5rem,4vw,5rem);font-weight:200;line-height:.95;color:var(--ivory);margin-bottom:4rem}
-.legal h1 em{font-style:italic;color:var(--gold)}
+.legal h1 em{font-style:italic;color:var(--rose)}
 .legal h2{font-family:var(--font-display);font-size:1.5rem;font-weight:300;color:var(--ivory);margin:3rem 0 1rem;padding-top:2.5rem;border-top:1px solid var(--ivory-dark)}
 .legal p{font-size:.9rem;line-height:1.95;color:var(--ivory-dim);margin-bottom:1rem}
 .legal ul{padding-left:1.5rem;margin-bottom:1rem}
 .legal ul li{font-size:.9rem;line-height:1.9;color:var(--ivory-dim);margin-bottom:.4rem}
-.legal a{color:var(--gold);text-decoration:none}
+.legal a{color:var(--rose);text-decoration:none}
 @media(max-width:768px){nav{height:64px}.nav-links{display:none}.hamburger{display:flex}.footer-top{grid-template-columns:1fr 1fr;gap:3rem}.footer-bottom{flex-direction:column;gap:1rem;text-align:center}}
 @media(max-width:500px){.footer-top{grid-template-columns:1fr}}
 </style>
@@ -87,9 +87,9 @@ footer{background:var(--bg-2);padding:6rem 5vw 3rem;border-top:1px solid var(--i
 </div>
 <footer>
   <div class="footer-top">
-    <div><img src="bilder/logo/logo.svg" alt="Royal Aesthetik" class="footer-logo"><p class="footer-tagline">Medizinische –sthetik auf höchstem Niveau.</p></div>
+    <div><img src="bilder/logo/logo.svg" alt="Royal Aesthetik" class="footer-logo"><p class="footer-tagline">Medizinische –Ästhetik auf höchstem Niveau.</p></div>
     <div><p class="footer-col-title">Behandlungen</p><ul class="footer-links"><li><a href="behandlungen.html">Botulinumtoxin</a></li><li><a href="behandlungen.html">Hyaluronsäure</a></li><li><a href="behandlungen.html">Fadenlifting</a></li><li><a href="behandlungen.html">PRP Therapie</a></li></ul></div>
-    <div><p class="footer-col-title">Klinik</p><ul class="footer-links"><li><a href="uber-uns.html">–ober uns</a></li><li><a href="preise.html">Preise</a></li><li><a href="faq.html">FAQ</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></div>
+    <div><p class="footer-col-title">Klinik</p><ul class="footer-links"><li><a href="uber-uns.html">Über uns</a></li><li><a href="preise.html">Preise</a></li><li><a href="faq.html">FAQ</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></div>
     <div><p class="footer-col-title">Kontakt</p><ul class="footer-links"><li><a href="#">Leutschenstrasse 1</a></li><li><a href="#">8807 Freienbach</a></li><li><a href="mailto:info@royalaesthetik.ch">info@royalaesthetik.ch</a></li></ul></div>
   </div>
   <div class="footer-bottom">
@@ -97,7 +97,7 @@ footer{background:var(--bg-2);padding:6rem 5vw 3rem;border-top:1px solid var(--i
     <div class="footer-swiss"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect width="16" height="16" fill="#CC0000" rx="2"/><rect x="6.5" y="2" width="3" height="12" fill="white"/><rect x="2" y="6.5" width="12" height="3" fill="white"/></svg><span>Swiss Made Quality</span></div>
   </div>
 </footer>
-<script>document.querySelector('.hamburger').addEventListener('click',function(){const l=document.querySelector('.nav-links');const open=l.style.display==='flex';l.style.cssText=open?'':'display:flex;flex-direction:column;position:fixed;top:64px;left:0;right:0;background:rgba(10,10,10,.97);padding:2rem 5vw;gap:1.5rem;border-bottom:1px solid rgba(184,146,90,.2)';});</script>
+<script>document.querySelector('.hamburger').addEventListener('click',function(){const l=document.querySelector('.nav-links');const open=l.style.display==='flex';l.style.cssText=open?'':'display:flex;flex-direction:column;position:fixed;top:64px;left:0;right:0;background:rgba(250,248,245,.98);padding:2rem 5vw;gap:1.5rem;border-bottom:1px solid rgba(201,164,164,.3);box-shadow:0 8px 24px rgba(28,26,24,.08)';});</script>
 </body>
 </html>
 

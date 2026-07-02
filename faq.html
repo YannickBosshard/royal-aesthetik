@@ -9,30 +9,30 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--bg:#FAF8F5;--bg-2:#F0EDE8;--bg-3:#E5E0D8;--ivory:#1C1A18;--ivory-dim:#6B6560;--ivory-dark:#CCC7BF;--gold:#B8925A;--gold-dim:rgba(184,146,90,.35);--font-display:'Cormorant Garamond',Georgia,serif;--font-body:'DM Sans',system-ui,sans-serif;--font-label:'Montserrat',sans-serif;--ease:cubic-bezier(0.25,0.1,0.25,1)}
+:root{--bg:#FAF8F5;--bg-2:#F0EDE8;--bg-3:#E5E0D8;--ivory:#1C1A18;--ivory-dim:#6B6560;--ivory-dark:#CCC7BF;--gold:#B8925A;--gold-dim:rgba(201,164,164,.15);--font-display:'Cormorant Garamond',Georgia,serif;--font-body:'DM Sans',system-ui,sans-serif;--font-label:'Montserrat',sans-serif;--ease:cubic-bezier(0.25,0.1,0.25,1);--rose:#C9A4A4;--rose-dim:rgba(201,164,164,.3);--rose-pale:rgba(201,164,164,.12);--white:#FFFFFF}
 html{scroll-behavior:smooth;font-size:16px}
 body{background:var(--bg);color:var(--ivory);font-family:var(--font-body);font-weight:300;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-.label{font-family:var(--font-label);font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);font-weight:400}
+.label{font-family:var(--font-label);font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--rose);font-weight:400}
 .r{opacity:0;transform:translateY(24px);transition:opacity 1s var(--ease),transform 1s var(--ease)}.r.on{opacity:1;transform:none}
 .d1{transition-delay:.1s}.d2{transition-delay:.2s}
-nav{position:fixed;top:0;left:0;right:0;z-index:200;height:76px;padding:0 5vw;display:flex;align-items:center;justify-content:space-between;background:rgba(250,248,245,.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--gold-dim)}
-nav.scrolled{background:rgba(250,248,245,.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--gold-dim)}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;height:76px;padding:0 5vw;display:flex;align-items:center;justify-content:space-between;background:rgba(250,248,245,.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--rose-dim)}
+nav.scrolled{background:rgba(250,248,245,.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--rose-dim)}
 .nav-logo{display:flex;align-items:center;text-decoration:none}
 .nav-logo img{height:38px;width:104px;object-fit:contain;object-position:left center;display:block;filter:none}
 .nav-links{display:flex;gap:2.5rem;list-style:none;align-items:center}
 .nav-links a{font-family:var(--font-label);font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--ivory-dim);text-decoration:none;transition:color .3s}
 .nav-links a:hover,.nav-links a.active{color:var(--ivory)}
-.nav-cta{background:transparent!important;border:1px solid var(--gold-dim);color:var(--gold)!important;padding:.55rem 1.4rem;transition:background .3s!important,border-color .3s!important,color .3s!important}
-.nav-cta:hover{background:var(--gold)!important;border-color:var(--gold)!important;color:var(--bg)!important}
+.nav-cta{background:transparent!important;border:1px solid var(--rose-dim);color:var(--rose)!important;padding:.55rem 1.4rem;transition:background .3s!important,border-color .3s!important,color .3s!important}
+.nav-cta:hover{background:var(--rose)!important;border-color:var(--rose)!important;color:var(--white)!important}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
 .hamburger span{display:block;width:20px;height:1px;background:var(--ivory)}
-.btn-dark{font-family:var(--font-label);font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;background:var(--gold);color:var(--bg);padding:.9rem 2.4rem;text-decoration:none;display:inline-block;transition:background .3s,transform .3s}
+.btn-dark{font-family:var(--font-label);font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;background:var(--rose);color:var(--bg);padding:.9rem 2.4rem;text-decoration:none;display:inline-block;transition:background .3s,transform .3s}
 .btn-dark:hover{background:var(--ivory);transform:translateY(-2px)}
-footer{background:var(--bg-2);padding:6rem 5vw 3rem;border-top:1px solid var(--ivory-dark)}
+footer{background:rgba(201,164,164,.1);padding:6rem 5vw 3rem;border-top:2px solid rgba(201,164,164,.4)}
 .footer-top{display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;gap:4vw;padding-bottom:4rem;border-bottom:1px solid var(--ivory-dark)}
 .footer-logo{height:52px;width:auto;display:block;opacity:.85}
 .footer-tagline{font-size:.8rem;color:var(--ivory-dim);margin-top:.75rem;line-height:1.8;max-width:240px}
-.footer-col-title{font-family:var(--font-label);font-size:8.5px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem}
+.footer-col-title{font-family:var(--font-label);font-size:8.5px;letter-spacing:.25em;text-transform:uppercase;color:var(--rose);margin-bottom:1.5rem}
 .footer-links{list-style:none;display:flex;flex-direction:column;gap:.85rem}
 .footer-links a{font-size:.8rem;color:var(--ivory-dim);text-decoration:none;transition:color .3s}
 .footer-links a:hover{color:var(--ivory)}
@@ -44,41 +44,41 @@ footer{background:var(--bg-2);padding:6rem 5vw 3rem;border-top:1px solid var(--i
 .footer-swiss span{font-family:var(--font-label);font-size:8.5px;letter-spacing:.18em;text-transform:uppercase;color:rgba(240,237,232,.2)}
 
 .page-hero{padding:160px 5vw 80px;border-bottom:1px solid var(--ivory-dark)}
-.page-eyebrow{font-family:var(--font-label);font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:2rem;display:flex;align-items:center;gap:1.2rem}
-.page-eyebrow::before{content:'';display:block;width:28px;height:1px;background:var(--gold)}
+.page-eyebrow{font-family:var(--font-label);font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--rose);margin-bottom:2rem;display:flex;align-items:center;gap:1.2rem}
+.page-eyebrow::before{content:'';display:block;width:28px;height:1px;background:var(--rose)}
 .page-title{font-family:var(--font-display);font-size:clamp(3rem,6vw,6.5rem);font-weight:200;line-height:.95;color:var(--ivory)}
-.page-title em{font-style:italic;color:var(--gold)}
+.page-title em{font-style:italic;color:var(--rose)}
 .page-sub{font-size:.92rem;line-height:1.9;color:var(--ivory-dim);max-width:520px;margin-top:2.5rem}
 
 /* FAQ LAYOUT */
 .faq-body{display:grid;grid-template-columns:280px 1fr;gap:0;border-bottom:1px solid var(--ivory-dark)}
 .faq-sidebar{padding:4rem 3vw 4rem 5vw;border-right:1px solid var(--ivory-dark);position:sticky;top:76px;align-self:start;max-height:calc(100vh - 76px);overflow-y:auto}
-.faq-sidebar-title{font-family:var(--font-label);font-size:8.5px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1.75rem}
+.faq-sidebar-title{font-family:var(--font-label);font-size:8.5px;letter-spacing:.25em;text-transform:uppercase;color:var(--rose);margin-bottom:1.75rem}
 .faq-nav{list-style:none;display:flex;flex-direction:column;gap:.25rem}
 .faq-nav a{font-size:.84rem;color:var(--ivory-dim);text-decoration:none;padding:.5rem 0;display:block;transition:color .3s;border-left:2px solid transparent;padding-left:1rem;margin-left:-1rem}
-.faq-nav a:hover,.faq-nav a.active{color:var(--ivory);border-left-color:var(--gold)}
+.faq-nav a:hover,.faq-nav a.active{color:var(--ivory);border-left-color:var(--rose)}
 
 .faq-content{padding:4rem 5vw}
 .faq-category{margin-bottom:5rem}
 .faq-category-title{font-family:var(--font-display);font-size:clamp(1.5rem,2.5vw,2.5rem);font-weight:200;color:var(--ivory);margin-bottom:2.5rem;padding-bottom:1.5rem;border-bottom:1px solid var(--ivory-dark)}
-.faq-category-title em{font-style:italic;color:var(--gold)}
+.faq-category-title em{font-style:italic;color:var(--rose)}
 
 .faq-item{border-bottom:1px solid var(--ivory-dark)}
 .faq-q{padding:1.5rem 0;display:flex;justify-content:space-between;align-items:center;cursor:pointer;gap:2rem}
 .faq-q-text{font-family:var(--font-display);font-size:1.1rem;font-weight:300;color:var(--ivory);line-height:1.3}
 .faq-q-icon{width:28px;height:28px;border:1px solid var(--ivory-dark);border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all .3s}
-.faq-q-icon::before{content:'+';font-family:var(--font-label);font-size:14px;color:var(--gold);line-height:1}
-.faq-item.open .faq-q-icon{border-color:var(--gold);background:var(--gold-dim)}
+.faq-q-icon::before{content:'+';font-family:var(--font-label);font-size:14px;color:var(--rose);line-height:1}
+.faq-item.open .faq-q-icon{border-color:var(--rose);background:var(--gold-dim)}
 .faq-item.open .faq-q-icon::before{content:'–'}
 .faq-a{max-height:0;overflow:hidden;transition:max-height .5s var(--ease)}
 .faq-a-inner{padding:0 0 1.75rem;font-size:.88rem;line-height:1.9;color:var(--ivory-dim)}
-.faq-a-inner a{color:var(--gold);text-decoration:none}
+.faq-a-inner a{color:var(--rose);text-decoration:none}
 
 /* CTA */
 .cta-strip{padding:8rem 5vw;text-align:center;position:relative}
-.cta-strip::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 50% 50%,rgba(184,146,90,.05) 0%,transparent 70%)}
+.cta-strip::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 50% 50%,rgba(201,164,164,.15) 0%,transparent 70%)}
 .cta-title{font-family:var(--font-display);font-size:clamp(2.5rem,4.5vw,5rem);font-weight:200;line-height:1.05;color:var(--ivory);margin:1.5rem 0}
-.cta-title em{font-style:italic;color:var(--gold)}
+.cta-title em{font-style:italic;color:var(--rose)}
 .cta-sub{font-size:.9rem;color:var(--ivory-dim);max-width:440px;margin:0 auto 3rem;line-height:1.9}
 
 @media(max-width:900px){.faq-body{grid-template-columns:1fr}.faq-sidebar{display:none}}
@@ -128,8 +128,8 @@ footer{background:var(--bg-2);padding:6rem 5vw 3rem;border-top:1px solid var(--i
       <h2 class="faq-category-title r"><em>Allgemein</em></h2>
 
       <div class="faq-item r">
-        <div class="faq-q"><p class="faq-q-text">Was ist medizinische –sthetik?</p><div class="faq-q-icon"></div></div>
-        <div class="faq-a"><div class="faq-a-inner">Medizinische –sthetik umfasst minimalinvasive Behandlungen, die das Erscheinungsbild verbessern, ohne einen chirurgischen Eingriff zu erfordern. Dazu gehören Injektionen, Fadenbehandlungen und regenerative Therapien – alles unter ärztlicher Aufsicht.</div></div>
+        <div class="faq-q"><p class="faq-q-text">Was ist medizinische –Ästhetik?</p><div class="faq-q-icon"></div></div>
+        <div class="faq-a"><div class="faq-a-inner">Medizinische –Ästhetik umfasst minimalinvasive Behandlungen, die das Erscheinungsbild verbessern, ohne einen chirurgischen Eingriff zu erfordern. Dazu gehören Injektionen, Fadenbehandlungen und regenerative Therapien – alles unter ärztlicher Aufsicht.</div></div>
       </div>
       <div class="faq-item r">
         <div class="faq-q"><p class="faq-q-text">Ist eine Erstberatung wirklich kostenlos?</p><div class="faq-q-icon"></div></div>
@@ -232,9 +232,9 @@ footer{background:var(--bg-2);padding:6rem 5vw 3rem;border-top:1px solid var(--i
 
 <footer>
   <div class="footer-top">
-    <div><img src="bilder/logo/logo.svg" alt="Royal Aesthetik" class="footer-logo"><p class="footer-tagline">Medizinische –sthetik auf höchstem Niveau.</p></div>
+    <div><img src="bilder/logo/logo.svg" alt="Royal Aesthetik" class="footer-logo"><p class="footer-tagline">Medizinische –Ästhetik auf höchstem Niveau.</p></div>
     <div><p class="footer-col-title">Behandlungen</p><ul class="footer-links"><li><a href="behandlungen.html">Botulinumtoxin</a></li><li><a href="behandlungen.html">Hyaluronsäure</a></li><li><a href="behandlungen.html">Fadenlifting</a></li><li><a href="behandlungen.html">PRP Therapie</a></li></ul></div>
-    <div><p class="footer-col-title">Klinik</p><ul class="footer-links"><li><a href="uber-uns.html">–ober uns</a></li><li><a href="preise.html">Preise</a></li><li><a href="faq.html">FAQ</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></div>
+    <div><p class="footer-col-title">Klinik</p><ul class="footer-links"><li><a href="uber-uns.html">Über uns</a></li><li><a href="preise.html">Preise</a></li><li><a href="faq.html">FAQ</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></div>
     <div><p class="footer-col-title">Kontakt</p><ul class="footer-links"><li><a href="#">Leutschenstrasse 1</a></li><li><a href="#">8807 Freienbach</a></li><li><a href="mailto:info@royalaesthetik.ch">info@royalaesthetik.ch</a></li></ul></div>
   </div>
   <div class="footer-bottom">
@@ -247,7 +247,7 @@ const nav=document.getElementById('nav');
 window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>40),{passive:true});
 const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target);}});},{threshold:0.08});
 document.querySelectorAll('.r').forEach(el=>obs.observe(el));
-document.querySelector('.hamburger').addEventListener('click',function(){const l=document.querySelector('.nav-links');const open=l.style.display==='flex';l.style.cssText=open?'':'display:flex;flex-direction:column;position:fixed;top:64px;left:0;right:0;background:rgba(10,10,10,.97);padding:2rem 5vw;gap:1.5rem;border-bottom:1px solid rgba(184,146,90,.2)';});
+document.querySelector('.hamburger').addEventListener('click',function(){const l=document.querySelector('.nav-links');const open=l.style.display==='flex';l.style.cssText=open?'':'display:flex;flex-direction:column;position:fixed;top:64px;left:0;right:0;background:rgba(250,248,245,.98);padding:2rem 5vw;gap:1.5rem;border-bottom:1px solid rgba(201,164,164,.3);box-shadow:0 8px 24px rgba(28,26,24,.08)';});
 document.querySelectorAll('.faq-item').forEach(item=>{item.querySelector('.faq-q').addEventListener('click',()=>{const isOpen=item.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(o=>{o.classList.remove('open');o.querySelector('.faq-a').style.maxHeight='0';});if(!isOpen){item.classList.add('open');item.querySelector('.faq-a').style.maxHeight=item.querySelector('.faq-a-inner').scrollHeight+'px';}});});
 </script>
 </body>

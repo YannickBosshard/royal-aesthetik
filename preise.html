@@ -9,30 +9,30 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--bg:#FAF8F5;--bg-2:#F0EDE8;--bg-3:#E5E0D8;--ivory:#1C1A18;--ivory-dim:#6B6560;--ivory-dark:#CCC7BF;--gold:#B8925A;--gold-dim:rgba(184,146,90,.35);--font-display:'Cormorant Garamond',Georgia,serif;--font-body:'DM Sans',system-ui,sans-serif;--font-label:'Montserrat',sans-serif;--ease:cubic-bezier(0.25,0.1,0.25,1)}
+:root{--bg:#FAF8F5;--bg-2:#F0EDE8;--bg-3:#E5E0D8;--ivory:#1C1A18;--ivory-dim:#6B6560;--ivory-dark:#CCC7BF;--gold:#B8925A;--gold-dim:rgba(201,164,164,.15);--font-display:'Cormorant Garamond',Georgia,serif;--font-body:'DM Sans',system-ui,sans-serif;--font-label:'Montserrat',sans-serif;--ease:cubic-bezier(0.25,0.1,0.25,1);--rose:#C9A4A4;--rose-dim:rgba(201,164,164,.3);--rose-pale:rgba(201,164,164,.12);--white:#FFFFFF}
 html{scroll-behavior:smooth;font-size:16px}
 body{background:var(--bg);color:var(--ivory);font-family:var(--font-body);font-weight:300;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-.label{font-family:var(--font-label);font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);font-weight:400}
+.label{font-family:var(--font-label);font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--rose);font-weight:400}
 .r{opacity:0;transform:translateY(24px);transition:opacity 1s var(--ease),transform 1s var(--ease)}.r.on{opacity:1;transform:none}
 .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.35s}.d4{transition-delay:.5s}
-nav{position:fixed;top:0;left:0;right:0;z-index:200;height:76px;padding:0 5vw;display:flex;align-items:center;justify-content:space-between;background:rgba(250,248,245,.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--gold-dim)}
-nav.scrolled{background:rgba(250,248,245,.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--gold-dim)}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;height:76px;padding:0 5vw;display:flex;align-items:center;justify-content:space-between;background:rgba(250,248,245,.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--rose-dim)}
+nav.scrolled{background:rgba(250,248,245,.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--rose-dim)}
 .nav-logo{display:flex;align-items:center;text-decoration:none}
 .nav-logo img{height:38px;width:104px;object-fit:contain;object-position:left center;display:block;filter:none}
 .nav-links{display:flex;gap:2.5rem;list-style:none;align-items:center}
 .nav-links a{font-family:var(--font-label);font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--ivory-dim);text-decoration:none;transition:color .3s}
 .nav-links a:hover,.nav-links a.active{color:var(--ivory)}
-.nav-cta{background:transparent!important;border:1px solid var(--gold-dim);color:var(--gold)!important;padding:.55rem 1.4rem;transition:background .3s!important,border-color .3s!important,color .3s!important}
-.nav-cta:hover{background:var(--gold)!important;border-color:var(--gold)!important;color:var(--bg)!important}
+.nav-cta{background:transparent!important;border:1px solid var(--rose-dim);color:var(--rose)!important;padding:.55rem 1.4rem;transition:background .3s!important,border-color .3s!important,color .3s!important}
+.nav-cta:hover{background:var(--rose)!important;border-color:var(--rose)!important;color:var(--white)!important}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
 .hamburger span{display:block;width:20px;height:1px;background:var(--ivory)}
-.btn-dark{font-family:var(--font-label);font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;background:var(--gold);color:var(--bg);padding:.9rem 2.4rem;text-decoration:none;display:inline-block;transition:background .3s,transform .3s}
+.btn-dark{font-family:var(--font-label);font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;background:var(--rose);color:var(--bg);padding:.9rem 2.4rem;text-decoration:none;display:inline-block;transition:background .3s,transform .3s}
 .btn-dark:hover{background:var(--ivory);transform:translateY(-2px)}
-footer{background:var(--bg-2);padding:6rem 5vw 3rem;border-top:1px solid var(--ivory-dark)}
+footer{background:rgba(201,164,164,.1);padding:6rem 5vw 3rem;border-top:2px solid rgba(201,164,164,.4)}
 .footer-top{display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;gap:4vw;padding-bottom:4rem;border-bottom:1px solid var(--ivory-dark)}
 .footer-logo{height:52px;width:auto;display:block;opacity:.85}
 .footer-tagline{font-size:.8rem;color:var(--ivory-dim);margin-top:.75rem;line-height:1.8;max-width:240px}
-.footer-col-title{font-family:var(--font-label);font-size:8.5px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem}
+.footer-col-title{font-family:var(--font-label);font-size:8.5px;letter-spacing:.25em;text-transform:uppercase;color:var(--rose);margin-bottom:1.5rem}
 .footer-links{list-style:none;display:flex;flex-direction:column;gap:.85rem}
 .footer-links a{font-size:.8rem;color:var(--ivory-dim);text-decoration:none;transition:color .3s}
 .footer-links a:hover{color:var(--ivory)}
@@ -44,44 +44,44 @@ footer{background:var(--bg-2);padding:6rem 5vw 3rem;border-top:1px solid var(--i
 .footer-swiss span{font-family:var(--font-label);font-size:8.5px;letter-spacing:.18em;text-transform:uppercase;color:rgba(240,237,232,.2)}
 
 .page-hero{padding:160px 5vw 80px;border-bottom:1px solid var(--ivory-dark)}
-.page-eyebrow{font-family:var(--font-label);font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:2rem;display:flex;align-items:center;gap:1.2rem}
-.page-eyebrow::before{content:'';display:block;width:28px;height:1px;background:var(--gold)}
+.page-eyebrow{font-family:var(--font-label);font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--rose);margin-bottom:2rem;display:flex;align-items:center;gap:1.2rem}
+.page-eyebrow::before{content:'';display:block;width:28px;height:1px;background:var(--rose)}
 .page-title{font-family:var(--font-display);font-size:clamp(3rem,6vw,6.5rem);font-weight:200;line-height:.95;color:var(--ivory)}
-.page-title em{font-style:italic;color:var(--gold)}
+.page-title em{font-style:italic;color:var(--rose)}
 .page-sub{font-size:.92rem;line-height:1.9;color:var(--ivory-dim);max-width:520px;margin-top:2.5rem}
 
 /* PRICE TABLE */
 .price-section{padding:8rem 5vw;border-bottom:1px solid var(--ivory-dark)}
 .price-header{margin-bottom:4rem;display:flex;justify-content:space-between;align-items:flex-end}
 .price-title{font-family:var(--font-display);font-size:clamp(1.8rem,3vw,3.2rem);font-weight:200;color:var(--ivory);line-height:1}
-.price-title em{font-style:italic;color:var(--gold)}
+.price-title em{font-style:italic;color:var(--rose)}
 .price-note{font-size:.8rem;color:var(--ivory-dim);max-width:240px;text-align:right;line-height:1.7}
 .price-table{border-top:1px solid var(--ivory-dark)}
 .price-row{display:grid;grid-template-columns:1fr auto;gap:2rem;padding:1.25rem 0;border-bottom:1px solid var(--ivory-dark);align-items:center;transition:background .2s}
 .price-row:hover{background:var(--bg-3);padding-left:1rem;padding-right:1rem;margin:0 -1rem}
 .price-name{font-family:var(--font-display);font-size:1.05rem;font-weight:300;color:var(--ivory)}
 .price-detail{font-size:.8rem;color:var(--ivory-dim);margin-top:.2rem}
-.price-amount{font-family:var(--font-display);font-size:1.2rem;font-weight:300;color:var(--gold);white-space:nowrap}
+.price-amount{font-family:var(--font-display);font-size:1.2rem;font-weight:300;color:var(--rose);white-space:nowrap}
 .price-from{font-family:var(--font-label);font-size:8px;letter-spacing:.15em;text-transform:uppercase;color:var(--ivory-dim);margin-right:.4rem;vertical-align:middle}
 
 /* PACKAGES */
 .packages{padding:8rem 5vw;border-bottom:1px solid var(--ivory-dark);background:var(--bg-2)}
 .packages-header{margin-bottom:5rem}
 .packages-title{font-family:var(--font-display);font-size:clamp(2rem,3.5vw,4rem);font-weight:200;color:var(--ivory);line-height:1;margin-top:1rem}
-.packages-title em{font-style:italic;color:var(--gold)}
+.packages-title em{font-style:italic;color:var(--rose)}
 .pkg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--ivory-dark)}
 .pkg-card{background:var(--bg-2);padding:3.5rem 2.5rem;position:relative;transition:background .3s}
 .pkg-card:hover{background:var(--bg-3)}
 .pkg-card--featured{background:var(--bg-3);outline:1px solid var(--gold-dim)}
-.pkg-badge{position:absolute;top:1.5rem;right:1.5rem;font-family:var(--font-label);font-size:7.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--bg);background:var(--gold);padding:.3rem .75rem}
-.pkg-name{font-family:var(--font-label);font-size:9px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1.25rem}
+.pkg-badge{position:absolute;top:1.5rem;right:1.5rem;font-family:var(--font-label);font-size:7.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--bg);background:var(--rose);padding:.3rem .75rem}
+.pkg-name{font-family:var(--font-label);font-size:9px;letter-spacing:.25em;text-transform:uppercase;color:var(--rose);margin-bottom:1.25rem}
 .pkg-price{font-family:var(--font-display);font-size:3.5rem;font-weight:200;color:var(--ivory);line-height:1}
-.pkg-price sup{font-size:.4em;vertical-align:super;color:var(--gold)}
+.pkg-price sup{font-size:.4em;vertical-align:super;color:var(--rose)}
 .pkg-period{font-family:var(--font-label);font-size:8.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--ivory-dim);margin-top:.4rem;margin-bottom:2.5rem}
 .pkg-divider{height:1px;background:var(--ivory-dark);margin:2rem 0}
 .pkg-features{list-style:none;display:flex;flex-direction:column;gap:.85rem;margin-bottom:2.5rem}
 .pkg-features li{font-size:.84rem;color:var(--ivory-dim);display:flex;gap:.75rem;align-items:flex-start}
-.pkg-features li::before{content:'';display:block;width:14px;height:1px;background:var(--gold);flex-shrink:0;margin-top:.6em}
+.pkg-features li::before{content:'';display:block;width:14px;height:1px;background:var(--rose);flex-shrink:0;margin-top:.6em}
 
 /* CONSULTATION NOTE */
 .consult-note{padding:5rem 5vw;border-bottom:1px solid var(--ivory-dark);display:grid;grid-template-columns:1fr 2fr;gap:6vw;align-items:center}
@@ -92,9 +92,9 @@ footer{background:var(--bg-2);padding:6rem 5vw 3rem;border-top:1px solid var(--i
 
 /* CTA */
 .cta-strip{padding:8rem 5vw;text-align:center;position:relative}
-.cta-strip::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 50% 50%,rgba(184,146,90,.05) 0%,transparent 70%)}
+.cta-strip::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 50% 50%,rgba(201,164,164,.15) 0%,transparent 70%)}
 .cta-title{font-family:var(--font-display);font-size:clamp(2.5rem,4.5vw,5rem);font-weight:200;line-height:1.05;color:var(--ivory);margin:1.5rem 0}
-.cta-title em{font-style:italic;color:var(--gold)}
+.cta-title em{font-style:italic;color:var(--rose)}
 .cta-sub{font-size:.9rem;color:var(--ivory-dim);max-width:440px;margin:0 auto 3rem;line-height:1.9}
 
 @media(max-width:900px){
@@ -136,12 +136,16 @@ footer{background:var(--bg-2);padding:6rem 5vw 3rem;border-top:1px solid var(--i
     <p class="price-note">Alle Preise in CHF inkl. MwSt. Endpreis nach Erstberatung.</p>
   </div>
   <div class="price-table r d1">
-    <div class="price-row"><div><p class="price-name">Stirn</p><p class="price-detail">Horizontale Stirnfalten</p></div><p class="price-amount"><span class="price-from">ab</span>280</p></div>
+    <div class="price-row"><div><p class="price-name">Stirn</p><p class="price-detail">Horizontale Stirnfalten / Denkfalten</p></div><p class="price-amount"><span class="price-from">ab</span>250</p></div>
     <div class="price-row"><div><p class="price-name">Glabella</p><p class="price-detail">Zornesfalten zwischen den Brauen</p></div><p class="price-amount"><span class="price-from">ab</span>250</p></div>
     <div class="price-row"><div><p class="price-name">Augenpartie</p><p class="price-detail">Krähenfüsse</p></div><p class="price-amount"><span class="price-from">ab</span>280</p></div>
-    <div class="price-row"><div><p class="price-name">Kombination Stirn + Glabella</p><p class="price-detail">2 Zonen</p></div><p class="price-amount"><span class="price-from">ab</span>450</p></div>
-    <div class="price-row"><div><p class="price-name">Full Face</p><p class="price-detail">Alle 3 Standardzonen</p></div><p class="price-amount"><span class="price-from">ab</span>620</p></div>
-    <div class="price-row"><div><p class="price-name">Brow Lift / Lip Flip</p><p class="price-detail">Spezialtechniken</p></div><p class="price-amount"><span class="price-from">ab</span>200</p></div>
+    <div class="price-row"><div><p class="price-name">Kombination Stirn + Glabella</p><p class="price-detail">2 Zonen</p></div><p class="price-amount"><span class="price-from">ab</span>500</p></div>
+    <div class="price-row"><div><p class="price-name">Full Face</p><p class="price-detail">Alle 3 Standardzonen</p></div><p class="price-amount"><span class="price-from">ab</span>600</p></div>
+    <div class="price-row"><div><p class="price-name">Brow Lift / Lip Flip</p><p class="price-detail">Spezialtechniken</p></div><p class="price-amount"><span class="price-from">ab</span>120</p></div>
+    <div class="price-row"><div><p class="price-name">Kinn</p><p class="price-detail">Glättung / Peau d'orange</p></div><p class="price-amount"><span class="price-from">ab</span>150</p></div>
+    <div class="price-row"><div><p class="price-name">Jawline</p><p class="price-detail">Konturierung Unterkiefer</p></div><p class="price-amount"><span class="price-from">ab</span>500</p></div>
+    <div class="price-row"><div><p class="price-name">Masseter</p><p class="price-detail">Zähneknirschen / Kieferverspannung</p></div><p class="price-amount"><span class="price-from">ab</span>500</p></div>
+    <div class="price-row"><div><p class="price-name">Hals</p><p class="price-detail">Plattysma-Bänder</p></div><p class="price-amount"><span class="price-from">ab</span>450</p></div>
   </div>
 </section>
 
@@ -151,12 +155,39 @@ footer{background:var(--bg-2);padding:6rem 5vw 3rem;border-top:1px solid var(--i
     <p class="price-note">Preis pro Spritze (1 ml). Volumen nach Beratung.</p>
   </div>
   <div class="price-table r d1">
-    <div class="price-row"><div><p class="price-name">Lippen</p><p class="price-detail">Volumen & Definition</p></div><p class="price-amount"><span class="price-from">ab</span>420</p></div>
-    <div class="price-row"><div><p class="price-name">Nasolabialfalten</p><p class="price-detail">Smile Lines</p></div><p class="price-amount"><span class="price-from">ab</span>420</p></div>
-    <div class="price-row"><div><p class="price-name">Wangen / Jochbein</p><p class="price-detail">Volumenaufbau</p></div><p class="price-amount"><span class="price-from">ab</span>480</p></div>
+    <div class="price-row"><div><p class="price-name">Lippen (0.5 ml)</p><p class="price-detail">Volumen & Definition</p></div><p class="price-amount"><span class="price-from">ab</span>250</p></div>
+    <div class="price-row"><div><p class="price-name">Lippen (1 ml)</p><p class="price-detail">Volumen & Definition</p></div><p class="price-amount"><span class="price-from">ab</span>500</p></div>
+    <div class="price-row"><div><p class="price-name">Nasolabialfalten & Wangen / Jochbein</p><p class="price-detail">Kombinationsbehandlung</p></div><p class="price-amount"><span class="price-from">ab</span>600</p></div>
+    <div class="price-row"><div><p class="price-name">Wangen / Jochbein</p><p class="price-detail">Volumenaufbau</p></div><p class="price-amount"><span class="price-from">ab</span>500</p></div>
     <div class="price-row"><div><p class="price-name">Kinn / Kiefer</p><p class="price-detail">Konturierung</p></div><p class="price-amount"><span class="price-from">ab</span>450</p></div>
-    <div class="price-row"><div><p class="price-name">Tränenrinne</p><p class="price-detail">Periorbitalbereich</p></div><p class="price-amount"><span class="price-from">ab</span>520</p></div>
-    <div class="price-row"><div><p class="price-name">Skinbooster</p><p class="price-detail">Hydration & Glanz</p></div><p class="price-amount"><span class="price-from">ab</span>380</p></div>
+    <div class="price-row"><div><p class="price-name">Jawline</p><p class="price-detail">Konturierung Unterkiefer</p></div><p class="price-amount"><span class="price-from">ab</span>600</p></div>
+    <div class="price-row"><div><p class="price-name">Tränenrinne</p><p class="price-detail">Periorbitalbereich</p></div><p class="price-amount"><span class="price-from">ab</span>400</p></div>
+  </div>
+</section>
+
+<section class="price-section">
+  <div class="price-header r">
+    <h2 class="price-title">Skin<em>booster</em></h2>
+    <p class="price-note">Preis pro Sitzung.</p>
+  </div>
+  <div class="price-table r d1">
+    <div class="price-row"><div><p class="price-name">Polynukleotide</p><p class="price-detail">Lachsspermien</p></div><p class="price-amount"><span class="price-from">ab</span>400</p></div>
+    <div class="price-row"><div><p class="price-name">Polymilchsäure</p><p class="price-detail">Kollagenstimulation</p></div><p class="price-amount"><span class="price-from">ab</span>650</p></div>
+    <div class="price-row"><div><p class="price-name">Aminosäure</p><p class="price-detail">Sonekus</p></div><p class="price-amount"><span class="price-from">ab</span>600</p></div>
+  </div>
+</section>
+
+<section class="price-section">
+  <div class="price-header r">
+    <h2 class="price-title">Endolift <em>Eufoton</em></h2>
+  </div>
+  <div class="price-table r d1">
+    <div class="price-row"><div><p class="price-name">Gesicht</p></div><p class="price-amount">1600 CHF</p></div>
+    <div class="price-row"><div><p class="price-name">Doppelkinn</p></div><p class="price-amount">1600 CHF</p></div>
+    <div class="price-row"><div><p class="price-name">Tränensäcke</p></div><p class="price-amount">1500 CHF</p></div>
+    <div class="price-row"><div><p class="price-name">Hals</p></div><p class="price-amount">1600 CHF</p></div>
+    <div class="price-row"><div><p class="price-name">Bauch</p></div><p class="price-amount">1800 CHF</p></div>
+    <div class="price-row"><div><p class="price-name">Oberschenkel</p></div><p class="price-amount">4400 CHF</p></div>
   </div>
 </section>
 
@@ -165,12 +196,11 @@ footer{background:var(--bg-2);padding:6rem 5vw 3rem;border-top:1px solid var(--i
     <h2 class="price-title">Weitere <em>Behandlungen</em></h2>
   </div>
   <div class="price-table r d1">
-    <div class="price-row"><div><p class="price-name">Fadenlifting</p><p class="price-detail">PDO-Fäden, Preis je nach Anzahl</p></div><p class="price-amount"><span class="price-from">ab</span>980</p></div>
-    <div class="price-row"><div><p class="price-name">PRP Therapie – Gesicht</p><p class="price-detail">Eigenblutbehandlung</p></div><p class="price-amount"><span class="price-from">ab</span>480</p></div>
-    <div class="price-row"><div><p class="price-name">PRP Therapie – Haare</p><p class="price-detail">Haarwachstum</p></div><p class="price-amount"><span class="price-from">ab</span>520</p></div>
-    <div class="price-row"><div><p class="price-name">Biostimulatoren (Sculptra)</p><p class="price-detail">Pro Fläschchen</p></div><p class="price-amount"><span class="price-from">ab</span>680</p></div>
-    <div class="price-row"><div><p class="price-name">Polynukleotide (PDRN)</p><p class="price-detail">Pro Sitzung</p></div><p class="price-amount"><span class="price-from">ab</span>420</p></div>
-    <div class="price-row"><div><p class="price-name">Microneedling + Exosomen</p><p class="price-detail">Pro Sitzung</p></div><p class="price-amount"><span class="price-from">ab</span>580</p></div>
+    <div class="price-row"><div><p class="price-name">Fadenlifting – Widerhackenfäden</p><p class="price-detail">Cog-Fäden, ausgeprägte Straffung</p></div><p class="price-amount"><span class="price-from">ab</span>1200</p></div>
+    <div class="price-row"><div><p class="price-name">Fadenlifting – Kollagenfäden</p><p class="price-detail">PDO-Fäden, kollagenbindend</p></div><p class="price-amount"><span class="price-from">ab</span>700</p></div>
+    <div class="price-row"><div><p class="price-name">PRP Therapie – Gesicht</p><p class="price-detail">Eigenblutbehandlung</p></div><p class="price-amount"><span class="price-from">ab</span>350</p></div>
+    <div class="price-row"><div><p class="price-name">PRP Therapie – Haare</p><p class="price-detail">Haarwachstum</p></div><p class="price-amount"><span class="price-from">ab</span>350</p></div>
+    <div class="price-row"><div><p class="price-name">Microneedling + Exosomen</p><p class="price-detail">Pro Sitzung</p></div><p class="price-amount"><span class="price-from">ab</span>450</p></div>
   </div>
 </section>
 
@@ -247,9 +277,9 @@ footer{background:var(--bg-2);padding:6rem 5vw 3rem;border-top:1px solid var(--i
 
 <footer>
   <div class="footer-top">
-    <div><img src="bilder/logo/logo.svg" alt="Royal Aesthetik" class="footer-logo"><p class="footer-tagline">Medizinische –sthetik auf höchstem Niveau.</p></div>
+    <div><img src="bilder/logo/logo.svg" alt="Royal Aesthetik" class="footer-logo"><p class="footer-tagline">Medizinische –Ästhetik auf höchstem Niveau.</p></div>
     <div><p class="footer-col-title">Behandlungen</p><ul class="footer-links"><li><a href="behandlungen.html">Botulinumtoxin</a></li><li><a href="behandlungen.html">Hyaluronsäure</a></li><li><a href="behandlungen.html">Fadenlifting</a></li><li><a href="behandlungen.html">PRP Therapie</a></li></ul></div>
-    <div><p class="footer-col-title">Klinik</p><ul class="footer-links"><li><a href="uber-uns.html">–ober uns</a></li><li><a href="preise.html">Preise</a></li><li><a href="faq.html">FAQ</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></div>
+    <div><p class="footer-col-title">Klinik</p><ul class="footer-links"><li><a href="uber-uns.html">Über uns</a></li><li><a href="preise.html">Preise</a></li><li><a href="faq.html">FAQ</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></div>
     <div><p class="footer-col-title">Kontakt</p><ul class="footer-links"><li><a href="#">Leutschenstrasse 1</a></li><li><a href="#">8807 Freienbach</a></li><li><a href="mailto:info@royalaesthetik.ch">info@royalaesthetik.ch</a></li></ul></div>
   </div>
   <div class="footer-bottom">
@@ -262,7 +292,7 @@ const nav=document.getElementById('nav');
 window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>40),{passive:true});
 const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target);}});},{threshold:0.08});
 document.querySelectorAll('.r').forEach(el=>obs.observe(el));
-document.querySelector('.hamburger').addEventListener('click',function(){const l=document.querySelector('.nav-links');const open=l.style.display==='flex';l.style.cssText=open?'':'display:flex;flex-direction:column;position:fixed;top:64px;left:0;right:0;background:rgba(10,10,10,.97);padding:2rem 5vw;gap:1.5rem;border-bottom:1px solid rgba(184,146,90,.2)';});
+document.querySelector('.hamburger').addEventListener('click',function(){const l=document.querySelector('.nav-links');const open=l.style.display==='flex';l.style.cssText=open?'':'display:flex;flex-direction:column;position:fixed;top:64px;left:0;right:0;background:rgba(250,248,245,.98);padding:2rem 5vw;gap:1.5rem;border-bottom:1px solid rgba(201,164,164,.3);box-shadow:0 8px 24px rgba(28,26,24,.08)';});
 </script>
 </body>
 </html>
