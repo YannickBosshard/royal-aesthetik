@@ -147,7 +147,7 @@ footer{background:rgba(201,164,164,.1);padding:6rem 5vw 3rem;border-top:2px soli
         <p class="contact-detail-value"><a href="mailto:info@royalaesthetik.ch">info@royalaesthetik.ch</a></p>
       </div>
       <div class="contact-detail">
-        <p class="contact-detail-label">–-ffnungszeiten</p>
+        <p class="contact-detail-label">Öffnungszeiten</p>
         <div class="hours-grid">
           <span class="hours-day">Montag – Freitag</span><span class="hours-time">09:00 – 18:00</span>
           <span class="hours-day">Samstag</span><span class="hours-time">Nach Vereinbarung</span>
@@ -157,24 +157,57 @@ footer{background:rgba(201,164,164,.1);padding:6rem 5vw 3rem;border-top:2px soli
     </div>
   </div>
 
-  <div class="contact-form-wrap rr" style="padding:100px 5vw 60px;justify-content:flex-start;align-items:flex-start;flex-direction:column">
-    <p class="label" style="margin-bottom:1.25rem">Online Terminbuchung</p>
-    <h2 class="form-title" style="margin-bottom:.75rem">Termin direkt<br><em>online buchen</em></h2>
-    <p style="font-size:.85rem;color:var(--ivory-dim);line-height:1.9;margin-bottom:2rem;max-width:400px">Wählen Sie Ihre Behandlung und einen passenden Termin. Bestätigung erhalten Sie sofort per E-Mail.</p>
-    <!-- MICROSOFT BOOKINGS IFRAME – ersetze src mit deinem Bookings-Link -->
-    <div style="width:100%;border:1px solid var(--ivory-dark);overflow:hidden;background:var(--bg-3)">
-      <iframe
-        id="bookings-iframe"
-        src="about:blank"
-        data-bookings-src="HIER_DEINEN_BOOKINGS_LINK_EINSETZEN"
-        width="100%"
-        height="580"
-        frameborder="0"
-        scrolling="yes"
-        style="display:block;filter:none hue-rotate(180deg) brightness(.88) contrast(.95)"
-      ></iframe>
+  <div class="contact-form-wrap rr">
+    <p class="label" style="margin-bottom:1.25rem">Kontaktformular</p>
+    <h2 class="form-title">Nachricht<br><em>senden</em></h2>
+
+    <div class="form-success" id="form-success">
+      <p class="form-success-title">Vielen Dank</p>
+      <p class="form-success-text">Ihre Nachricht ist bei uns eingegangen. Wir melden uns innerhalb eines Werktages.</p>
     </div>
-    <p style="font-size:.76rem;color:var(--ivory-dim);opacity:.55;line-height:1.7;margin-top:1.25rem">Fragen? <a href="mailto:info@royalaesthetik.ch" style="color:var(--rose);text-decoration:none">info@royalaesthetik.ch</a></p>
+
+    <form id="contact-form" novalidate>
+      <div class="form-group form-group--half">
+        <div>
+          <label class="form-label" for="vorname">Vorname</label>
+          <input class="form-input" type="text" id="vorname" name="vorname" placeholder="Maria" required>
+        </div>
+        <div>
+          <label class="form-label" for="nachname">Nachname</label>
+          <input class="form-input" type="text" id="nachname" name="nachname" placeholder="Muster" required>
+        </div>
+      </div>
+      <div class="form-group form-group--half">
+        <div>
+          <label class="form-label" for="email">E-Mail</label>
+          <input class="form-input" type="email" id="email" name="email" placeholder="maria@beispiel.ch" required>
+        </div>
+        <div>
+          <label class="form-label" for="telefon">Telefon (optional)</label>
+          <input class="form-input" type="tel" id="telefon" name="telefon" placeholder="+41 79 000 00 00">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="behandlung">Gewünschte Behandlung</label>
+        <select class="form-select" id="behandlung" name="behandlung">
+          <option value="">Bitte wählen…</option>
+          <option>Endolift Eufoton</option>
+          <option>Botulinumtoxin</option>
+          <option>Hyaluronsäure</option>
+          <option>Fadenlifting</option>
+          <option>PRP Therapie</option>
+          <option>Biostimulatoren / Skinbooster</option>
+          <option>Exosomen &amp; Microneedling</option>
+          <option>Erstberatung (allgemein)</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="nachricht">Nachricht</label>
+        <textarea class="form-textarea" id="nachricht" name="nachricht" rows="4" placeholder="Ihre Fragen oder Wünsche…"></textarea>
+      </div>
+      <p class="form-privacy">Mit dem Absenden stimmen Sie unserer <a href="datenschutz.html">Datenschutzerklärung</a> zu. Ihre Daten werden ausschliesslich zur Bearbeitung Ihrer Anfrage verwendet.</p>
+      <button type="submit" class="btn-submit" id="submit-btn">Nachricht senden</button>
+    </form>
   </div>
 </div>
 
@@ -188,7 +221,7 @@ footer{background:rgba(201,164,164,.1);padding:6rem 5vw 3rem;border-top:2px soli
 
 <footer>
   <div class="footer-top">
-    <div><img src="bilder/logo/logo.svg" alt="Royal Aesthetik" class="footer-logo"><p class="footer-tagline">Medizinische –Ästhetik auf höchstem Niveau.</p></div>
+    <div><img src="bilder/logo/logo.svg" alt="Royal Aesthetik" class="footer-logo"><p class="footer-tagline">Medizinische Ästhetik auf höchstem Niveau.</p></div>
     <div><p class="footer-col-title">Behandlungen</p><ul class="footer-links"><li><a href="behandlungen.html">Botulinumtoxin</a></li><li><a href="behandlungen.html">Hyaluronsäure</a></li><li><a href="behandlungen.html">Fadenlifting</a></li><li><a href="behandlungen.html">PRP Therapie</a></li></ul></div>
     <div><p class="footer-col-title">Klinik</p><ul class="footer-links"><li><a href="uber-uns.html">Über uns</a></li><li><a href="preise.html">Preise</a></li><li><a href="faq.html">FAQ</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></div>
     <div><p class="footer-col-title">Kontakt</p><ul class="footer-links"><li><a href="#">Leutschenstrasse 1</a></li><li><a href="#">8807 Freienbach</a></li><li><a href="mailto:info@royalaesthetik.ch">info@royalaesthetik.ch</a></li></ul></div>
@@ -204,7 +237,28 @@ window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scro
 const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target);}});},{threshold:0.08});
 document.querySelectorAll('.r,.rl,.rr').forEach(el=>obs.observe(el));
 document.querySelector('.hamburger').addEventListener('click',function(){const l=document.querySelector('.nav-links');const open=l.style.display==='flex';l.style.cssText=open?'':'display:flex;flex-direction:column;position:fixed;top:64px;left:0;right:0;background:rgba(250,248,245,.98);padding:2rem 5vw;gap:1.5rem;border-bottom:1px solid rgba(201,164,164,.3);box-shadow:0 8px 24px rgba(28,26,24,.08)';});
-const iframe=document.getElementById('bookings-iframe');const src=iframe.dataset.bookingsSrc;if(src&&src!=='HIER_DEINEN_BOOKINGS_LINK_EINSETZEN'){iframe.src=src;}
+const form=document.getElementById('contact-form');
+const success=document.getElementById('form-success');
+const btn=document.getElementById('submit-btn');
+form.addEventListener('submit',async function(e){
+  e.preventDefault();
+  btn.textContent='Wird gesendet…';
+  btn.disabled=true;
+  const data=new FormData(form);
+  try{
+    const res=await fetch('https://formspree.io/f/mnjykbrl',{method:'POST',body:data,headers:{'Accept':'application/json'}});
+    if(res.ok){
+      form.style.display='none';
+      success.classList.add('show');
+    } else {
+      btn.textContent='Fehler – erneut versuchen';
+      btn.disabled=false;
+    }
+  } catch(err){
+    btn.textContent='Fehler – erneut versuchen';
+    btn.disabled=false;
+  }
+});
 </script>
 </body>
 </html>
