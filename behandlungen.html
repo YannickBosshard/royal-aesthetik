@@ -20,8 +20,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;padding:0 5vw;di
 nav::before{content:'';position:absolute;inset:0;background:transparent;backdrop-filter:none;z-index:-1;transition:background .5s}
 nav.scrolled::before{background:rgba(250,248,245,.96);backdrop-filter:blur(16px)}
 nav.scrolled{border-bottom:1px solid var(--rose-dim)}
-.nav-logo{display:flex;align-items:flex-start;text-decoration:none;align-self:flex-start;padding-top:4px}
-.nav-logo img{height:88px;width:auto;display:block}
+.nav-logo{display:flex;align-items:center;text-decoration:none}
+.nav-logo img{height:56px;width:auto;display:block}
 .nav-links{display:flex;gap:2.5rem;list-style:none;align-items:center}
 .nav-links a{font-family:var(--font-label);font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--ivory-dim);text-decoration:none;transition:color .3s}
 .nav-links a:hover,.nav-links a.active{color:var(--ivory)}
