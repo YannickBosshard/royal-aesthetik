@@ -16,10 +16,12 @@ body{background:var(--bg);color:var(--ivory);font-family:var(--font-body);font-w
 .r{opacity:0;transform:translateY(24px);transition:opacity 1s var(--ease),transform 1s var(--ease)}.r.on{opacity:1;transform:none}
 .rl{opacity:0;transform:translateX(-28px);transition:opacity 1s var(--ease),transform 1s var(--ease)}.rl.on{opacity:1;transform:none}
 .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.35s}
-nav{position:fixed;top:0;left:0;right:0;z-index:200;height:64px;padding:0 5vw;display:flex;align-items:center;justify-content:space-between;transition:background .5s,border-color .5s}
-nav.scrolled{background:rgba(250,248,245,.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--rose-dim)}
-.nav-logo{display:flex;align-items:center;text-decoration:none}
-.nav-logo img{height:58px;width:auto;display:block}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;padding:0 5vw;display:flex;align-items:center;justify-content:space-between;transition:border-color .5s;overflow:visible}
+nav::before{content:'';position:absolute;inset:0;background:transparent;backdrop-filter:none;z-index:-1;transition:background .5s}
+nav.scrolled::before{background:rgba(250,248,245,.96);backdrop-filter:blur(16px)}
+nav.scrolled{border-bottom:1px solid var(--rose-dim)}
+.nav-logo{display:flex;align-items:flex-start;text-decoration:none;align-self:flex-start;padding-top:4px}
+.nav-logo img{height:88px;width:auto;display:block}
 .nav-links{display:flex;gap:2.5rem;list-style:none;align-items:center}
 .nav-links a{font-family:var(--font-label);font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--ivory-dim);text-decoration:none;transition:color .3s}
 .nav-links a:hover,.nav-links a.active{color:var(--ivory)}
@@ -117,7 +119,7 @@ footer{background:rgba(201,164,164,.1);padding:6rem 5vw 3rem;border-top:2px soli
   .t-body{border-left:none;border-top:1px solid var(--ivory-dark)}
 }
 @media(max-width:768px){
-  nav{height:64px}.nav-links{display:none}.hamburger{display:flex}
+  nav{height:56px}.nav-logo{align-self:center;padding-top:0}.nav-logo img{height:44px}.nav-links{display:none}.hamburger{display:flex}
   .footer-top{grid-template-columns:1fr 1fr;gap:3rem}
   .footer-bottom{flex-direction:column;gap:1rem;text-align:center}
   .t-meta{grid-template-columns:1fr}
@@ -129,7 +131,7 @@ footer{background:rgba(201,164,164,.1);padding:6rem 5vw 3rem;border-top:2px soli
 </head>
 <body>
 <nav id="nav" class="scrolled">
-  <a href="index.html" class="nav-logo"><img src="bilder/logo/logo.svg" alt="Royal Aesthetik" style="height:38px;width:104px;display:block;object-fit:contain;object-position:left center"></a>
+  <a href="index.html" class="nav-logo"><img src="bilder/logo/logo.svg" alt="Royal Aesthetik"></a>
   <ul class="nav-links">
     <li><a href="behandlungen.html" class="active">Behandlungen</a></li>
     <li><a href="uber-uns.html">Dr. Jeyrani</a></li>
