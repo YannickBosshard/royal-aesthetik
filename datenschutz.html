@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--bg:#FAF8F5;--bg-2:#F0EDE8;--ivory:#1C1A18;--ivory-dim:#6B6560;--ivory-dark:#CCC7BF;--gold:#B8925A;--gold-dim:rgba(201,164,164,.15);--font-display:'Cormorant Garamond',Georgia,serif;--font-body:'DM Sans',system-ui,sans-serif;--font-label:'Montserrat',sans-serif}
+:root{--bg:#FAF8F5;--bg-2:#F0EDE8;--ivory:#1C1A18;--ivory-dim:#6B6560;--ivory-dark:#CCC7BF;--gold:#B8925A;--gold-dim:rgba(176,128,128,.15);--font-display:'Cormorant Garamond',Georgia,serif;--font-body:'DM Sans',system-ui,sans-serif;--font-label:'Montserrat',sans-serif}
 html{font-size:16px}
 body{background:var(--bg);color:var(--ivory);font-family:var(--font-body);font-weight:300;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;padding:0 5vw;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--rose-dim);overflow:visible}
@@ -23,7 +23,7 @@ nav::before{content:'';position:absolute;inset:0;background:rgba(250,248,245,.96
 .nav-cta:hover{background:var(--rose)!important;border-color:var(--rose)!important;color:var(--white)!important}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
 .hamburger span{display:block;width:20px;height:1px;background:var(--ivory)}
-footer{background:rgba(201,164,164,.1);padding:6rem 5vw 3rem;border-top:2px solid rgba(201,164,164,.4)}
+footer{background:rgba(176,128,128,.1);padding:6rem 5vw 3rem;border-top:2px solid rgba(176,128,128,.4)}
 .footer-top{display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;gap:4vw;padding-bottom:4rem;border-bottom:1px solid var(--ivory-dark)}
 .footer-logo{height:52px;width:auto;display:block;opacity:.85}
 .footer-tagline{font-size:.8rem;color:var(--ivory-dim);margin-top:.75rem;line-height:1.8;max-width:240px}
@@ -98,7 +98,7 @@ footer{background:rgba(201,164,164,.1);padding:6rem 5vw 3rem;border-top:2px soli
     <div class="footer-swiss"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect width="16" height="16" fill="#CC0000" rx="2"/><rect x="6.5" y="2" width="3" height="12" fill="white"/><rect x="2" y="6.5" width="12" height="3" fill="white"/></svg><span>Swiss Made Quality</span></div>
   </div>
 </footer>
-<script>document.querySelector('.hamburger').addEventListener('click',function(){const l=document.querySelector('.nav-links');const open=l.style.display==='flex';l.style.cssText=open?'':'display:flex;flex-direction:column;position:fixed;top:64px;left:0;right:0;background:rgba(250,248,245,.98);padding:2rem 5vw;gap:1.5rem;border-bottom:1px solid rgba(201,164,164,.3);box-shadow:0 8px 24px rgba(28,26,24,.08)';});</script>
+<script>document.querySelector('.hamburger').addEventListener('click',function(){const l=document.querySelector('.nav-links');const open=l.style.display==='flex';l.style.cssText=open?'':'display:flex;flex-direction:column;position:fixed;top:64px;left:0;right:0;background:rgba(250,248,245,.98);padding:2rem 5vw;gap:1.5rem;border-bottom:1px solid rgba(176,128,128,.3);box-shadow:0 8px 24px rgba(28,26,24,.08)';});</script>
 </body>
 </html>
 
