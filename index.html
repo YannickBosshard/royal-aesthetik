@@ -108,9 +108,9 @@ nav.scrolled::before{background:rgba(250,248,245,.96)}
 
 /* ── PHILOSOPHY ── */
 .philosophy{padding:10rem 5vw;display:grid;grid-template-columns:1fr 1fr;gap:10vw;align-items:center}
-.phil-quote{font-family:var(--font-display);font-size:clamp(1.8rem,3vw,3.2rem);font-weight:200;line-height:1.4;color:var(--ivory);font-style:italic}
-.phil-quote::before{content:'\201C';display:block;font-size:6rem;line-height:.7;color:var(--rose);opacity:.5;margin-bottom:.5rem;font-style:normal}
-.phil-quote::after{content:'\201D';display:block;font-size:6rem;line-height:.7;color:var(--rose);opacity:.5;margin-top:.5rem;font-style:normal;text-align:right}
+.phil-quote{font-family:var(--font-display);font-size:clamp(1.8rem,3vw,3.2rem);font-weight:200;line-height:1.4;color:var(--ivory);font-style:italic;position:relative;padding-left:2.5rem}
+.phil-quote::before{content:'\201C';position:absolute;left:0;top:-.5rem;font-size:5rem;line-height:1;color:var(--rose);opacity:.25;font-style:normal}
+.phil-quote::after{content:'\201D';display:block;font-size:5rem;line-height:1;color:var(--rose);opacity:.25;margin-top:.5rem;font-style:normal;text-align:right}
 .phil-body{}
 .phil-body p{font-size:.92rem;line-height:1.95;color:var(--ivory-dim);margin-bottom:1.25rem;font-weight:300}
 .phil-sig{margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--ivory-dark)}
@@ -194,7 +194,7 @@ nav.scrolled::before{background:rgba(250,248,245,.96)}
 .test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--ivory-dark)}
 .test-card{background:var(--bg-2);padding:3rem}
 .test-quote{font-family:var(--font-display);font-size:1.1rem;font-weight:300;color:var(--ivory);line-height:1.75;font-style:italic;position:relative}
-.test-quote::before{content:'\201C';font-size:4rem;line-height:0;vertical-align:-.35em;color:var(--rose);opacity:.5}
+.test-quote::before{content:none}
 .test-author{margin-top:2rem;display:flex;align-items:center;gap:1rem;padding-top:1.5rem;border-top:1px solid var(--ivory-dark)}
 .test-avatar{width:44px;height:44px;border-radius:50%;background:var(--rose-pale);border:1px solid var(--rose-dim);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:1.15rem;font-weight:300;color:var(--rose);flex-shrink:0}
 .test-name{font-family:var(--font-label);font-size:9.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--ivory);font-weight:400}
