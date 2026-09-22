@@ -117,7 +117,7 @@ footer{background:rgba(154,112,112,.1);padding:6rem 5vw 3rem;border-top:2px soli
 .cta-sub{font-size:.9rem;color:var(--ivory-dim);max-width:440px;margin:0 auto 3rem;line-height:1.9}
 
 @media(max-width:900px){
-  .treatment{grid-template-columns:1fr}
+  .treatment,.treatment:nth-child(even){grid-template-columns:1fr}
   .treatment:nth-child(even) .t-img{order:0}
   .treatment:nth-child(even) .t-body{order:0;border-right:none}
   .t-body{border-left:none;border-top:1px solid var(--ivory-dark)}
